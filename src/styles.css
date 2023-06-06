@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+}
+  
