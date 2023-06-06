@@ -1,10 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
 
 html {
     overflow-y: scroll;
+    --color-top-color: hsl(0deg 0% 10.98%);
+    --color-gray-300: hsl(0deg 0% 28.63%);
+    --color-gray-900: hsl(0deg 0% 90%);
+    --color-blue-400: hsl(197.55deg 76.42% 51.76%)
 }
 
 body {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Mulish', sans-serif;
 }
   
+
+
+.header{
+    background-color: var(--color-top-color);
+    color: var(--color-gray-900);
+    height: 100px;
+}
