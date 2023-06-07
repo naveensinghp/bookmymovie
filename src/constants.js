@@ -1,7 +1,8 @@
 
 export const COLORS = {
     gray:{
-        '300': 'hsl(0deg 0% 28.63%)',
+        '300': '#424242',
+        '600':'#1b1b1b'
     },
     white: '#FFF',
     black: '#000',
