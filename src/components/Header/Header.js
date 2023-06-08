@@ -9,7 +9,9 @@ function Header() {
   return (
     <Wrapper>
       <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
-      <SearchBar />
+      {/* <SearchBar /> */}
+      <SearchBox></SearchBox>
+      <ChooseLocation></ChooseLocation>
     </Wrapper>
   );
 }
@@ -28,4 +30,26 @@ const Wrapper = styled.div`
     align-items: flex-start;
     border-top: 1px solid #dddddd;
     z-index: 1;
+`;
+
+const SearchBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  color: ${COLORS.white};
+  background: ${COLORS.gray[300]};
+  width: 350px;
+  height: 40px;
+  border-radius: 12px;
+`;
+
+const ChooseLocation = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  color: ${COLORS.white};
+  background: ${COLORS.gray[300]};
+  width: 300px;
+  height: 40px;
+  border-radius: 12px;
 `;
