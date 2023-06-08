@@ -10,7 +10,12 @@ function Header() {
     <Wrapper>
       <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
       {/* <SearchBar /> */}
-      <SearchBox></SearchBox>
+      {/* <SearchBox></SearchBox> */}
+      <Input 
+          id="search-movie"
+          type="text"
+          placeholder=' Search movies or theatres...'
+      />
       <ChooseLocation></ChooseLocation>
     </Wrapper>
   );
@@ -18,9 +23,19 @@ function Header() {
 
 export default Header;
 
-
+const Input = styled.input`
+    height: 40px;
+    /* border-color: rgb(210, 210, 215); */
+    border-radius: 4px;
+    border-style: solid;
+    width: 40%;
+    font-size: 1rem;
+    background: ${COLORS.gray[300]};
+    color: ${COLORS.white};
+`;
 const Wrapper = styled.div`
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     padding: 20px;
     box-shadow: 0px 2px 5px hsl(0deg 0% 0% / 0.2); 
@@ -28,7 +43,6 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    border-top: 1px solid #dddddd;
     z-index: 1;
 `;
 
@@ -38,9 +52,9 @@ const SearchBox = styled.div`
   align-items: end;
   color: ${COLORS.white};
   background: ${COLORS.gray[300]};
-  width: 350px;
+  width: 40%;
   height: 40px;
-  border-radius: 12px;
+  border-radius: 7px;
 `;
 
 const ChooseLocation = styled.div`
@@ -49,7 +63,7 @@ const ChooseLocation = styled.div`
   align-items: end;
   color: ${COLORS.white};
   background: ${COLORS.gray[300]};
-  width: 300px;
+  width: 200px;
   height: 40px;
   border-radius: 12px;
 `;
