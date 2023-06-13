@@ -1,11 +1,9 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components'
+import { random,useRandomInterval } from '../../utils';
+
 
 const DEFAULT_COLOR = 'hsl(50deg, 100%, 50%)';
-
-
-const random = (min,max) => Math.floor(Math.random() * (max - min)) + min;
-
 const generateSparkles = (color = DEFAULT_COLOR) => {
   return{
     id: String(random(10000, 99999)),
@@ -23,6 +21,7 @@ const generateSparkles = (color = DEFAULT_COLOR) => {
 function SparkleInstance({color,size,style}){
   return(
     <>
+    <Wrappers>
     <Svg
       width={size} 
       height={size}
@@ -36,7 +35,7 @@ function SparkleInstance({color,size,style}){
       /> */}
       <path d="M80 0C80 0 84.2846 41.2925 101.496 58.504C118.707 75.7154 160 80 160 80C160 80 118.707 84.2846 101.496 101.496C84.2846 118.707 80 160 80 160C80 160 75.7154 118.707 58.504 101.496C41.2925 84.2846 0 80 0 80C0 80 41.2925 75.7154 58.504 58.504C75.7154 41.2925 80 0 80 0Z" fill="#FFC700"/>
     </Svg>
-   
+    </Wrappers>
     </>
     
     
@@ -47,7 +46,7 @@ function SparkleInstance({color,size,style}){
 
 
 function Sparkle({children}){
-  
+  //console.log({children});
   const sparkle = generateSparkles();
   return(
    <Wrapper>
@@ -57,7 +56,7 @@ function Sparkle({children}){
         style={sparkle.style}
       />
       <ChildWrapper>
-        {/* <button>Generate Sparkle</button> */}
+        {/* <button onClick={generateSparkles}>Regenerate</button> */}
         {children}
       </ChildWrapper>
    </Wrapper>
@@ -65,7 +64,7 @@ function Sparkle({children}){
 }
 
 function SparklesGlow() {
-  return <Sparkle />;
+  return <Sparkle><button>Regenerate</button> </Sparkle>;
 }
 
 export default SparklesGlow;
@@ -84,6 +83,7 @@ const Wrapper = styled.span`
 `;
 
 
+
 const sparkleAnimation = keyframes`
 0% {
   transform: scale(0) rotate(0deg);
@@ -96,9 +96,39 @@ const sparkleAnimation = keyframes`
 }
 `;
 
+const growAndShrink = keyframes`
+0% {
+  transform: scale(0);
+}
+50% {
+  transform: scale(1);
+}
+100% {
+  transform: scale(0);
+}
+`;
+
+const spin = keyframes`
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(180deg);
+}
+`;
+
+const Wrappers = styled.div`
+  position: absolute;
+  pointer-events: none;
+  animation: ${growAndShrink} 600ms ease-in-out forwards;
+`;
+
+
 const Svg = styled.svg`
-position: absolute;
+/* position: absolute;
 animation: ${sparkleAnimation} 600ms forwards;
 pointer-events: none;
-z-index: 2;`;
+z-index: 2; */
+animation: ${spin} 600ms linear forwards;
+`;
 

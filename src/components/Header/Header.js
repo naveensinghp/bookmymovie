@@ -24,7 +24,7 @@ function Header() {
 export default Header;
 
 const Input = styled.input`
-    height: 40px;
+    height: 45px;
     /* border-color: rgb(210, 210, 215); */
     border-radius: 4px;
     border-style: solid;
