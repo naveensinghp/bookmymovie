@@ -12,7 +12,9 @@ body {
     font-family: 'Mulish', sans-serif;
 }
   
-
+input:-moz-placeholder{
+    color: red;
+}
 
 .header{
     background-color: var(--color-top-color);
