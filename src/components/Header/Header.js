@@ -3,31 +3,40 @@ import styled from 'styled-components';
 import { COLORS } from '../../constants';
 import SearchBar from '../SearchBar/SearchBar';
 import { Icon } from 'react-icons-kit'
-
 import { home } from 'react-icons-kit/icomoon/home'
 
-
-
+import {search} from 'react-icons-kit/fa/search'
+import {ic_mic_outline} from 'react-icons-kit/md/ic_mic_outline'
+import {ic_menu_outline} from 'react-icons-kit/md/ic_menu_outline'
 function Header() {
   return (
     <Wrapper>
       <Logo>
-        <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
+        <img src="assets/logo.png" alt="bookmymovielogo" width={170}/>
       </Logo>
-      <Icon style={{marginLeft: "1rem", position: "absolute"}} size="1.5em" icon={home} />
+      <Icon style={{marginLeft: "1rem", color: 'red'}} size="1.5em" icon={search} />
+
+      <Icon style={{marginLeft: "1rem", color: 'red'}} size="1.5em" icon={ic_mic_outline} />
       <Input 
           id="search-movie"
           type="text"
-          placeholder='&#xF002;'
-          //font-family:Arial, FontAwesome
-          style={{fontFamily: 'Arial'}}
+          placeholder=' Search Movies or Theatres;'
       />
       <ChooseLocation></ChooseLocation>
+      <MenuIcon>
+        <Icon size="2em" icon={ic_menu_outline} />
+      </MenuIcon>
     </Wrapper>
   );
 }
 
 export default Header;
+
+
+const MenuIcon = styled.div`
+  color: ${COLORS.blue};
+`;
+
 
 const Logo = styled.div`
   /* margin-top: 10px; */
