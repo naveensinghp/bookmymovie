@@ -4,27 +4,31 @@ import { COLORS } from '../../constants';
 import SearchBar from '../SearchBar/SearchBar';
 import { Icon } from 'react-icons-kit'
 import { home } from 'react-icons-kit/icomoon/home'
-
 import {search} from 'react-icons-kit/fa/search'
 import {ic_mic_outline} from 'react-icons-kit/md/ic_mic_outline'
 import {ic_menu_outline} from 'react-icons-kit/md/ic_menu_outline'
+import {iosMoon} from 'react-icons-kit/ionicons/iosMoon'
+
 function Header() {
   return (
     <Wrapper>
       <Logo>
         <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
       </Logo>
-      <Icon style={{marginLeft: "1rem", color: 'red'}} size="1.5em" icon={search} />
-
-      <Icon style={{marginLeft: "1rem", color: 'red'}} size="1.5em" icon={ic_mic_outline} />
-      <Input 
-          id="search-movie"
-          type="text"
-          placeholder=' Search Movies or Theatres;'
-      />
-      <ChooseLocation></ChooseLocation>
+      {/* <Icon style={{marginLeft: "1rem", color: 'red'}} size="1.5em" icon={search} />
+      <Icon style={{marginLeft: "1rem", color: 'red'}} size="1.5em" icon={ic_mic_outline} /> */}
+      <div style={{background: 'hotpink',width: '50%',display: 'flex',flexDirection: 'row'}}>
+        <Input 
+            id="search-movie"
+            type="text"
+            placeholder="&#xF002; search users"
+        />
+        <ChooseLocation>
+        </ChooseLocation>
+      </div>
       <MenuIcon>
         <Icon size="2em" icon={ic_menu_outline} />
+        <Icon size="3em" icon={iosMoon} />
       </MenuIcon>
     </Wrapper>
   );
@@ -47,7 +51,7 @@ const Input = styled.input`
     border-color: rgb(210, 210, 215);
     border-radius: 4px;
     border-style: solid;
-    width: 40%;
+    width: 100%;
     font-size: 1rem;
     background: ${COLORS.gray[300]};
     color: ${COLORS.white};
@@ -57,12 +61,11 @@ const Wrapper = styled.div`
     width: 100%;
     top: 0;
     padding: 20px;
-    /* box-shadow: 0px 2px 5px hsl(0deg 0% 0% / 0.2);  */
+    box-shadow: 0px 2px 5px hsl(0deg 0% 0% / 0.2); 
     background: ${COLORS.gray[600]};
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    z-index: 1;
 `;
 
 const SearchBox = styled.div`
