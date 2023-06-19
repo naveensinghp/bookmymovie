@@ -12,7 +12,7 @@ function Header() {
   return (
     <Wrapper>
       <Logo>
-        <img src="assets/logo.png" alt="bookmymovielogo" width={170}/>
+        <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
       </Logo>
       <Icon style={{marginLeft: "1rem", color: 'red'}} size="1.5em" icon={search} />
 
