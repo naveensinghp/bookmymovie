@@ -8,6 +8,7 @@ import {search} from 'react-icons-kit/fa/search'
 import {ic_mic_outline} from 'react-icons-kit/md/ic_mic_outline'
 import {ic_menu_outline} from 'react-icons-kit/md/ic_menu_outline'
 import {iosMoon} from 'react-icons-kit/ionicons/iosMoon'
+import {thMenu} from 'react-icons-kit/typicons/thMenu'
 
 function Header() {
   return (
@@ -15,9 +16,10 @@ function Header() {
       <Logo>
         <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
       </Logo>
-      {/* <Icon style={{marginLeft: "1rem", color: 'red'}} size="1.5em" icon={search} />
+      {/* 
       <Icon style={{marginLeft: "1rem", color: 'red'}} size="1.5em" icon={ic_mic_outline} /> */}
-      <div style={{background: 'hotpink',width: '50%',display: 'flex',flexDirection: 'row'}}>
+      <div style={{width: '50%',display: 'flex',flexDirection: 'row'}}>
+      <Icon style={{marginLeft: "1rem", color: 'white'}} size="1.5em" icon={search} />
         <Input 
             id="search-movie"
             type="text"
@@ -27,7 +29,7 @@ function Header() {
         </ChooseLocation>
       </div>
       <MenuIcon>
-        <Icon size="2em" icon={ic_menu_outline} />
+        <Icon size="2em" icon={thMenu} />
         <Icon size="3em" icon={iosMoon} />
       </MenuIcon>
     </Wrapper>
@@ -37,7 +39,13 @@ function Header() {
 export default Header;
 
 
+const Dark = styled.div`
+  cursor: pointer;
+`;
+
 const MenuIcon = styled.div`
+   display: flex;
+   cursor: pointer;
   color: ${COLORS.blue};
 `;
 
@@ -48,7 +56,7 @@ const Logo = styled.div`
 
 const Input = styled.input`
     height: 45px;
-    border-color: rgb(210, 210, 215);
+    border-color: rgb(28 28 28);
     border-radius: 4px;
     border-style: solid;
     width: 100%;
@@ -85,7 +93,7 @@ const ChooseLocation = styled.div`
   align-items: end;
   color: ${COLORS.white};
   background: ${COLORS.gray[300]};
-  width: 200px;
+  width: 350px;
   height: 40px;
   border-radius: 12px;
 `;
