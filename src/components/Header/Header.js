@@ -29,8 +29,8 @@ function Header() {
         </ChooseLocation>
       </div>
       <MenuIcon>
-        <Icon size="2em" icon={thMenu} />
-        <Icon size="3em" icon={iosMoon} />
+        <Icon  size={32} icon={thMenu} />
+        <Icon size={42} icon={iosMoon} />
       </MenuIcon>
     </Wrapper>
   );
