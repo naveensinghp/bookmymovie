@@ -9,8 +9,14 @@ import {ic_mic_outline} from 'react-icons-kit/md/ic_mic_outline'
 import {ic_menu_outline} from 'react-icons-kit/md/ic_menu_outline'
 import {iosMoon} from 'react-icons-kit/ionicons/iosMoon'
 import {thMenu} from 'react-icons-kit/typicons/thMenu'
+import {adjustBrightness} from 'react-icons-kit/typicons/adjustBrightness'
 
 function Header() {
+  const[isOpened,setIsOpened] = React.useState(false);
+  function toggle(){
+    setIsOpened(isOpened => !isOpened)
+    console.log(isOpened);
+  }
   return (
     <Wrapper>
       <Logo>
@@ -23,14 +29,18 @@ function Header() {
         <Input 
             id="search-movie"
             type="text"
-            placeholder="&#xF002; search users"
+            placeholder="&#xF002; search movies or theatres"
         />
         <ChooseLocation>
         </ChooseLocation>
       </div>
       <MenuIcon>
         <Icon  size={32} icon={thMenu} />
-        <Icon size={42} icon={iosMoon} />
+        {
+          isOpened ? 
+            <Icon size={42} icon={iosMoon} onClick={toggle} /> 
+          : <Icon size={32} icon={adjustBrightness} onClick={toggle} />
+        }
       </MenuIcon>
     </Wrapper>
   );
@@ -44,7 +54,6 @@ const Dark = styled.div`
 `;
 
 const MenuIcon = styled.div`
-   display: flex;
    cursor: pointer;
   color: ${COLORS.blue};
 `;
