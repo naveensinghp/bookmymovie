@@ -15,9 +15,9 @@ function Header() {
   const[isOpened,setIsOpened] = React.useState(false);
   function toggle(){
     setIsOpened(isOpened => !isOpened)
-    console.log(isOpened);
   }
   return (
+    
     <Wrapper>
       <Logo>
         <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
@@ -35,19 +35,32 @@ function Header() {
         </ChooseLocation>
       </div>
       <MenuIcon>
-        <Icon  size={32} icon={thMenu} />
+        {/* <Icon  size={32} icon={thMenu} /> */}
         {
           isOpened ? 
             <Icon size={42} icon={iosMoon} onClick={toggle} /> 
           : <Icon size={32} icon={adjustBrightness} onClick={toggle} />
         }
       </MenuIcon>
+      <Test>
+      <Icon style={{color: 'black'}} size="1.5em" icon={search} />
+        <input placeholder='type to search' />
+      </Test>
     </Wrapper>
   );
 }
 
 export default Header;
 
+const Test = styled.div`
+  background-color: white;
+  width: 40%;
+  border-radius: 10px;
+  height: 2.5rem;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+`;
 
 const Dark = styled.div`
   cursor: pointer;
@@ -55,7 +68,7 @@ const Dark = styled.div`
 
 const MenuIcon = styled.div`
    cursor: pointer;
-  color: ${COLORS.blue};
+   color: ${COLORS.blue};
 `;
 
 
@@ -65,6 +78,7 @@ const Logo = styled.div`
 
 const Input = styled.input`
     height: 45px;
+    outline: 0px;
     border-color: rgb(28 28 28);
     border-radius: 4px;
     border-style: solid;
