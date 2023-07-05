@@ -22,35 +22,35 @@ function Header() {
       <Logo>
         <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
       </Logo>
-      {/* 
-      <Icon style={{marginLeft: "1rem", color: 'red'}} size="1.5em" icon={ic_mic_outline} /> */}
-      <div style={{width: '50%',display: 'flex',flexDirection: 'row'}}>
-      <Icon style={{marginLeft: "1rem", color: 'white'}} size="1.5em" icon={search} />
+      <SearchMovies>
+        <Icon style={{color: 'white'}} size="0.9em" icon={search} />
         <Input 
             id="search-movie"
             type="text"
-            placeholder="&#xF002; search movies or theatres"
+            placeholder="Search movies or theatres"
         />
-        <ChooseLocation>
-        </ChooseLocation>
-      </div>
+         <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={ic_mic_outline} /> 
+      </SearchMovies>
       <MenuIcon>
-        {/* <Icon  size={32} icon={thMenu} /> */}
-        {
-          isOpened ? 
-            <Icon size={42} icon={iosMoon} onClick={toggle} /> 
+        { isOpened ? <Icon size={42} icon={iosMoon} onClick={toggle} /> 
           : <Icon size={32} icon={adjustBrightness} onClick={toggle} />
         }
       </MenuIcon>
-      <Test>
-      <Icon style={{color: 'black'}} size="1.5em" icon={search} />
-        <input placeholder='type to search' />
-      </Test>
     </Wrapper>
   );
 }
 
 export default Header;
+
+const SearchMovies = styled.div`
+  background: ${COLORS.gray[300]};
+  width: 40%;
+  border-radius: 10px;
+  height: 2.5rem;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+`;
 
 const Test = styled.div`
   background-color: white;
@@ -77,11 +77,8 @@ const Logo = styled.div`
 `;
 
 const Input = styled.input`
-    height: 45px;
     outline: 0px;
     border-color: rgb(28 28 28);
-    border-radius: 4px;
-    border-style: solid;
     width: 100%;
     font-size: 1rem;
     background: ${COLORS.gray[300]};
