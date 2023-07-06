@@ -25,12 +25,15 @@ function Header() {
       <SearchMovies>
         <Icon style={{color: 'white'}} size="0.9em" icon={search} />
         <Input 
-            id="search-movie"
+            id=" search-movie"
             type="text"
             placeholder="Search movies or theatres"
         />
          <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={ic_mic_outline} /> 
       </SearchMovies>
+      <ChooseLocation>
+          Coimbatore
+      </ChooseLocation>
       <MenuIcon>
         { isOpened ? <Icon size={42} icon={iosMoon} onClick={toggle} /> 
           : <Icon size={32} icon={adjustBrightness} onClick={toggle} />
