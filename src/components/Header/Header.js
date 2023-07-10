@@ -10,6 +10,8 @@ import {ic_menu_outline} from 'react-icons-kit/md/ic_menu_outline'
 import {iosMoon} from 'react-icons-kit/ionicons/iosMoon'
 import {thMenu} from 'react-icons-kit/typicons/thMenu'
 import {adjustBrightness} from 'react-icons-kit/typicons/adjustBrightness'
+import {arrowSortedDown} from 'react-icons-kit/typicons/arrowSortedDown'
+import {locationArrow} from 'react-icons-kit/typicons/locationArrow'
 
 function Header() {
   const[isOpened,setIsOpened] = React.useState(false);
@@ -22,7 +24,7 @@ function Header() {
       <Logo>
         <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
       </Logo>
-      <div style={{background: 'hotpink',display:'flex',justifyContent: 'space-around',alignItems: 'center',paddingLeft: '7%'}}>
+      <div style={{display:'flex',justifyContent: 'space-around',alignItems: 'center',paddingLeft: '5%',width:'70%',gap: '20px'}}>
           <SearchMovies>
             <Icon style={{color: 'white'}} size="0.9em" icon={search} />
             <Input 
@@ -32,22 +34,27 @@ function Header() {
             />
             <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={ic_mic_outline} /> 
           </SearchMovies>
-          <Select>
+          {/* <Select>
             <option value="">- Select Bank -</option>
             <option value="coim">Coimbatore</option>
-          </Select>
+          </Select> */}
+        <ChooseLocation>
+           <Icon style={{color: 'white'}} size="1.5em" icon={locationArrow} />
+           <Input 
+                readOnly={true}
+                id="search-movie"
+                type="text"
+                placeholder="Coimbatore"
+            />
+                        <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={arrowSortedDown} /> 
+
+        </ChooseLocation>
       </div>
-      <MenuIcon>
+      {/* <MenuIcon>
           { isOpened ? <Icon size={42} icon={iosMoon} onClick={toggle} /> 
             : <Icon size={32} icon={adjustBrightness} onClick={toggle} />
           }
-        </MenuIcon>
-      
-      {/* <ChooseLocation>
-          Coimbatore
-      </ChooseLocation> */}
-      
-      
+      </MenuIcon> */}
     </Wrapper>
   );
 }
@@ -56,7 +63,7 @@ export default Header;
 
 const Select = styled.select`
     background: ${COLORS.gray[300]};
-    /* width: 20%; */
+    width: 27%;
     padding: 0 15px;
     color: white;
     border-color: ${COLORS.gray[300]};
@@ -67,12 +74,12 @@ const Select = styled.select`
 `;
 const SearchMovies = styled.div`
   background: ${COLORS.gray[300]};
-  width: 50%;
+  width: 70%;
   border-radius: 5px;
   height: 2.5rem;
   padding: 0 15px;
   display: flex;
-  align-items: baseline;
+  align-items: center;
 `;
 
 const Test = styled.div`
@@ -106,6 +113,7 @@ const Input = styled.input`
     font-size: 1rem;
     background: ${COLORS.gray[300]};
     color: ${COLORS.white};
+    cursor: pointer;
 `;
 const Wrapper = styled.div`
     position: fixed;
@@ -134,10 +142,20 @@ const SearchBox = styled.div`
 const ChooseLocation = styled.div`
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
   color: ${COLORS.white};
   background: ${COLORS.gray[300]};
   width: 300px;
   height: 40px;
-  border-radius: 12px;
+  border-radius: 7px;
+  padding: 0 15px;
+  
 `;
+
+// background: ${COLORS.gray[300]};
+//   width: 70%;
+//   border-radius: 5px;
+//   height: 2.5rem;
+//   padding: 0 15px;
+//   display: flex;
+//   align-items: center;
