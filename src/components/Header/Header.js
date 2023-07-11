@@ -19,12 +19,11 @@ function Header() {
     setIsOpened(isOpened => !isOpened)
   }
   return (
-    
     <Wrapper>
       <Logo>
         <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
       </Logo>
-      <div style={{display:'flex',justifyContent: 'space-around',alignItems: 'center',paddingLeft: '5%',width:'70%',gap: '20px'}}>
+      <div style={{display:'flex',justifyContent: 'space-around',alignItems: 'baseline',width:'70%',gap: '20px',flexDirection: 'column'}}>
           <SearchMovies>
             <Icon style={{color: 'white'}} size="0.9em" icon={search} />
             <Input 
@@ -32,13 +31,26 @@ function Header() {
                 type="text"
                 placeholder="Search movies or theatres"
             />
-            <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={ic_mic_outline} /> 
+            <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={ic_mic_outline} />
           </SearchMovies>
+          <SubMenu>
+                <Icon style={{color: 'white',cursor: 'pointer'}} size="1em" icon={home} />
+                <div>IMAX</div>
+                <div>4DX</div>
+                <div>Playhouse</div>
+                <div>GOLD</div>
+                <div>P[XL]</div>
+                <div>ONYX</div>
+          </SubMenu>
+          <div style={{color:'white'}}>
+            Private Screening
+          </div>
           {/* <Select>
             <option value="">- Select Bank -</option>
             <option value="coim">Coimbatore</option>
           </Select> */}
-        <ChooseLocation>
+      </div>
+      {/* <ChooseLocation>
            <Icon style={{color: 'white'}} size="1.5em" icon={locationArrow} />
            <Input 
                 readOnly={true}
@@ -48,18 +60,29 @@ function Header() {
             />
                         <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={arrowSortedDown} /> 
 
-        </ChooseLocation>
-      </div>
-      {/* <MenuIcon>
+        </ChooseLocation> */}
+      <MenuIcon>
           { isOpened ? <Icon size={42} icon={iosMoon} onClick={toggle} /> 
             : <Icon size={32} icon={adjustBrightness} onClick={toggle} />
           }
-      </MenuIcon> */}
+      </MenuIcon>
     </Wrapper>
   );
 }
 
 export default Header;
+
+const SubMenu = styled.div`
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  gap: 20px;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  &:hover {
+    color: ${COLORS.blue};
+  }
+`;
 
 const Select = styled.select`
     background: ${COLORS.gray[300]};
@@ -97,6 +120,9 @@ const Dark = styled.div`
 `;
 
 const MenuIcon = styled.div`
+   display: flex;
+   justify-content: center;
+   align-items: center;
    cursor: pointer;
    color: ${COLORS.blue};
 `;
@@ -113,7 +139,6 @@ const Input = styled.input`
     font-size: 1rem;
     background: ${COLORS.gray[300]};
     color: ${COLORS.white};
-    cursor: pointer;
 `;
 const Wrapper = styled.div`
     position: fixed;
@@ -123,9 +148,8 @@ const Wrapper = styled.div`
     box-shadow: 0px 2px 5px hsl(0deg 0% 0% / 0.2); 
     background: ${COLORS.gray[600]};
     display: flex;
-    /* display: flex;
     justify-content: space-between;
-    align-items: flex-start; */
+    /* align-items: flex-start; */
 `;
 
 const SearchBox = styled.div`
