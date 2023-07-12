@@ -35,15 +35,24 @@ function Header() {
           </SearchMovies>
           <SubMenu>
                 <Icon style={{color: 'white',cursor: 'pointer'}} size="1em" icon={home} />
-                <div>IMAX</div>
-                <div>4DX</div>
-                <div>Playhouse</div>
-                <div>GOLD</div>
-                <div>P[XL]</div>
-                <div>ONYX</div>
+                <ul style={{listStyleType: 'none',display: 'flex',gap: '20px'}}>
+                  <li>IMAX</li>
+                  <li>4DX</li>
+                  <li>Playhouse</li>
+                  <li>GOLD</li>
+                  <li>P[XL]</li>
+                  <li>ONYX</li>
+                </ul>
           </SubMenu>
           <div style={{color:'white'}}>
-            Private Screening
+            <ul>
+              <li>Private Screening</li>
+              <li>Cinemas</li>
+              <li>Offers</li>
+              <li>Advertise</li>
+              <li>Gift Card</li>
+              <li>Bulk Booking</li>
+            </ul>
           </div>
           {/* <Select>
             <option value="">- Select Bank -</option>
