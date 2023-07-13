@@ -44,7 +44,15 @@ function Header() {
                   <li>ONYX</li>
                 </ul>
           </SubMenu>
-          <div style={{color:'white'}}>
+          <SubMenuTwo>
+              <li>Private Screening</li>
+              <li>Cinemas</li>
+              <li>Offers</li>
+              <li>Advertise</li>
+              <li>Gift Card</li>
+              <li>Bulk Booking</li>
+          </SubMenuTwo>
+          {/* <div style={{color:'white'}}>
             <ul>
               <li>Private Screening</li>
               <li>Cinemas</li>
@@ -53,7 +61,7 @@ function Header() {
               <li>Gift Card</li>
               <li>Bulk Booking</li>
             </ul>
-          </div>
+          </div> */}
           {/* <Select>
             <option value="">- Select Bank -</option>
             <option value="coim">Coimbatore</option>
@@ -81,6 +89,18 @@ function Header() {
 
 export default Header;
 
+const SubMenuTwo = styled.ul`
+  list-style-type: none;
+  color: white;
+  display: flex;
+  font-size: 14px;
+  gap: 20px;
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  &:hover {
+    color: ${COLORS.blue};
+  }
+`;
 const SubMenu = styled.div`
   cursor: pointer;
   display: flex;
