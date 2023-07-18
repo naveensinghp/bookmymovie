@@ -32,6 +32,19 @@ function App() {
   // )
 }
 
+function LayoutAnimation(){
+  const [isMaxiMized,setisMaximized] = React.useState(false);
+  return(
+    <>
+      <motion.div 
+        layout={true}
+        className={`wrapper ${isMaxiMized ? 'maximized' : ""} `}>
+        <button onClick={() => setisMaximized(!isMaxiMized)}></button>
+      </motion.div>
+    </>
+  );
+}
+
 
 const Center = styled.div`
   display: flex;
