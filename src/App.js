@@ -46,6 +46,20 @@ function LayoutAnimation(){
 }
 
 
+
+
+const ITEMS = [
+  {
+    id: '001',
+    label: 'hello',
+  },
+  {
+    id: '002',
+    label: 'world'
+  }
+]; 
+
+
 const Center = styled.div`
   display: flex;
   flex-direction: column;

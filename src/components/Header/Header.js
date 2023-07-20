@@ -15,16 +15,13 @@ import {locationArrow} from 'react-icons-kit/typicons/locationArrow'
 
 function Header() {
   const[isOpened,setIsOpened] = React.useState(false);
-  function toggle(){
-    setIsOpened(isOpened => !isOpened)
-  }
   return (
     <Wrapper>
       <Logo>
         <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
       </Logo>
-      <div style={{display:'flex',justifyContent: 'space-around',alignItems: 'baseline',width:'70%',gap: '20px',flexDirection: 'column'}}>
-          <SearchMovies>
+      <SearchSection>
+        <SearchMovies>
             <Icon style={{color: 'white'}} size="0.9em" icon={search} />
             <Input 
                 id=" search-movie"
@@ -32,62 +29,103 @@ function Header() {
                 placeholder="Search movies or theatres"
             />
             <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={ic_mic_outline} />
-          </SearchMovies>
-          <SubMenu>
+        </SearchMovies>
+        <SubMenu>
                 <Icon style={{color: 'white',cursor: 'pointer'}} size="1em" icon={home} />
-                <ul style={{listStyleType: 'none',display: 'flex',gap: '20px'}}>
-                  <li>IMAX</li>
-                  <li>4DX</li>
-                  <li>Playhouse</li>
-                  <li>GOLD</li>
-                  <li>P[XL]</li>
-                  <li>ONYX</li>
-                </ul>
+                <div >
+                  <ul className="threemenu" style={{listStyleType: 'none',display: 'flex',gap: '20px'}}>
+                    <li>IMAX</li>
+                    <li>4DX</li>
+                    <li>Playhouse</li>
+                    <li>GOLD</li>
+                    <li>P[XL]</li>
+                    <li>ONYX</li>
+                  </ul>
+                </div>
+                
           </SubMenu>
-          <SubMenuTwo>
-              <li>Private Screening</li>
-              <li>Cinemas</li>
-              <li>Offers</li>
-              <li>Advertise</li>
-              <li>Gift Card</li>
-              <li>Bulk Booking</li>
-          </SubMenuTwo>
-          {/* <div style={{color:'white'}}>
-            <ul>
-              <li>Private Screening</li>
-              <li>Cinemas</li>
-              <li>Offers</li>
-              <li>Advertise</li>
-              <li>Gift Card</li>
-              <li>Bulk Booking</li>
-            </ul>
-          </div> */}
-          {/* <Select>
-            <option value="">- Select Bank -</option>
-            <option value="coim">Coimbatore</option>
-          </Select> */}
-      </div>
-      {/* <ChooseLocation>
-           <Icon style={{color: 'white'}} size="1.5em" icon={locationArrow} />
-           <Input 
+        <ChooseLocation>
+            <Icon style={{color: 'white'}} size="1.5em" icon={locationArrow} />
+            <Input 
                 readOnly={true}
                 id="search-movie"
                 type="text"
                 placeholder="Coimbatore"
             />
-                        <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={arrowSortedDown} /> 
-
-        </ChooseLocation> */}
-      <MenuIcon>
-          { isOpened ? <Icon size={42} icon={iosMoon} onClick={toggle} /> 
-            : <Icon size={32} icon={adjustBrightness} onClick={toggle} />
-          }
-      </MenuIcon>
+            <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={arrowSortedDown} /> 
+        </ChooseLocation>
+      </SearchSection>
+      <EndMenu>
+          <MenuIcon>
+              { isOpened ? <Icon size={42} icon={iosMoon} onClick={() => setIsOpened(!isOpened)} /> 
+                : <Icon size={32} icon={adjustBrightness} onClick={() => setIsOpened(!isOpened)} />
+              }
+              <Icon size={32} icon={thMenu} />
+          </MenuIcon>
+      </EndMenu>
     </Wrapper>
+    // <Logo>
+    // <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
+    // </Logo>
+    // <div style={{display:'flex',justifyContent: 'space-around',alignItems: 'baseline',width:'70%',gap: '20px',flexDirection: 'column'}}>
+    //   <SearchMovies>
+    //     <Icon style={{color: 'white'}} size="0.9em" icon={search} />
+    //     <Input 
+    //         id=" search-movie"
+    //         type="text"
+    //         placeholder="Search movies or theatres"
+    //     />
+    //     <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={ic_mic_outline} />
+    //   </SearchMovies>
+    //   <SubMenu>
+    //         <Icon style={{color: 'white',cursor: 'pointer'}} size="1em" icon={home} />
+    //         <ul style={{listStyleType: 'none',display: 'flex',gap: '20px'}}>
+    //           <li>IMAX</li>
+    //           <li>4DX</li>
+    //           <li>Playhouse</li>
+    //           <li>GOLD</li>
+    //           <li>P[XL]</li>
+    //           <li>ONYX</li>
+    //         </ul>
+    //   </SubMenu>
+    //   <SubMenuTwo>
+    //       <li>Private Screening</li>
+    //       <li>Cinemas</li>
+    //       <li>Offers</li>
+    //       <li>Advertise</li>
+    //       <li>Gift Card</li>
+    //       <li>Bulk Booking</li>
+    //   </SubMenuTwo>
+    // </div>
+    // <ChooseLocation>
+    //    <Icon style={{color: 'white'}} size="1.5em" icon={locationArrow} />
+    //    <Input 
+    //         readOnly={true}
+    //         id="search-movie"
+    //         type="text"
+    //         placeholder="Coimbatore"
+    //     />
+    //     <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={arrowSortedDown} /> 
+    // </ChooseLocation>
+    // <MenuIcon>
+    //   { isOpened ? <Icon size={42} icon={iosMoon} onClick={() => setIsOpened(!isOpened)} /> 
+    //     : <Icon size={32} icon={adjustBrightness} onClick={() => setIsOpened(!isOpened)} />
+    //   }
+    // </MenuIcon>
   );
 }
 
 export default Header;
+
+const EndMenu = styled.div`
+
+`;
+
+const SearchSection = styled.div`
+  background: hotpink;
+  width: 50%;
+`;
+
 
 const SubMenuTwo = styled.ul`
   list-style-type: none;
@@ -106,6 +144,7 @@ const SubMenu = styled.div`
   display: flex;
   font-size: 14px;
   gap: 20px;
+  /* background: yellow; */
   color: white;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   &:hover {
@@ -126,7 +165,7 @@ const Select = styled.select`
 `;
 const SearchMovies = styled.div`
   background: ${COLORS.gray[300]};
-  width: 70%;
+
   border-radius: 5px;
   height: 2.5rem;
   padding: 0 15px;
