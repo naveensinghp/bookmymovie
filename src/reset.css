@@ -64,6 +64,11 @@ input:focus{
   outline: none;
 }
 
-.threemenu li a:hover{
-  background: 'red';
+.threemenu ul{
+  color: white;
+  cursor: pointer;
+}
+
+.threemenu li:hover{
+  color: hotpink;
 }

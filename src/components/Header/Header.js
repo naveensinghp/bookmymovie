@@ -30,20 +30,6 @@ function Header() {
             />
             <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={ic_mic_outline} />
         </SearchMovies>
-        <SubMenu>
-                <Icon style={{color: 'white',cursor: 'pointer'}} size="1em" icon={home} />
-                <div >
-                  <ul className="threemenu" style={{listStyleType: 'none',display: 'flex',gap: '20px'}}>
-                    <li>IMAX</li>
-                    <li>4DX</li>
-                    <li>Playhouse</li>
-                    <li>GOLD</li>
-                    <li>P[XL]</li>
-                    <li>ONYX</li>
-                  </ul>
-                </div>
-                
-          </SubMenu>
         <ChooseLocation>
             <Icon style={{color: 'white'}} size="1.5em" icon={locationArrow} />
             <Input 
@@ -55,6 +41,44 @@ function Header() {
             <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={arrowSortedDown} /> 
         </ChooseLocation>
       </SearchSection>
+
+      <div>
+      <SubMenu>
+      <div className="threemenu" >
+          <ul style={{listStyleType: 'none',display: 'flex',gap: '20px'}}>
+            <li>IMAX</li>
+            <li>4DX</li>
+            <li>Playhouse</li>
+            <li>GOLD</li>
+            <li>P[XL]</li>
+            <li>ONYX</li>
+          </ul>
+        </div>
+      </SubMenu>
+      {/* <SubMenu>
+                <Icon style={{color: 'white',cursor: 'pointer'}} size="1em" icon={home} />
+                <div className="threemenu" >
+                  <ul style={{listStyleType: 'none',display: 'flex',gap: '20px'}}>
+                    <li>IMAX</li>
+                    <li>4DX</li>
+                    <li>Playhouse</li>
+                    <li>GOLD</li>
+                    <li>P[XL]</li>
+                    <li>ONYX</li>
+                  </ul>
+                </div>
+          </SubMenu>  */}
+            {/* <div className="threemenu" >
+                  <ul style={{listStyleType: 'none',display: 'flex',gap: '20px'}}>
+                    <li>IMAX</li>
+                    <li>4DX</li>
+                    <li>Playhouse</li>
+                    <li>GOLD</li>
+                    <li>P[XL]</li>
+                    <li>ONYX</li>
+                  </ul>
+                </div> */}
+      </div>
       <EndMenu>
           <MenuIcon>
               { isOpened ? <Icon size={42} icon={iosMoon} onClick={() => setIsOpened(!isOpened)} /> 
@@ -123,7 +147,10 @@ const EndMenu = styled.div`
 
 const SearchSection = styled.div`
   background: hotpink;
-  width: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
 `;
 
 
@@ -147,9 +174,6 @@ const SubMenu = styled.div`
   /* background: yellow; */
   color: white;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  &:hover {
-    color: ${COLORS.blue};
-  }
 `;
 
 const Select = styled.select`
@@ -165,7 +189,7 @@ const Select = styled.select`
 `;
 const SearchMovies = styled.div`
   background: ${COLORS.gray[300]};
-
+  width: 45%;
   border-radius: 5px;
   height: 2.5rem;
   padding: 0 15px;
