@@ -42,3 +42,21 @@ input:-moz-placeholder{
     background: hsl(50deg 100% 50%);
     background: oklch(0.9 0.25 100 / 1);
 }
+
+.wrapper {
+    width: 180px;
+    height: 180px;
+    background: hsl(161,98deg 100% 50%);
+    background: oklch(0.86 0.25 162.3);
+    color: black;
+    padding: 16px;
+    font-size: 1.5rem;
+    will-change: true;
+}
+
+.wrapper.maximized {
+    position: absolute;
+    inset: 0;
+    width: revert;
+    height: revert;
+}
