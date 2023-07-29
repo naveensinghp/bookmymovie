@@ -2,13 +2,12 @@ import React from 'react';
 
 function SubmenuRight() {
   return <div className="threemenu" >
-  <ul style={{listStyleType: 'none',display: 'flex',gap: '20px'}}>
-    <li>ffef</li>
-    <li>4DX</li>
-    <li>Playhouse</li>
-    <li>GOLD</li>
-    <li>P[XL]</li>
-    <li>ONYX</li>
+  <ul style={{listStyleType: 'none',display: 'flex',gap: '20px',fontWeight: 'bold',fontSize: '12px'}}>
+    <li>Private Screening</li>
+    <li>Cinemas Offers</li>
+    <li>Advertise</li>
+    <li>Gift Cards</li>
+    <li>Bulk Booking</li>
   </ul>
 </div>;;
 }
