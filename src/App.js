@@ -12,7 +12,7 @@ function App() {
   // return(
   //   <>
   //     <Center>
-  //       <motion.div
+  //       {/* <motion.div
   //         className="yellow ball"
   //         initial={false}
   //         transition={{
@@ -25,7 +25,8 @@ function App() {
   //         }}
   //       />
         
-  //       <button className="jbutton" onClick={() => setIsEnabled(!isEnabled)}>Toggle</button>
+  //       <button className="jbutton" onClick={() => setIsEnabled(!isEnabled)}>Toggle</button> */}
+  //       <LayoutAnimation />
   //     </Center>
       
   //   </>
@@ -38,14 +39,22 @@ function LayoutAnimation(){
     <>
       <motion.div 
         layout={true}
+        transition={SPRING}
         className={`wrapper ${isMaxiMized ? 'maximized' : ""} `}>
-        <button onClick={() => setisMaximized(!isMaxiMized)}></button>
+        <motion.p layout="position">
+          Hello World
+        </motion.p>
       </motion.div>
+      <button onClick={() => setisMaximized(!isMaxiMized)}>Toggle {isMaxiMized}</button>
     </>
   );
 }
 
-
+const SPRING = {
+  type: 'spring',
+  stiffness: 200,
+  damping: 40
+}
 
 
 const ITEMS = [
