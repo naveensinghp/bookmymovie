@@ -3,16 +3,63 @@ import Header from "./components/Header/Header";
 import React from 'react';
 import styled from 'styled-components';
 
+function Button({children}){
+
+  const element = (
+    <div>
+       Welcome Home
+    </div>
+  );
+  
+  console.log(element);
+  return(
+    <button
+      style={{
+        border: '2px solid',
+        color: 'green',
+        borderColor: 'green',
+        background: 'white',
+        borderRadius: '4px',
+        padding: '16px',
+        margin: '8',
+      }}
+    >
+      {children}
+    </button>
+  );
+}
+
 function App() {
   const [isEnabled,setIsEnabled] = React.useState(true);
+
   return (
-   <Header>
-   </Header>
+    <>
+      <Button>
+        Cancelff
+      </Button>
+      <button
+      style={{
+        border: '2px solid',
+        color: 'red',
+        borderColor: 'red',
+        borderRadius: '4px',
+        padding: '16px',
+        margin: '8',
+      }}
+    >
+      Confirm
+    </button>
+    </>
+
   );
+  // return (
+  //  <Header>
+  //  </Header>
+  // );
   // return(
   //   <>
   //     <Center>
-  //       {/* <motion.div
+  //       <motion.div
   //         className="yellow ball"
   //         initial={false}
   //         transition={{
@@ -25,8 +72,8 @@ function App() {
   //         }}
   //       />
         
-  //       <button className="jbutton" onClick={() => setIsEnabled(!isEnabled)}>Toggle</button> */}
-  //       <LayoutAnimation />
+  //       <button className="jbutton" onClick={() => setIsEnabled(!isEnabled)}>Toggle</button>
+  //       {/* <LayoutAnimation /> */}
   //     </Center>
       
   //   </>
