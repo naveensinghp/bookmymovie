@@ -10,6 +10,9 @@ export const COLORS = {
 }
 
 
+export const LOGO = {
+    companylogo: `assets/logo.png`
+}
 
 export const BREAKPOINT_SIZES = {
     xs: 320,
