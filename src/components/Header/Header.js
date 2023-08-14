@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { COLORS } from '../../constants';
+import { COLORS,LOGO } from '../../constants';
 import SearchBar from '../SearchBar/SearchBar';
 import { Icon } from 'react-icons-kit'
 import { home } from 'react-icons-kit/icomoon/home'
@@ -23,59 +23,74 @@ function Header() {
         <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
       </Logo>
       <SearchSection>
+        <div style={{'display': 'flex','gap': '20px','background':'hotpink','width': '100%'}}>
         <SearchMovies>
-            <Icon style={{color: 'white'}} size="0.9em" icon={search} />
-            <Input 
+           <Icon style={{color: 'white'}} size="0.9em" icon={search} />
+           <Input 
                 id=" search-movie"
                 type="text"
                 placeholder="Search movies or theatres"
             />
-            <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={ic_mic_outline} />
+          <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={ic_mic_outline} />
         </SearchMovies>
-        <SubmenuLeft />
+         <Select
+        label="sort"
+        value="test">
+          <option value="newst">Newest Release</option>
+          <option value="game">Game Settings</option>
+          <option value="cutest">Cuted Person</option>
+        </Select>
+        </div>
+        <div style={{'width': '100%','display': 'flex'}}>
+          <SubmenuLeft />
+          <SubmenuRight />
+        </div>
+        {/* <div style={{width: '100%'}}>
+          <Select
+        label="sort"
+        value="test">
+          <option value="newst">Newest Release</option>
+          <option value="game">Game Settings</option>
+          <option value="cutest">Cuted Person</option>
+        </Select>
+        </div> */}
+        {/* <SubmenuLeft /> */}
       </SearchSection>
-      <SearchSection>
-      <ChooseLocation>
-            <Icon style={{color: 'white'}} size="1.5em" icon={locationArrow} />
-            <Input 
-                readOnly={true}
-                id="search-movie"
-                type="text"
-                placeholder="Coimbatore"
-            />
-            <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={arrowSortedDown} /> 
-        </ChooseLocation>
-        <SubmenuRight />
-      </SearchSection>
-      
-      {/* <SubMenu>
-        <SubmenuLeft />
-        <SubmenuRight />
-      </SubMenu> */}
-      <EndMenu>
-          <MenuIcon>
-              { isOpened ? <Icon size={42} icon={iosMoon} onClick={() => setIsOpened(!isOpened)} /> 
-                : <Icon size={32} icon={adjustBrightness} onClick={() => setIsOpened(!isOpened)} />
-              }
-              <Icon size={32} icon={thMenu} />
-          </MenuIcon>
-      </EndMenu>
     </Wrapper>
   );
 }
 
 export default Header;
 
-const EndMenu = styled.div``;
+const Wrapper = styled.div`
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px;
+    box-shadow: 0px 2px 5px hsl(0deg 0% 0% / 0.2); 
+    background: ${COLORS.gray[600]};
+    display: flex;
+    /* gap: 150px; */
+    /* justify-content: space-between; */
+    /* align-items: flex-start; */
+`;
+
+const Logo = styled.div`
+  /* margin-top: 10px; */
+`;
 
 const SearchSection = styled.div`
   /* background: hotpink; */
-  width: 50%;
-   display: flex;
+  width: 70%;
+  display: flex;
    flex-direction: column;
-  /* justify-content: space-evenly; */
+  justify-content: center;
   gap: 20px;
 `;
+
+const EndMenu = styled.div``;
+
+
 
 
 const SubMenuTwo = styled.ul`
@@ -145,9 +160,7 @@ const MenuIcon = styled.div`
 `;
 
 
-const Logo = styled.div`
-  /* margin-top: 10px; */
-`;
+
 
 const Input = styled.input`
     outline: 0px;
@@ -157,18 +170,7 @@ const Input = styled.input`
     background: ${COLORS.gray[300]};
     color: ${COLORS.white};
 `;
-const Wrapper = styled.div`
-    position: fixed;
-    width: 100%;
-    top: 0;
-    padding: 20px;
-    box-shadow: 0px 2px 5px hsl(0deg 0% 0% / 0.2); 
-    background: ${COLORS.gray[600]};
-    display: flex;
-    gap: 150px;
-    /* justify-content: space-between; */
-    /* align-items: flex-start; */
-`;
+
 
 const SearchBox = styled.div`
   display: flex;

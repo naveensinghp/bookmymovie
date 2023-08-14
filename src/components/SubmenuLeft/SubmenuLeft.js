@@ -28,7 +28,7 @@ export default SubmenuLeft;
 
 
 const Wrapper = styled.div`
-  background: hotpink;
+  /* background: hotpink; */
 `;
 
 
