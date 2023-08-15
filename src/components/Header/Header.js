@@ -17,6 +17,9 @@ import SubmenuRight from '../SubmenuRight/SubmenuRight';
 
 function Header() {
   const[isOpened,setIsOpened] = React.useState(false);
+  function toggle(){
+    setIsOpened(isOpened => !isOpened)
+  }
   return (
     <Wrapper>
       <Logo>
@@ -36,9 +39,9 @@ function Header() {
          <Select
         label="sort"
         value="test">
-          <option value="newst">Newest Release</option>
-          <option value="game">Game Settings</option>
-          <option value="cutest">Cuted Person</option>
+          <option value="newst">Coimbatore</option>
+          <option value="game">Bangalore</option>
+          <option value="cutest">Chennai</option>
         </Select>
         </div>
         <div style={{'width': '100%','display': 'flex'}}>
@@ -56,6 +59,19 @@ function Header() {
         </div> */}
         {/* <SubmenuLeft /> */}
       </SearchSection>
+      
+      <div>
+        <div className="darkmode" style={{'cursor': 'pointer'}}>
+
+        {
+          isOpened ? 
+            <Icon style={{color: 'white'}} size={42} icon={iosMoon} onClick={toggle} /> 
+          : <Icon style={{color: 'white'}} size={32} icon={adjustBrightness} onClick={toggle} />
+        }
+    
+        </div>
+        <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={ic_menu_outline} />
+      </div>
     </Wrapper>
   );
 }
