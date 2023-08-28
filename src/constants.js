@@ -42,10 +42,23 @@ export const LIGHTCOLORS = {
     '--text-color': 'hsl(0deg 0% 5%)',
     '--color-primary-100': 'hsl(240deg 100% 90%)',
     '--color-primary-300': 'hsl(242deg 100% 70%)',
+    '--color-decorative-500': 'hsl(50deg 100% 70%)',
+    '--color-backdrop': 'hsl(104, 76%, 52%)',
+    '--color-gray-1000': 'black',
 }
 
-export const DARKCOLOR = {
+export const DARKCOLORS = {
     '--text-color': 'hsl(0deg 0% 100%)',
+    '--color-decorative-500': 'hsl(256deg 40% 30%)',
+    '--color-backdrop': 'hsl(104, 76%, 52%)',
+    '--color-gray-1000': 'white',
 }
 
+
+// Light Mode 
 LIGHTCOLORS['--color-primary'] = LIGHTCOLORS['--color-primary-500'];
+LIGHTCOLORS['--color-backdrop'] = LIGHTCOLORS['--color-decorative-500'];
+
+
+// Dark Mode 
+DARKCOLORS['--color-backdrop'] = DARKCOLORS['--color-decorative-500'];
