@@ -5,13 +5,18 @@ import styled from 'styled-components';
 
 
 function SubmenuLeft() {
+  const[isHome,setHome] = React.useState(true);
   return(
     <>
       <div className="threemenu">
         <Wrapper>
-          <Icon style={{color: 'white'}} icon={home} />
           <Ul>
-            <li>MAX</li>
+            {
+              isHome ? <li  style={{ position: 'relative',left:'10px',top:'-3px' }}> 
+              <Icon style={{color: 'white'}} icon={home} />
+            </li> : ''
+            }
+            <li>IMAX</li>
             <li>4DX</li>
             <li>Playhouse</li>
             <li>GOLD</li>
@@ -36,7 +41,7 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: row;
-  gap: 20px;
-  font-weight: bold;
-  font-size: 12px;
+  gap: 16px;
+  font-size: 11px;
+  padding-left: 100px;
 `;

@@ -14,6 +14,11 @@ import {arrowSortedDown} from 'react-icons-kit/typicons/arrowSortedDown'
 import {locationArrow} from 'react-icons-kit/typicons/locationArrow'
 import SubmenuLeft from '../SubmenuLeft/SubmenuLeft';
 import SubmenuRight from '../SubmenuRight/SubmenuRight';
+import {
+  Sun,
+  Moon,
+  Menu
+} from 'react-feather';
 
 function Header() {
   const[isOpened,setIsOpened] = React.useState(false);
@@ -26,7 +31,7 @@ function Header() {
         <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
       </Logo>
       <SearchSection>
-        <div style={{'display': 'flex','gap': '20px','background':'hotpink','width': '100%'}}>
+        <div style={{'display': 'flex','gap': '20px','width': '100%','paddingLeft': '100px'}}>
         <SearchMovies>
            <Icon style={{color: 'white'}} size="0.9em" icon={search} />
            <Input 
@@ -46,7 +51,7 @@ function Header() {
         </div>
         <div style={{'width': '100%','display': 'flex'}}>
           <SubmenuLeft />
-          <SubmenuRight />
+          {/* <SubmenuRight /> */}
         </div>
         {/* <div style={{width: '100%'}}>
           <Select
@@ -59,25 +64,34 @@ function Header() {
         </div> */}
         {/* <SubmenuLeft /> */}
       </SearchSection>
-      
-      <div>
-        <div className="darkmode" style={{'cursor': 'pointer'}}>
 
-        {
-          isOpened ? 
-            <Icon style={{color: 'white'}} size={42} icon={iosMoon} onClick={toggle} /> 
-          : <Icon style={{color: 'white'}} size={32} icon={adjustBrightness} onClick={toggle} />
+        <MenuIcon>
+        <div className="darkmode" style={{'cursor': 'pointer'}}>
+        { isOpened ? 
+            <Sun style={{color: 'white'}} size={26} onClick={toggle} />
+            // <Icon style={{color: 'white'}} size={42} icon={iosMoon} onClick={toggle} /> 
+          : <Moon style={{color: 'white'}} size={26} icon={adjustBrightness} onClick={toggle} />
         }
-    
         </div>
-        <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={ic_menu_outline} />
-      </div>
+          <SideMenu>
+            <Menu size={26}  />
+          </SideMenu>
+        </MenuIcon>
     </Wrapper>
   );
 }
 
 export default Header;
 
+const SideMenu = styled.div`
+  //color: hsl(197.55deg 76.42% 51.76%);
+  &:hover {
+    color: ${COLORS.white};
+    filter: blur(14px);
+    transform: rotateZ(-45deg) translateX(-50%);
+    transition: .2s ease-in;
+  }
+`;
 const Wrapper = styled.div`
     position: fixed;
     width: 100%;
@@ -87,12 +101,13 @@ const Wrapper = styled.div`
     background: ${COLORS.gray[600]};
     display: flex;
     /* gap: 150px; */
-    /* justify-content: space-between; */
+    justify-content: space-between;
     /* align-items: flex-start; */
 `;
 
 const Logo = styled.div`
   /* margin-top: 10px; */
+  cursor: pointer;
 `;
 
 const SearchSection = styled.div`
@@ -153,26 +168,15 @@ const SearchMovies = styled.div`
   align-items: center;
 `;
 
-const Test = styled.div`
-  background-color: white;
-  width: 40%;
-  border-radius: 10px;
-  height: 2.5rem;
-  padding: 0 15px;
-  display: flex;
-  align-items: center;
-`;
 
-const Dark = styled.div`
-  cursor: pointer;
-`;
 
 const MenuIcon = styled.div`
    display: flex;
    justify-content: center;
-   align-items: center;
+   align-items: baseline;
    cursor: pointer;
    color: ${COLORS.blue};
+   gap: 37px;
 `;
 
 
