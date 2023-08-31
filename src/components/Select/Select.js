@@ -69,8 +69,4 @@ pointer-events: none;
 
 
 
-
-
-
-
 export default Select;

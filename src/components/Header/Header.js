@@ -51,25 +51,14 @@ function Header() {
         </div>
         <div style={{'width': '100%','display': 'flex'}}>
           <SubmenuLeft />
-          {/* <SubmenuRight /> */}
+          <SubmenuRight />
         </div>
-        {/* <div style={{width: '100%'}}>
-          <Select
-        label="sort"
-        value="test">
-          <option value="newst">Newest Release</option>
-          <option value="game">Game Settings</option>
-          <option value="cutest">Cuted Person</option>
-        </Select>
-        </div> */}
-        {/* <SubmenuLeft /> */}
+        
       </SearchSection>
-
         <MenuIcon>
         <div className="darkmode" style={{'cursor': 'pointer'}}>
         { isOpened ? 
             <Sun style={{color: 'white'}} size={26} onClick={toggle} />
-            // <Icon style={{color: 'white'}} size={42} icon={iosMoon} onClick={toggle} /> 
           : <Moon style={{color: 'white'}} size={26} icon={adjustBrightness} onClick={toggle} />
         }
         </div>
@@ -78,6 +67,7 @@ function Header() {
           </SideMenu>
         </MenuIcon>
     </Wrapper>
+    
   );
 }
 
@@ -87,8 +77,6 @@ const SideMenu = styled.div`
   //color: hsl(197.55deg 76.42% 51.76%);
   &:hover {
     color: ${COLORS.white};
-    filter: blur(14px);
-    transform: rotateZ(-45deg) translateX(-50%);
     transition: .2s ease-in;
   }
 `;
@@ -160,7 +148,7 @@ const Select = styled.select`
 `;
 const SearchMovies = styled.div`
   background: ${COLORS.gray[300]};
-  width: 100%;
+  width: 60%;
   border-radius: 5px;
   height: 2.5rem;
   padding: 0 15px;
