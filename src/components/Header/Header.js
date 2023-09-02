@@ -20,6 +20,8 @@ import {
   Menu
 } from 'react-feather';
 
+import styles from './Header.module.css';
+
 function Header() {
   const[isOpened,setIsOpened] = React.useState(false);
   function toggle(){
@@ -31,23 +33,23 @@ function Header() {
         <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
       </Logo>
       <SearchSection>
-        <div style={{'display': 'flex','gap': '20px','width': '100%','paddingLeft': '100px'}}>
-        <SearchMovies>
-           <Icon style={{color: 'white'}} size="0.9em" icon={search} />
-           <Input 
-                id=" search-movie"
-                type="text"
-                placeholder="Search movies or theatres"
-            />
-          <Icon style={{color: 'white',cursor: 'pointer'}} size="1.4em" icon={ic_mic_outline} />
-        </SearchMovies>
-         <Select
-        label="sort"
-        value="test">
-          <option value="newst">Coimbatore</option>
-          <option value="game">Bangalore</option>
-          <option value="cutest">Chennai</option>
-        </Select>
+         <div className={styles.searchMovieWrapper}>
+          <SearchMovies>
+            <Icon style={{color: 'white'}} size="0.9em" icon={search} />
+            <Input 
+                  id=" search-movie"
+                  type="text"
+                  placeholder="Search movies or theatres"
+              />
+            <Icon className={styles.iconPointer} size="1.4em" icon={ic_mic_outline} />
+          </SearchMovies>
+          <Select
+          label="sort"
+          value="test">
+            <option value="newst">Coimbatore</option>
+            <option value="game">Bangalore</option>
+            <option value="cutest">Chennai</option>
+          </Select>
         </div>
         <div style={{'width': '100%','display': 'flex'}}>
           <SubmenuLeft />
@@ -56,7 +58,7 @@ function Header() {
         
       </SearchSection>
         <MenuIcon>
-        <div className="darkmode" style={{'cursor': 'pointer'}}>
+        <div className={styles.pointer}>
         { isOpened ? 
             <Sun style={{color: 'white'}} size={26} onClick={toggle} />
           : <Moon style={{color: 'white'}} size={26} icon={adjustBrightness} onClick={toggle} />

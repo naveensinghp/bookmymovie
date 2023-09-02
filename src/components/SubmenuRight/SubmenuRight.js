@@ -2,7 +2,7 @@ import React from 'react';
 
 function SubmenuRight() {
   return <div className="threemenu" >
-  <ul style={{listStyleType: 'none',display: 'flex',gap: '20px',fontWeight: 'bold',fontSize: '12px'}}>
+  <ul style={{listStyleType: 'none',display: 'flex',gap: '14px',fontWeight: 'bold',fontSize: '11px'}}>
     <li>Private Screening</li>
     <li>Cinemas Offers</li>
     <li>Advertise</li>

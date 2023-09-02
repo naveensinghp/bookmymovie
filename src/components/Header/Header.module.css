@@ -1,0 +1,19 @@
+.colorWhite{
+    color : var(--color-blue-400);
+}
+
+.iconPointer{
+    color: var(--color-gray-900);
+    cursor: pointer;
+}
+
+.pointer{
+    cursor: pointer;   
+}
+
+.searchMovieWrapper{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    padding-left: 100px;
+}
