@@ -9,8 +9,9 @@ function App() {
   return (
     <>
    <Header />
+   <NowShowingMovie />
+
     {/* <RecentMovieSlider /> */}
-    <NowShowingMovie />
     </>
   );
 }

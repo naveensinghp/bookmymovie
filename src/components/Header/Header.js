@@ -51,7 +51,7 @@ function Header() {
             <option value="cutest">Chennai</option>
           </Select>
         </div>
-        <div style={{'width': '100%','display': 'flex'}}>
+        <div className={styles.leftrightmenu}>
           <SubmenuLeft />
           <SubmenuRight />
         </div>
@@ -93,6 +93,7 @@ const Wrapper = styled.div`
     /* gap: 150px; */
     justify-content: space-between;
     /* align-items: flex-start; */
+    z-index: 1;
 `;
 
 const Logo = styled.div`
@@ -109,33 +110,10 @@ const SearchSection = styled.div`
   gap: 20px;
 `;
 
-const EndMenu = styled.div``;
 
 
 
 
-const SubMenuTwo = styled.ul`
-  list-style-type: none;
-  color: white;
-  display: flex;
-  flex-direction: row;
-  font-size: 14px;
-  gap: 20px;
-  cursor: pointer;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  &:hover {
-    color: ${COLORS.blue};
-  }
-`;
-const SubMenu = styled.div`
-  cursor: pointer;
-  display: flex;
-  font-size: 14px;
-  gap: 20px;
-  /* background: yellow; */
-  color: white;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-`;
 
 const Select = styled.select`
     background: ${COLORS.gray[300]};
@@ -182,26 +160,5 @@ const Input = styled.input`
 `;
 
 
-const SearchBox = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  color: ${COLORS.white};
-  background: ${COLORS.gray[300]};
-  width: 40%;
-  height: 40px;
-  border-radius: 7px;
-`;
 
-const ChooseLocation = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: ${COLORS.white};
-  background: ${COLORS.gray[300]};
-  width: 300px;
-  height: 40px;
-  border-radius: 7px;
-  padding: 0 15px;
-  
-`;
+
