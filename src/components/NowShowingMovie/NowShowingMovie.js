@@ -1,11 +1,15 @@
 import React from 'react';
+import styles from './Nowshowing.module.css';
+
 
 function NowShowingMovie() {
   return(
-    
-    <div style={{'background': 'hotpink',width: '100%','height': '230px','paddingTop': '7%','borderRadius': '6px'}}>
+    <>
+      <div className={styles.wrapper}>
       <h1>Hello World</h1>
-    </div>
+      </div>
+    </>
+  
   );
 }
 

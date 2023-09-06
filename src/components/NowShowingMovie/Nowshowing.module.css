@@ -1,0 +1,10 @@
+
+
+.wrapper{
+    background: red;
+    padding: 20px;
+    background-color: var(--test-color);
+    width: 300px;
+    height: 400px;
+    border-radius: 12px;
+}

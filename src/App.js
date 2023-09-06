@@ -8,10 +8,8 @@ import NowShowingMovie from "./components/NowShowingMovie/NowShowingMovie";
 function App() {
   return (
     <>
-   <Header />
-   <NowShowingMovie />
-
-    {/* <RecentMovieSlider /> */}
+    <Header />
+    <NowShowingMovie />
     </>
   );
 }
