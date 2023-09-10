@@ -2,18 +2,18 @@ import React from 'react';
 import styles from './Nowshowing.module.css';
 import styled from 'styled-components';
 import { range } from '../../utils';
+import MovieCard from '../MovieCard/MovieCard';
+
 
 function NowShowingMovie() {
   return(
       <Wrapper>
         <h4 className={styles.nowshowing}>Now Showing</h4>
-        {range(2).map((num) => (
         <CurrentShowingMovie>
-          <div className={styles.wrapper}>
-            <img src="assets/leo.jpg" alt="bookmymovielogo" width={374}/>
-          </div>
+          {range(4).map((num) =>( 
+            <MovieCard />
+          ))}
         </CurrentShowingMovie>
-        ))}
       </Wrapper>
   );
 }
