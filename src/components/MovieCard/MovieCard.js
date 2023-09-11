@@ -2,9 +2,13 @@ import React from 'react';
 import styles from './MovieCard.module.css';
 
 function MovieCard() {
-  return  <div className={styles.cardwrapper}>
-    <img src="assets/leo.jpg" alt="bookmymovielogo" width={374}/>
-  </div>
+  return(
+    <>
+      <div className={styles.cardwrapper}>
+        <img src="assets/kufu1.webp" style={{objectFit: 'cover'}} alt="bookmymovielogo"/>
+      </div>
+    </>
+  );
 }
 
 export default MovieCard;

@@ -62,3 +62,14 @@ LIGHTCOLORS['--color-backdrop'] = LIGHTCOLORS['--color-decorative-500'];
 
 // Dark Mode 
 DARKCOLORS['--color-backdrop'] = DARKCOLORS['--color-decorative-500'];
+
+
+export const nowShowingMovie = [
+    {
+        id: 1,
+        movieName: "Jawan",
+        movieRunningLanguage: ["Tamil","Hinid","Telegu"],
+        newRelease: false,
+        likesCount: 30
+    },
+];
