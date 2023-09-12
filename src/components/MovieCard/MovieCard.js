@@ -5,7 +5,7 @@ function MovieCard() {
   return(
     <>
       <div className={styles.cardwrapper}>
-        <img src="assets/kufu1.webp" style={{objectFit: 'cover'}} alt="bookmymovielogo"/>
+        <img src="assets/kufu1.webp" class={styles.movieimg} style={{objectFit: 'cover'}} alt="bookmymovielogo"/>
       </div>
     </>
   );
