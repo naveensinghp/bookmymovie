@@ -32,22 +32,3 @@ const Wrapper = styled.button`
 
 export default Button;
 
-
-
-// function VisuallyHidden({
-//   as: Element = 'span',
-//   className,
-//   children,
-//   ...delegated
-// }) {
-//   return (
-//     <Element
-//       className={clsx(styles.wrapper, className)}
-//       {...delegated}
-//     >
-//       {children}
-//     </Element>
-//   );
-// }
-
-// export default VisuallyHidden;
