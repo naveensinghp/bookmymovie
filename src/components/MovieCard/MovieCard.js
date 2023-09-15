@@ -9,10 +9,10 @@ function MovieCard() {
       <div className={styles.cardwrapper}>
         <img src="assets/kufu1.webp" class={styles.movieimg} style={{objectFit: 'cover'}} alt="bookmymovielogo"/>
         <div className={styles.moviename}>
-            <h4>BARBIE</h4>
-            <div>English (U/A)</div>
+            <h4>Jurassic Park</h4>
         </div>
-        <Button name="Login With OTP"/>
+        {/* <Button name="Login With OTP"/> */}
+        <div className={styles.newreleaselabel}>New Release</div>
       </div>
     </>
   );
