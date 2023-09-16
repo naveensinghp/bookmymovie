@@ -13,6 +13,10 @@ function MovieCard() {
         </div>
         {/* <Button name="Login With OTP"/> */}
         <div className={styles.newreleaselabel}>New Release</div>
+        <div className={styles.bookingstuff}>
+            <Button>Book Ticket</Button>
+            <Button>Play Trailer</Button>
+        </div>
       </div>
     </>
   );

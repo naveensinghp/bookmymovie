@@ -64,21 +64,3 @@ LIGHTCOLORS['--color-backdrop'] = LIGHTCOLORS['--color-decorative-500'];
 DARKCOLORS['--color-backdrop'] = DARKCOLORS['--color-decorative-500'];
 
 
-export const nowShowingMovie = [
-    {
-        id: 1,
-        movieName: "Jawan",
-        movieRunningLanguage: ["Tamil","Hinid","Telegu"],
-        newRelease: false,
-        releaseDate: "Fri Sept 14",
-        likesCount: 30
-    },
-    {
-        id: 2,
-        movieName: "Mark Antony",
-        movieRunningLanguage: ["Tamil","Hinid","Telegu"],
-        newRelease: false,
-        releaseDate: "Fri Sept 14",
-        likesCount: 30
-    },
-];

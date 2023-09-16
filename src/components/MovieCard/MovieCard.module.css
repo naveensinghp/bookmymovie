@@ -1,6 +1,6 @@
 .cardwrapper{
     padding: 10px;
-    /* background-color: var(--test-color); */
+    background-color: var(--test-color);
     width: 344px;
     height: 230px;
     border-radius: 12px;
@@ -19,6 +19,22 @@
   border-top-left-radius: unset;
   border-bottom-left-radius: unset;
   box-shadow: 0 1px 2px #00000059  
+}
+
+.cardwrapper:hover .bookingstuff{
+  position: absolute;
+  transform: scale(1);
+  transform-origin: bottom center;
+  will-change: transform;
+  /* transition: transform 500ms; */
+}
+
+.bookingstuff{
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 2px;
+  transform: scale(0);
 }
 
 .movieimg{

@@ -2,13 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-function Button({
-  name
-}) {
+function Button({children}) {
   return(
     <>
     <Wrapper>
-      {name}
+      {children}
     </Wrapper>;
     </>
   );
