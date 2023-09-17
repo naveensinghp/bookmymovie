@@ -3,16 +3,19 @@ import styles from './MovieCard.module.css';
 import Button from '../Button/Button';
 
 
-function MovieCard() {
+
+function MovieCard(props) {
+   let movie = props.data;
+   console.log(props);
   return(
     <>
       <div className={styles.cardwrapper}>
-        <img src="assets/kufu1.webp" class={styles.movieimg} style={{objectFit: 'cover'}} alt="bookmymovielogo"/>
+        <img src={movie.moviePoster} className={styles.movieimg} alt="bookmymovielogo"/>
         <div className={styles.moviename}>
-            <h4>Jurassic Park</h4>
+            <h4>{movie.movieName}</h4>
         </div>
         {/* <Button name="Login With OTP"/> */}
-        <div className={styles.newreleaselabel}>New Release</div>
+        { movie.newRelease ? <div className={styles.newreleaselabel}> New Release</div> : ""}
         <div className={styles.bookingstuff}>
             <Button>Book Ticket</Button>
             <Button>Play Trailer</Button>

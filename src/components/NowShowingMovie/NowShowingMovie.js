@@ -3,16 +3,25 @@ import styles from './Nowshowing.module.css';
 import styled from 'styled-components';
 import { range } from '../../utils';
 import MovieCard from '../MovieCard/MovieCard';
-
+import { nowShowingMovie } from '../../data';
 
 function NowShowingMovie() {
+  // console.log(nowShowingMovie);
   return(
       <Wrapper>
         <h4 className={styles.nowshowing}>Now Showing</h4>
         <CurrentShowingMovie>
-          {range(4).map((num) =>( 
-            <MovieCard />
-          ))}
+          {/* {range(4).map((num) =>( 
+            
+          ))} */}
+          
+          {nowShowingMovie.map((data) =>(
+              <MovieCard 
+                key={data.id}
+                data={data}
+              />
+            ))
+          }
         </CurrentShowingMovie>
       </Wrapper>
   );

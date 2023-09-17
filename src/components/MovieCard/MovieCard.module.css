@@ -1,6 +1,6 @@
 .cardwrapper{
     padding: 10px;
-    background-color: var(--test-color);
+    /* background-color: var(--test-color); */
     width: 344px;
     height: 230px;
     border-radius: 12px;
@@ -45,8 +45,8 @@
   cursor: pointer;
 }
 
-.movieimg:hover{
-  
+.cardwrapper:hover .movieimg{
+  transform: scaleX(1.1);
 }
 .moviename{
   font-weight: bolder;

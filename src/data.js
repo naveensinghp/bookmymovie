@@ -12,13 +12,15 @@ export const nowShowingMovie = [
         movieRunningLanguage: ["Tamil","Hinid","Telegu"],
         newRelease: false,
         releaseDate: "Fri Sept 14",
+        moviePoster: "assets/kufu1.webp",
         likesCount: 30
     },
     {
         id: 2,
-        movieName: "Mark Antony",
+        movieName: "One Pieces",
         movieRunningLanguage: ["Tamil","Hinid","Telegu"],
-        newRelease: false,
+        moviePoster: "assets/onepiece.jpg",
+        newRelease: true,
         releaseDate: "Fri Sept 14",
         likesCount: 30
     },
