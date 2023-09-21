@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import styled from 'styled-components';
+import css from './FramerMotion.module.css';
+
 
 function FramerMotionLearnings() {
   return <div></div>;
@@ -47,4 +49,36 @@ function Button({children}){
   );
 }
 
-export default FramerMotionLearnings;
+
+function Card({children}){
+  return(
+    <div className={css.card}>
+        {children}
+    </div>
+  );
+}
+
+function Avatar(props) {
+  console.log({props});
+  return (
+    <img
+      className="avatar"
+      src="https://i.imgur.com/1bX5QH6.jpg"
+      alt="Lin Lanying"
+      width={props.size}
+      height={props.size}
+    />
+  );
+}
+
+export default function Profile(props) {
+  return (
+    <Card>
+      <Avatar 
+       {...props}
+      />
+    </Card>
+  );
+}
+
+//export default FramerMotionLearnings;

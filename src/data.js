@@ -13,7 +13,9 @@ export const nowShowingMovie = [
         newRelease: false,
         releaseDate: "Fri Sept 14",
         moviePoster: "assets/kufu1.webp",
-        likesCount: 30
+        likesCount: 30,
+        genre: "Adventure",
+        language: 'Hindi'
     },
     {
         id: 2,
@@ -22,6 +24,8 @@ export const nowShowingMovie = [
         moviePoster: "assets/onepiece.jpg",
         newRelease: true,
         releaseDate: "Fri Sept 14",
-        likesCount: 30
+        likesCount: 30,
+        genre: "Drama",
+        language: 'Tamil'
     },
 ];

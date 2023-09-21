@@ -13,8 +13,11 @@ function MovieCard(props) {
         <img src={movie.moviePoster} className={styles.movieimg} alt="bookmymovielogo"/>
         <div className={styles.moviename}>
             <h4>{movie.movieName}</h4>
+            <div>
+              {movie.language} • (U/A) • {movie.genre}
+            </div>
         </div>
-        {/* <Button name="Login With OTP"/> */}
+        {/* <Button>NAVEENSINGH</Button> */}
         { movie.newRelease ? <div className={styles.newreleaselabel}> New Release</div> : ""}
         <div className={styles.bookingstuff}>
             <Button>Book Ticket</Button>
