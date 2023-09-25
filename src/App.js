@@ -21,12 +21,9 @@ function App({person='Naveen',alt="singh",size =550}) {
      
     </div> */}
     <Header />
-    <AwesomeSlider>
-      <div><img src="https://originserver-static1-uat.pvrcinemas.com/pvrcms/banners/Kotak-Welcome_back__1738.jpg" /></div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-    </AwesomeSlider>
+    <div style={{display: 'flex',justifyContent: 'center',marginTop: '10%'}}>
+        <img src="https://originserver-static1-uat.pvrcinemas.com/pvrcms/banners/Kotak-Welcome_back__1738.jpg" alt="banner" />
+    </div>
     <NowShowingMovie />
     </>
   );

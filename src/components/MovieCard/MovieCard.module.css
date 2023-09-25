@@ -1,17 +1,19 @@
 .cardwrapper{
     padding: 10px;
-    /* background-color: var(--test-color); */
+    /* background-color: var(--test-color, yellow); */
     width: 344px;
     height: 230px;
     border-radius: 12px;
     position: relative;
+    transition: transform 250ms, opacity 400ms;
 }
 
 .newreleaselabel{
   width: auto;
   background-color: var(--color-yellow);
   position: absolute;
-  top: 10px;
+  top: 9px;
+  left: 10px;
   padding: 5px 10px 5px 15px;
   border-radius: 9px;
   font-size: 12px;
@@ -23,9 +25,9 @@
 
 .cardwrapper:hover .bookingstuff{
   position: absolute;
-  transform: scale(1);
-  transform-origin: bottom center;
-  will-change: transform;
+  /* transform: scale(0.8);
+  transform-origin: top center;
+  will-change: transform; */
   /* transition: transform 500ms; */
 }
 
@@ -34,7 +36,7 @@
   gap: 10px;
   position: absolute;
   bottom: 2px;
-  transform: scale(0);
+  padding: 15px 12px;
 }
 
 .movieimg{
@@ -45,18 +47,38 @@
   cursor: pointer;
 }
 
-.cardwrapper:hover .movieimg{
-  transform: scaleX(1.1);
+.movieimg:hover{
+  transform: scale(1.0);
+  transition: all .3s ease-in;
 }
+
+/* .cardwrapper:hover .movieimg{
+  transform: scale(1.1);
+  transition: all .3s ease-in;
+} */
 .moviename{
   font-weight: bolder;
   width: 100%;
   height: 100%;
   font-size: 1rem;
   position: absolute;
-  left: 30px;
+  left: 18px;
   top: 50%;
   text-shadow: 0 3px 7px rgba(0,0,0,.8);
   transition: all .3s ease-out;
   color: var(--color-white)
 }
+
+.bookmarkmovie{
+  position: relative;
+  top: -10px;
+  bottom: 0;
+}
+
+/* .moviehover:hover{
+  position: relative;
+  transform: scale(0.8);
+  transform-origin: top center;
+  will-change: transform;
+  transition: transform 500ms;
+} */
