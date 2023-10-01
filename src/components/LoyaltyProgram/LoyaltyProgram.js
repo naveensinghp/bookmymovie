@@ -11,13 +11,23 @@ function LoyaltyProgram() {
         <TitleText>
             Introducing a loyalty program with special rewards and exclusive benefits!
         </TitleText>
-        <Button>Know More</Button>
+        <ButtonThings>
+            <Button>Know More</Button>
+            <a className="alre" href="#">Already a Memeber</a>
+        </ButtonThings>
       </div>
     </Card>
   );
 }
 
 export default LoyaltyProgram;
+
+
+const ButtonThings = styled.div`
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+`;
 
 const Card = styled.div`
   display: flex;
