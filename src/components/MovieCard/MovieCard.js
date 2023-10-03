@@ -4,12 +4,13 @@ import Button from '../Button/Button';
 import {locationArrow} from 'react-icons-kit/typicons/locationArrow'
 import { Icon } from 'react-icons-kit'
 import {androidBookmark} from 'react-icons-kit/ionicons/androidBookmark'
+import Spinner from '../Spinner';
 
 function MovieCard(props) {
    let movie = props.data;
-   console.log(props);
   return(
     <>
+     {/* <Spinner /> */}
       <div className={styles.cardwrapper}>
         <img src={movie.moviePoster} className={styles.movieimg} alt="bookmymovielogo"/>
         <div>

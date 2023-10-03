@@ -117,3 +117,17 @@ input:-moz-placeholder{
     width: revert;
     height: revert;
 }
+
+.loaderspinner {
+  display: block;
+  width: max-content;
+  margin: auto;
+  color: white;
+  animation: spin 1000ms linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(-360deg);
+  }
+}
