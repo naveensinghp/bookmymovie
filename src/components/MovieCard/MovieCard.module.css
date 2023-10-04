@@ -52,10 +52,10 @@
   transition: all .3s ease-in;
 }
 
-/* .cardwrapper:hover .movieimg{
+.cardwrapper:hover .movieimg{
   transform: scale(1.1);
-  transition: all .3s ease-in;
-} */
+  transition: transform 350ms;
+}
 .moviename{
   font-weight: bolder;
   width: 100%;

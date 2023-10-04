@@ -6,7 +6,6 @@ import MovieCard from '../MovieCard/MovieCard';
 import { nowShowingMovie } from '../../data';
 
 function NowShowingMovie() {
-  // console.log(nowShowingMovie);
   return(
       <Wrapper>
         <h4 className={styles.nowshowing}>Now Showing</h4>

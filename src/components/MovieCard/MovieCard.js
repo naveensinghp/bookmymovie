@@ -1,10 +1,6 @@
 import React from 'react';
 import styles from './MovieCard.module.css';
 import Button from '../Button/Button';
-import {locationArrow} from 'react-icons-kit/typicons/locationArrow'
-import { Icon } from 'react-icons-kit'
-import {androidBookmark} from 'react-icons-kit/ionicons/androidBookmark'
-import Spinner from '../Spinner';
 
 function MovieCard(props) {
    let movie = props.data;
@@ -28,13 +24,7 @@ function MovieCard(props) {
             <Button>Book Tickets</Button>
             <Button>Play Trailer</Button>
           </div>
-        </div>
-      
-        {/* <div className={styles.bookmarkmovie}>
-          <Icon style={{color: 'white'}} size="2.9em" icon={androidBookmark} />
-        </div> */}
-        
-        
+        </div> 
       </div>
     </>
   );
