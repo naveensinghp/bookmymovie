@@ -7,7 +7,7 @@ function Button({children}) {
     <>
     <Wrapper>
       {children}
-    </Wrapper>;
+    </Wrapper>
     </>
   );
   
