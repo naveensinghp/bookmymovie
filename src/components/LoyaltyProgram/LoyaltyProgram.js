@@ -6,20 +6,22 @@ import Button from '../Button/Button';
 
 function LoyaltyProgram() {
   return (
-    // <Card>
-    //     <TitleText>
-    //         Introducing a loyalty program with special <br/>rewards and exclusive benefits!
-    //     </TitleText>
-    //     <ButtonThings>
-    //         <Button>Know More</Button>
-    //         <a  href="/home">Already a Memeber</a>
-    //     </ButtonThings>
-    //     <Logo>
-    //       <img src="assets/pvr.png" alt="bookmymovielogo" width={200}/>
-    //     </Logo>
-    // </Card>
     <Wrapper>
-
+      <WrapperTwo>
+          <CardOuter>
+          <TitleText>
+                Introducing a loyalty program with special <br/>
+                rewards and exclusive benefits!
+            </TitleText>
+            <div>
+                <img src="assets/pvr.png" alt="bookmymovielogo" width={250}/>
+            </div>
+          </CardOuter>
+          <ButtonThings>
+              <Button>Know More</Button>
+              <a  href="/home">Already a Memeber</a>
+          </ButtonThings>
+      </WrapperTwo>
     </Wrapper>
     // <div style={{display: 'flex',justifyContent:'center'}}>
     //   <div 
@@ -51,8 +53,21 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-const WrapperTwo = styled.div`
 
+const WrapperTwo = styled.div`
+ background-color: hotpink;
+ width: 75%;
+ height: 240px;
+ border-radius: 12px;
+ padding: 20px 20px 200px 20px;
+`;
+
+//  <div style={{display: 'flex',justifyContent: 'space-between',alignItems: 'center'}}>
+
+const CardOuter = styled.div`
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 `;
 
 const Card = styled.div`
@@ -76,7 +91,6 @@ const TitleText = styled.p`
 const ButtonThings = styled.div`
   display: flex;
   gap: 20px;
-  padding-top: 20px;
 `;
 
 const Logo = styled.div`
