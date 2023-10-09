@@ -18,30 +18,42 @@ function LoyaltyProgram() {
     //       <img src="assets/pvr.png" alt="bookmymovielogo" width={200}/>
     //     </Logo>
     // </Card>
-    <div style={{display: 'flex',justifyContent:'center'}}>
-      <div 
-        style={{backgroundColor: 'hotpink',width: '75%',height: '240px',borderRadius: '12px',padding: '20px 20px 20px 20px',marginTop: '30px'}}>
-          {/* first part */}
-          <div style={{display: 'flex',justifyContent: 'space-between',backgroundColor: 'red'}}>
-            <TitleText>
-                Introducing a loyalty program with special <br/>
-                rewards and exclusive benefits!
-            </TitleText>
-              <div>
-                <img src="assets/pvr.png" alt="bookmymovielogo" width={250}/>
-              </div>
-          </div>
-          <div style={{display: 'flex',gap: '20px'}}>
-              <Button>Know More</Button>
-              <a  href="/home">Already a Memeber</a>
-          </div>
-      </div>
-    </div>
+    <Wrapper>
+
+    </Wrapper>
+    // <div style={{display: 'flex',justifyContent:'center'}}>
+    //   <div 
+    //     style={{backgroundColor: 'hotpink',width: '75%',height: '240px',borderRadius: '12px',padding: '20px 20px 20px 20px',marginTop: '30px'}}>
+    //       {/* first part */}
+    //       <div style={{display: 'flex',justifyContent: 'space-between',alignItems: 'center'}}>
+    //         <TitleText>
+    //             Introducing a loyalty program with special <br/>
+    //             rewards and exclusive benefits!
+    //         </TitleText>
+    //           <div>
+    //             <img src="assets/pvr.png" alt="bookmymovielogo" width={250}/>
+    //           </div>
+    //       </div>
+    //       <div style={{display: 'flex',gap: '20px'}}>
+    //           <Button>Know More</Button>
+    //           <a  href="/home">Already a Memeber</a>
+    //       </div>
+    //   </div>
+    // </div>
   );
 }
 
 export default LoyaltyProgram;
 
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const WrapperTwo = styled.div`
+
+`;
 
 const Card = styled.div`
   padding: 20px 20px 20px 40px;
