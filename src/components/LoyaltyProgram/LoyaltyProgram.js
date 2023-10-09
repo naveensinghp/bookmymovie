@@ -13,9 +13,7 @@ function LoyaltyProgram() {
                 Introducing a loyalty program with special <br/>
                 rewards and exclusive benefits!
             </TitleText>
-            <div>
-                <img src="assets/pvr.png" alt="bookmymovielogo" width={250}/>
-            </div>
+            <img src="assets/pvr.png" alt="bookmymovielogo" width={250}/>
           </CardOuter>
           <ButtonThings>
               <Button>Know More</Button>
@@ -23,25 +21,6 @@ function LoyaltyProgram() {
           </ButtonThings>
       </WrapperTwo>
     </Wrapper>
-    // <div style={{display: 'flex',justifyContent:'center'}}>
-    //   <div 
-    //     style={{backgroundColor: 'hotpink',width: '75%',height: '240px',borderRadius: '12px',padding: '20px 20px 20px 20px',marginTop: '30px'}}>
-    //       {/* first part */}
-    //       <div style={{display: 'flex',justifyContent: 'space-between',alignItems: 'center'}}>
-    //         <TitleText>
-    //             Introducing a loyalty program with special <br/>
-    //             rewards and exclusive benefits!
-    //         </TitleText>
-    //           <div>
-    //             <img src="assets/pvr.png" alt="bookmymovielogo" width={250}/>
-    //           </div>
-    //       </div>
-    //       <div style={{display: 'flex',gap: '20px'}}>
-    //           <Button>Know More</Button>
-    //           <a  href="/home">Already a Memeber</a>
-    //       </div>
-    //   </div>
-    // </div>
   );
 }
 
@@ -55,14 +34,14 @@ const Wrapper = styled.div`
 
 
 const WrapperTwo = styled.div`
- background-color: hotpink;
+ background-color: var(--color-black-400);
  width: 75%;
  height: 240px;
  border-radius: 12px;
  padding: 20px 20px 200px 20px;
+ margin-top: 30px;
 `;
 
-//  <div style={{display: 'flex',justifyContent: 'space-between',alignItems: 'center'}}>
 
 const CardOuter = styled.div`
  display: flex;
@@ -70,17 +49,6 @@ const CardOuter = styled.div`
  align-items: center;
 `;
 
-const Card = styled.div`
-  padding: 20px 20px 20px 40px;
-  margin-top: 30px;
-  /* display: flex; */
-  justify-content: center;
-  width: 75%;
-  height: 240px;
-  margin-left: 15%;
-  border-radius: 12px;
-  background-color: var(--color-black-400, yellow);
-`;
 
 const TitleText = styled.p`
   font-size: 1.7rem;
@@ -91,11 +59,4 @@ const TitleText = styled.p`
 const ButtonThings = styled.div`
   display: flex;
   gap: 20px;
-`;
-
-const Logo = styled.div`
- /* width: 100%; */
- position: absolute;
- left: 0;
- right: 0;
 `;
