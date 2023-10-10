@@ -3,6 +3,8 @@ import styles from './MovieCard.module.css';
 import Button from '../Button/Button';
 import { Heart } from 'react-feather';
 
+
+
 function MovieCard(props) {
    let movie = props.data;
   return(
@@ -28,7 +30,7 @@ function MovieCard(props) {
               </div>
           </div>
           <div className={styles.bookingstuff}>
-            <Button>Book Tickets</Button>
+            <Button >Book Tickets</Button>
             <Button>Play Trailer</Button>
           </div>
         </div> 
