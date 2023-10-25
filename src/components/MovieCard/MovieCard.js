@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './MovieCard.module.css';
 import Button from '../Button/Button';
 import { Heart } from 'react-feather';
+import Spinner from '../Spinner';
 
 
 
@@ -30,7 +31,8 @@ function MovieCard(props) {
               </div>
           </div>
           <div className={styles.bookingstuff}>
-            <Button >Book Tickets</Button>
+            {/* <Button >Book Tickets</Button> */}
+            <a href="/moviecalendar">Book Tickets</a>
             <Button>Play Trailer</Button>
           </div>
         </div> 
