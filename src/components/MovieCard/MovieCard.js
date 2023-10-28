@@ -31,9 +31,8 @@ function MovieCard(props) {
               </div>
           </div>
           <div className={styles.bookingstuff}>
-            <Button variant='small' >Book Tickets</Button>
-            {/* <a href="/moviecalendar">Book Tickets</a> */}
-            <Button size="large">Play Trailer</Button>
+            <Button variant='fill' size="small" href="https://www.google.com">Book Tickets</Button>
+            <Button variant='fill' size="small">Play Trailer</Button>
           </div>
         </div> 
       </div>

@@ -13,14 +13,15 @@ const SIZES = {
     '--padding': "12px 20px",
   },
   large: {
-    '--borderRadius': 2 + 'px',
+    // '--borderRadius': 2 + 'px',
     '--fontSize': 21 / 16 + "rem",
     '--padding': "20px 36px",
   },
   
 }
 
-function Button({variant,size,children}) {
+
+function Button({variant,size,children,href}) {
   const styles = SIZES[size];
   let Component;
   if(variant === 'fill'){
@@ -30,7 +31,7 @@ function Button({variant,size,children}) {
   }
   return(
     <>
-    <Component style={styles} as="a">
+    <Component style={styles} as={href ? 'a' : "button"} href={href}>
       {children}
     </Component>
     </>
@@ -46,12 +47,13 @@ const ButtonBase = styled.button`
   font-weight: bolder;
   border-radius: 0.25rem;
   /* padding: 0.3rem 0.9rem; */
+  padding: var(--padding);
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  border: 1px solid transparent;
-  /* font-size: 0.9rem; */
-  font-size: var(--fontSize);
+  border: none;
+  font-size: 0.9rem;
+  /* font-size: var(--fontSize); */
   letter-spacing: 0.6px;
 
 
@@ -63,8 +65,8 @@ const ButtonBase = styled.button`
 `;
 
 const FillButton = styled(ButtonBase)`
-  background-color: 'hotpink';
-  color: 'white';
+  /* background-color: 'hotpink';
+  color: 'white'; */
 `
 const OutlineButton = styled(ButtonBase)`
   background-color: 'red';
