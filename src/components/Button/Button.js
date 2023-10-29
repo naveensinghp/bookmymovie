@@ -55,6 +55,7 @@ const ButtonBase = styled.button`
   font-size: 0.9rem;
   /* font-size: var(--fontSize); */
   letter-spacing: 0.6px;
+  width: 100%;
 
 
   cursor: pointer;

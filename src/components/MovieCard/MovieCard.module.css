@@ -1,5 +1,4 @@
 .cardwrapper{
-    padding: 10px;
     /* background-color: var(--test-color, yellow); */
     width: 344px;
     height: 230px;
@@ -27,8 +26,8 @@
   width: auto;
   background-color: var(--color-yellow);
   position: absolute;
-  top: 9px;
-  left: 10px;
+  top: 0;
+  /* left: 10px; */
   padding: 5px 10px 5px 15px;
   border-radius: 9px;
   font-size: 12px;
@@ -53,6 +52,8 @@
 }
 
 .bookingstuff{
+  width: 100%;
+  /* background: hotpink; */
   display: flex;
   gap: 10px;
   transform: scale(1);
@@ -75,7 +76,7 @@
 }
 
 .cardwrapper:hover .movieimg{
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   transition: transform 350ms;
 }
 .moviename{
