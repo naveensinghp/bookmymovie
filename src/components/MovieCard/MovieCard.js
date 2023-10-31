@@ -3,6 +3,7 @@ import styles from './MovieCard.module.css';
 import Button from '../Button/Button';
 import { Heart } from 'react-feather';
 import Spinner from '../Spinner';
+import TextLink from '../TextLink/TextLink';
 
 
 
@@ -31,8 +32,11 @@ function MovieCard(props) {
               </div>
           </div>
           <div className={styles.bookingstuff}>
-            <Button variant='fill' size="small" href="https://www.google.com">Book Tickets</Button>
+            <Button variant='fill' size="small" href="/moviecalendar">Book Tickets</Button>
             <Button variant='fill' size="small">Play Trailer</Button>
+            <TextLink href="/to">
+              Hello World
+            </TextLink>
           </div>
         </div> 
       </div>
