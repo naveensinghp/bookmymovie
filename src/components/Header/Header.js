@@ -76,7 +76,6 @@ function Header() {
 export default Header;
 
 const SideMenu = styled.div`
-  //color: hsl(197.55deg 76.42% 51.76%);
   &:hover {
     color: ${COLORS.white};
     transition: .2s ease-in;
@@ -90,9 +89,7 @@ const Wrapper = styled.div`
     box-shadow: 0px 2px 5px hsl(0deg 0% 0% / 0.2); 
     background: ${COLORS.gray[600]};
     display: flex;
-    /* gap: 150px; */
     justify-content: space-between;
-    /* align-items: flex-start; */
     z-index: 1;
 `;
 
