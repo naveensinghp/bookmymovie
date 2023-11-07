@@ -15,7 +15,7 @@ function MovieCard(props) {
       <div className={styles.cardwrapper}>
         <img src={movie.moviePoster} className={styles.movieimg} alt="bookmymovielogo"/>
         <div>
-          { movie.newRelease ? <div className={styles.newreleaselabel}> New Release</div> : ""}
+          { movie.newRelease ? <div className={styles.newreleaselabel}> Releasing on Fri Nov 10</div> : ""}
           <div className={styles.likeheart}>
             <Heart size={18} color='white' />
           </div>
@@ -34,9 +34,9 @@ function MovieCard(props) {
           <div className={styles.bookingstuff}>
             <Button variant='fill' size="small" href="/moviecalendar">Book Tickets</Button>
             <Button variant='fill' size="small">Play Trailer</Button>
-            <TextLink href="/to">
+            {/* <TextLink href="/moviecalendar">
               Hello World
-            </TextLink>
+            </TextLink> */}
           </div>
         </div> 
       </div>

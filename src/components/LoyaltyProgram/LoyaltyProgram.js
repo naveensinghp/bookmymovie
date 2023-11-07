@@ -16,7 +16,8 @@ function LoyaltyProgram() {
             <img src="assets/pvr.png" alt="bookmymovielogo" width={250}/>
           </CardOuter>
           <ButtonThings>
-              <Button>Know More</Button>
+              {/* <Button>Know More</Button> */}
+              
               <a  href="/home">Already a Memeber</a>
           </ButtonThings>
       </WrapperTwo>
@@ -57,6 +58,6 @@ const TitleText = styled.p`
 `;
 
 const ButtonThings = styled.div`
-  display: flex;
-  gap: 20px;
+  /* display: flex;
+  gap: 20px; */
 `;
