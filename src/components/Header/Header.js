@@ -77,8 +77,15 @@ export default Header;
 
 const SideMenu = styled.div`
   &:hover {
-    color: ${COLORS.white};
-    transition: .2s ease-in;
+    opacity: 0;
+    border: none;
+    border-radius: 80% 0 55% 50%/55% 0 80% 50%;
+    color: #000;
+    text-overflow: clip;
+    background: #9C27B0;
+    transform: rotate(-45deg) translate(-50%);
+    filter: blur(14px);
+    transition: all .2s ease-in;
   }
 `;
 const Wrapper = styled.div`
