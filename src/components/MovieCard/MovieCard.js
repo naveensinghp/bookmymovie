@@ -4,6 +4,8 @@ import Button from '../Button/Button';
 import { Heart } from 'react-feather';
 import Spinner from '../Spinner';
 import TextLink from '../TextLink/TextLink';
+import MovieCalendar from '../../pages/moviecalendar';
+import { Link } from "react-router-dom"; 
 
 
 
@@ -31,6 +33,8 @@ function MovieCard(props) {
                 {movie.language} • (U/A) • {movie.genre}
               </div>
           </div>
+          {/* <Link to="/moviecalendar" className="btn btn-primary">hello</Link> */}
+
           <div className={styles.bookingstuff}>
             <Button variant='fill' size="small" href="/moviecalendar">Book Tickets</Button>
             <Button variant='fill' size="small">Play Trailer</Button>
