@@ -11,6 +11,10 @@ import { Link } from "react-router-dom";
 
 function MovieCard(props) {
    let movie = props.data;
+   const[like, setLink] = React.useState(12);
+   function onClickLike(){
+    setLink(like +1)
+   }
   return(
     <>
      {/* <Spinner /> */}
@@ -19,16 +23,16 @@ function MovieCard(props) {
         <div>
           { movie.newRelease ? <div className={styles.newreleaselabel}> Releasing on Fri Nov 10</div> : ""}
           <div className={styles.likeheart}>
-            <Heart size={18} color='white' />
+            <Heart size={18} color='white' onClick={onClickLike} />
           </div>
           <div className={styles.likescount}>
-              12k
+              {like}k
           </div>
         </div>
          {/* Entire movie set hover */}
         <div className={styles.moviehover}>
           <div className={styles.moviename}>
-              <h4>{movie.movieName}</h4>
+              <h4 className={styles.movietitle}>{movie.movieName}</h4>
               <div>
                 {movie.language} • (U/A) • {movie.genre}
               </div>

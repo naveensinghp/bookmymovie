@@ -37,19 +37,13 @@
   box-shadow: 0 1px 2px #00000059  
 }
 
-.cardwrapper:hover .bookingstuff{
-  /* background-color: var(--color-yellow); */
+/* .cardwrapper:hover .bookingstuff{
   position: absolute;
   transform: scale(1);
   transform-origin: top center;
   will-change: transform; 
   transition: all .3s ease-in;
-
-  /* transform: scale(0.8);
-  transform-origin: top center;
-  will-change: transform; */
-  /* transition: transform 500ms; */
-}
+} */
 
 .bookingstuff{
   width: 100%;
@@ -70,50 +64,47 @@
   cursor: pointer;
 }
 
-.movieimg:hover{
-  transform: scale(1.0);
-  transition: all .3s ease-in;
+.movietitle{
+  color: var(--color-white);
+  font-size: 1.1rem;
+  font-weight: bolder;
+  margin: 0;
+  line-height: 1.4;
 }
 
-.cardwrapper:hover .movieimg{
-  /* transform: scale(1.1); */
+/* .movieimg:hover{
+  transform: scale(1.0);
+  transition: all .3s ease-in;
+} */
+
+/* .cardwrapper:hover .movieimg{
+  transform: scale(1.1);
   transition: transform 350ms;
-}
+} */
 .moviename{
+  /* background-color: aqua; */
   font-weight: bolder;
   width: 100%;
   height: 100%;
   font-size: 1rem;
   position: absolute;
   left: 18px;
-  top: 70%;
+  top: 100px;
   text-shadow: 0 3px 7px rgba(0,0,0,.8);
   transition: all .3s ease-out;
   color: var(--color-white)
 }
 
-.cardwrapper:hover .moviename
+/* .cardwrapper:hover .moviename
 {
-  /* background-color: aqua; */
+  background-color: aqua;
   position: absolute;
   top: 50%;
   transition: all .3s ease-out;
-}
+} */
 
 .bookmarkmovie{
   position: relative;
   top: -10px;
   bottom: 0;
-}
-
-
-
-
-.moviehover:hover{
-
-  /* position: relative;
-  transform: scale(0.8);
-  transform-origin: top center;
-  will-change: transform;
-  transition: transform 500ms; */
 }
