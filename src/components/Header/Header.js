@@ -21,6 +21,7 @@ import {
 } from 'react-feather';
 
 import styles from './Header.module.css';
+import TextLink from '../TextLink';
 
 function Header() {
   const[isOpened,setIsOpened] = React.useState(false);
@@ -30,7 +31,7 @@ function Header() {
   return (
     <Wrapper>
       <Logo>
-        <img src="assets/logo.png" alt="bookmymovielogo" width={200}/>
+        <TextLink href="/"> <img src="assets/logo.png" alt="bookmymovielogo" width={200}/></TextLink>
       </Logo>
       <SearchSection>
          <div className={styles.searchMovieWrapper}>
