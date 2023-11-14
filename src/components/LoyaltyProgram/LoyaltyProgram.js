@@ -17,7 +17,6 @@ function LoyaltyProgram() {
           </CardOuter>
           <ButtonThings>
               {/* <Button>Know More</Button> */}
-              
               <a  href="/home">Already a Memeber</a>
           </ButtonThings>
       </WrapperTwo>
