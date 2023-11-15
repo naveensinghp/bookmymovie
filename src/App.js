@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import Home from "./components/Home/Home";
 import MovieCalendar from "./pages/moviecalendar";
+import FramerMotionLearnings from './components/FramerMotionLearnings/FramerMotionLearnings';
+
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/moviecalendar" element={<MovieCalendar />} />
+          <Route exact path="/fm" element={<FramerMotionLearnings />} />
         </Routes>
       </Router>
     </>

@@ -10,10 +10,11 @@ function MovieCalendar(){
             {/* <h1>Movie Calendar Page</h1> */}
             <Wrapper>
                 {/* MOVIE BANNER GOESHERS */}
+                <img src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/big/1460x600/HO00025768.jpg" alt="banner" />
                 <MoviePoster>
-                    <div style={{background: 'white'}}>
+                    <Showstuff>
                     Hello World
-                    </div>
+                    </Showstuff>
                 </MoviePoster>
             </Wrapper>
         </>
@@ -25,12 +26,17 @@ function MovieCalendar(){
 export default MovieCalendar;
 
 const MoviePoster = styled.div`
-    /* padding-left: 50%;
-    padding-right: 50%; */
-
 `
 
 const Wrapper = styled.div`
-  padding-top: 20%;
+  padding-top: 1%;
   background: hotpink;
+  margin-left: 5%;
+  margin-right: 5%;
+`;
+
+const Showstuff = styled.div`
+    padding: 20px;
+    background: white;
+
 `;
