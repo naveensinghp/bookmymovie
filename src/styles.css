@@ -59,8 +59,8 @@ html {
     --color-white: white;
     --test-color: hotpink;
     --color-black: black;
-    --color-black-400: hsl(0deg 0% 10.2%)
-   
+    --color-black-400: hsl(0deg 0% 10.2%);
+    --color-black-500: #191919;
 }
 
 body {

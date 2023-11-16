@@ -37,6 +37,8 @@ const Wrapper = styled.div`
 
 const Showstuff = styled.div`
     padding: 20px;
-    background: white;
+    font-size: 1rem;
+    color: var(--color-white);
+    background: var(--color-black-500);
 
 `;
