@@ -1,9 +1,13 @@
 import Header from "../components/Header/Header";
 import TextLink from "../components/TextLink";
 import styled from 'styled-components';
-import { X } from 'react-feather';
+import { X,ChevronRight,ChevronLeft } from 'react-feather';
 import Link from "../components/Link";
+import React from 'react';
 function MovieCalendar(){
+    let newDate = new Date()
+    let date = newDate.getDate();
+    
     return(
         <>
             <Header/>
@@ -23,6 +27,23 @@ function MovieCalendar(){
                         <Showstuff> ShowTimes</Showstuff>
                         <Showstuff> synopsis</Showstuff>
                     </Showwrapper>
+                    <TimingStuff>
+                        {/* <Day>
+                            <ChevronLeft />
+                                <div>Sun</div>
+                                <div>{date}</div>
+                            <ChevronRight />
+                        </Day> */}
+                        <div style={{display: 'flex',gap: '20px',color:'white',fontSize: '1rem',justifyContent: 'center',alignItems: 'center'}}>
+                            <ChevronLeft />
+                                <div style={{display: 'flex',flexDirection: 'column',fontSize: '1.1rem'}}>
+                                    <h4>Sun</h4>
+                                    <h5>19</h5>
+                                </div>
+                                
+                            <ChevronRight />
+                        </div>
+                    </TimingStuff>
                 </MoviePoster>
             </Wrapper>
         </>
@@ -59,11 +80,23 @@ const Showstuff = styled.div`
     cursor: pointer;
     text-transform: uppercase;
     padding: 20px;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: bolder;
     color: var(--color-white);
     background: var(--color-black-500);
     &:hover{
         color: var(--color-yellow);
     }
+`;
+
+const TimingStuff = styled.div`
+    padding: 20px;
+    display: flex;
+`;
+const Day = styled.div`
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
 `;
