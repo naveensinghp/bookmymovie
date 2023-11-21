@@ -20,7 +20,13 @@ function MovieCalendar(){
                     </Link>
                 </Close>
                 {/* MOVIE BANNER GOESHERS */}
-                <img src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/big/1460x600/HO00025768.jpg" alt="banner" />
+                <div>
+                    <img src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/big/1460x600/HO00025768.jpg" alt="banner" />
+                    <MovieTitle>
+                        <h1>Leo</h1>
+                    </MovieTitle>
+                </div>
+                
                 
                 <MoviePoster>
                     <Showwrapper>
@@ -54,6 +60,15 @@ function MovieCalendar(){
 
 export default MovieCalendar;
 
+const MovieTitle = styled.div`
+    position: absolute;
+    font-size: 1rem;
+    color: white;
+    top: 20;
+
+`;
+
+
 const MoviePoster = styled.div`
 `
 const Close = styled.div`
@@ -74,6 +89,7 @@ const Wrapper = styled.div`
   background: hotpink;
   margin-left: 5%;
   margin-right: 5%;
+  box-shadow: 10px 10px;
 `;
 
 const Showstuff = styled.div`
