@@ -4,10 +4,15 @@ import styled from 'styled-components';
 import { X,ChevronRight,ChevronLeft } from 'react-feather';
 import Link from "../components/Link";
 import React from 'react';
+import { range } from "../utils";
+
 function MovieCalendar(){
+    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
     let newDate = new Date()
     let date = newDate.getDate();
-    
+    console.log("tt",new Date().toUTCString());
+    // From 
     return(
         <>
             <Header/>
@@ -42,11 +47,13 @@ function MovieCalendar(){
                         </Day> */}
                         <div style={{display: 'flex',gap: '20px',color:'white',fontSize: '1rem',justifyContent: 'center',alignItems: 'center'}}>
                             <ChevronLeft />
-                                <div style={{display: 'flex',flexDirection: 'column',fontSize: '1.1rem'}}>
+                            {/* { range(2).map((itemNum) =>{
+                                
+                            })}  */}
+                             <div style={{display: 'flex',flexDirection: 'column',fontSize: '1.1rem'}}>
                                     <h4>Sun</h4>
                                     <h5>19</h5>
                                 </div>
-                                
                             <ChevronRight />
                         </div>
                     </TimingStuff>
