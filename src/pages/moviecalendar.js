@@ -28,7 +28,9 @@ function MovieCalendar(){
                 <div>
                     <img src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/big/1460x600/HO00025768.jpg" alt="banner" />
                     <MovieTitle>
-                        <h1>Leo</h1>
+                        <h1>Leo (U/A)</h1>
+                        <h4>(U/A) • 2h 44m • Thursday, October 19, 2023 • TAMIL • ACTION</h4>
+                        <h5>Thalapathy Vijay, Sanjay Dutt, Trisha</h5>
                     </MovieTitle>
                 </div>
                 
@@ -71,7 +73,8 @@ const MovieTitle = styled.div`
     position: absolute;
     font-size: 1rem;
     color: white;
-    top: 20;
+    top: 23em;
+    padding: 20px;
 
 `;
 

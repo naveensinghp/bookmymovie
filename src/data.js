@@ -8,7 +8,7 @@ export const CITY = {
 export const nowShowingMovie = [
     {
         id: 1,
-        movieName: "Jawan",
+        movieName: "Wishu",
         movieRunningLanguage: ["Tamil","Hinid","Telegu"],
         newRelease: false,
         releaseDate: "Fri Sept 14",

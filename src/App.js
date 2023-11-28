@@ -17,10 +17,11 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/moviecalendar" element={<MovieCalendar />} />
+          <Route exact path="/moviecalendar" element={<MovieCalendar key={2} />} />
           <Route exact path="/fm" element={<FramerMotionLearnings />} />
         </Routes>
       </Router>
+      {/* <FramerMotionLearnings /> */}
     </>
   );
 }
