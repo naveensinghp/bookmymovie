@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 function MovieCard(props) {
    let movie = props.data;
-   const[like, setLink] = React.useState(12);
+   const[like, setLink] = React.useState(movie.likesCount);
    function onClickLike(){
     setLink(like +1)
    }
@@ -21,7 +21,7 @@ function MovieCard(props) {
       <div className={styles.cardwrapper}>
         <img src={movie.moviePoster} className={styles.movieimg} alt="bookmymovielogo"/>
         <div>
-          { movie.newRelease ? <div className={styles.newreleaselabel}> Releasing on Fri Nov 10</div> : ""}
+          { movie.newRelease ? <div className={styles.newreleaselabel}> Releasing on {movie.releaseDate}</div> : ""}
           <div className={styles.likeheart}>
             <Heart size={18} color='white' onClick={onClickLike} />
           </div>

@@ -8,7 +8,7 @@ export const CITY = {
 export const nowShowingMovie = [
     {
         id: 1,
-        movieName: "Wishu",
+        movieName: "Kunfu Panda",
         movieRunningLanguage: ["Tamil","Hinid","Telegu"],
         newRelease: false,
         releaseDate: "Fri Sept 14",
@@ -23,7 +23,7 @@ export const nowShowingMovie = [
         movieRunningLanguage: ["Tamil","Hinid","Telegu"],
         moviePoster: "assets/onepiece.jpg",
         newRelease: true,
-        releaseDate: "Fri Sept 14",
+        releaseDate: "Fri Nov 14",
         likesCount: 30,
         genre: "Drama",
         language: 'Tamil'
@@ -34,7 +34,7 @@ export const nowShowingMovie = [
         movieRunningLanguage: ["Tamil","Hinid","Telegu"],
         moviePoster: "assets/onepiece.jpg",
         newRelease: true,
-        releaseDate: "Fri Sept 14",
+        releaseDate: "Fri Dec 14",
         likesCount: 30,
         genre: "Drama",
         language: 'Tamil'
@@ -67,7 +67,7 @@ export const nowShowingMovie = [
         movieRunningLanguage: ["Tamil","Hinid","Telegu"],
         moviePoster: "assets/onepiece.jpg",
         newRelease: true,
-        releaseDate: "Fri Sept 14",
+        releaseDate: "Fri Nov 20",
         likesCount: 30,
         genre: "Drama",
         language: 'Tamil'
