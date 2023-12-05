@@ -24,7 +24,7 @@ export const nowShowingMovie = [
         moviePoster: "assets/onepiece.jpg",
         newRelease: true,
         releaseDate: "Fri Nov 14",
-        likesCount: 30,
+        likesCount: 60,
         genre: "Drama",
         language: 'Tamil'
     },
@@ -35,7 +35,7 @@ export const nowShowingMovie = [
         moviePoster: "assets/onepiece.jpg",
         newRelease: true,
         releaseDate: "Fri Dec 14",
-        likesCount: 30,
+        likesCount: 20,
         genre: "Drama",
         language: 'Tamil'
     },
@@ -46,7 +46,7 @@ export const nowShowingMovie = [
         moviePoster: "assets/onepiece.jpg",
         newRelease: true,
         releaseDate: "Fri Sept 14",
-        likesCount: 30,
+        likesCount: 10,
         genre: "Drama",
         language: 'Tamil'
     },
@@ -57,7 +57,7 @@ export const nowShowingMovie = [
         moviePoster: "assets/leo.jpg",
         newRelease: false,
         releaseDate: "Fri Sept 14",
-        likesCount: 30,
+        likesCount: 40,
         genre: "Drama",
         language: 'Tamil'
     },

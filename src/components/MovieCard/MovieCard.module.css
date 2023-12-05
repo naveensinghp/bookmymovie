@@ -45,9 +45,37 @@
   transition: all .3s ease-in;
 } */
 
+
+.cardwrapper:hover .bookingstuff{
+  top: 0;  
+ 
+ 
+}
+
+.container{
+  position: relative;
+  height: 20rem;
+  width: 20rem;
+  border: solid blue 0.05rem;
+}
+
+/* .child1 {
+  position: absolute;
+  display: inline-block;
+  height: 5rem;
+  width: 5rem;
+  background-color: red;
+  top: calc( 100% - 5rem ); 
+  transition: all .3s ease;
+  will-change: top;
+}
+
+.container:hover  .child1{
+  top: 100px;  
+} */
 .bookingstuff{
   width: 100%;
-  /* background: hotpink; */
+  background: hotpink;
   display: flex;
   gap: 10px;
   transform: scale(1);

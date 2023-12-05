@@ -18,6 +18,9 @@ function MovieCard(props) {
   return(
     <>
      {/* <Spinner /> */}
+     {/* <div className={styles.cardwrapper}>
+      <div className={styles.child}></div>
+     </div> */}
       <div className={styles.cardwrapper}>
         <img src={movie.moviePoster} className={styles.movieimg} alt="bookmymovielogo"/>
         <div>
