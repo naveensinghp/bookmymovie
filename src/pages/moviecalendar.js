@@ -51,50 +51,29 @@ function MovieCalendar(){
 
                         <div style={{
                                 display: 'flex',
-                                
-                                gap: '50px',
+                                gap: '8rem',
                                 color:'white',
                                 fontSize: '1rem',
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 padding: '15px 40px'
-                                
                                 }}>
-                            
-                             <div style={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        fontSize: '1.1rem',
-                                        }}>
+                                <Test>
                                     <h4 style={{fontSize: '1.5rem'}}>Sun</h4>
                                     <h5 style={{fontSize: '1.7rem'}}>19</h5>
-                                </div>
-                                <div style={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        fontSize: '1.1rem'
-                                        }}>
+                                </Test>
+                                <Test>
                                     <h4 style={{fontSize: '1.5rem'}}>Mon</h4>
                                     <h5 style={{fontSize: '1.7rem'}}>20</h5>
-                                </div>
-                                <div style={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        fontSize: '1.1rem'
-                                        }}>
+                                </Test>
+                                <Test>
                                     <h4 style={{fontSize: '1.5rem'}}>Tue</h4>
                                     <h5 style={{fontSize: '1.7rem'}}>21</h5>
-                                </div>
-                                <div style={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        fontSize: '1.1rem',
-                                        cursor: 'pointer'
-                                        }}>
-                                    <h4 style={{fontSize: '1.5rem'}}>Sun</h4>
-                                    <h5 style={{fontSize: '1.7rem'}}>19</h5>
-                                </div>
-                           
+                                </Test>
+                                <Test>
+                                    <h4 style={{fontSize: '1.5rem'}}>Wed</h4>
+                                    <h5 style={{fontSize: '1.7rem'}}>22</h5>
+                                </Test>
                         </div>
                     </TimingStuff>
                 </MoviePoster>
@@ -103,9 +82,17 @@ function MovieCalendar(){
     );
 }
 
-
-
 export default MovieCalendar;
+
+const Test  = styled.div`
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    cursor: pointer;
+    &:hover{
+        background-color: red;
+    }
+`;
 
 const MovieTitle = styled.div`
     position: absolute;
@@ -134,10 +121,10 @@ const Showwrapper = styled.div`
 
 const Wrapper = styled.div`
   padding-top: 1%;
-  background: hotpink;
+  /* background: hotpink; */
   margin-left: 5%;
   margin-right: 5%;
-  box-shadow: 10px 10px;
+  border-bottom: 1px solid white;
 `;
 
 const Showstuff = styled.div`
