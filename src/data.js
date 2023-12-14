@@ -3,6 +3,11 @@ export const CITY = {
 } 
 
 
+export const WEEKS = [
+    {
+        
+    }
+]
 
 
 export const nowShowingMovie = [

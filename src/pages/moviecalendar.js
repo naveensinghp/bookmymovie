@@ -41,15 +41,19 @@ function MovieCalendar(){
                         <Showstuff> synopsis</Showstuff>
                     </Showwrapper>
                     <TimingStuff>
-                        {/* <Day>
-                            <ChevronLeft />
-                                <div>Sun</div>
-                                <div>{date}</div>
-                            <ChevronRight />
-                        </Day> */}
+                        <Day>
+                            <ChevronLeft color="gray" />
+                                <div style={{display: 'flex',flexDirection: 'column'}}>
+                                    <h3>Sun</h3>
+                                    <h3>14</h3>
+                                </div>
+                                {/* <div>Sun</div>
+                                <div>{date}</div> */}
+                            <ChevronRight color="gray" />
+                        </Day>
 
 
-                        <div style={{
+                        {/* <div style={{
                                 display: 'flex',
                                 gap: '8rem',
                                 color:'white',
@@ -74,7 +78,7 @@ function MovieCalendar(){
                                     <h4 style={{fontSize: '1.5rem'}}>Wed</h4>
                                     <h5 style={{fontSize: '1.7rem'}}>22</h5>
                                 </Test>
-                        </div>
+                        </div> */}
                     </TimingStuff>
                 </MoviePoster>
             </Wrapper>
@@ -90,6 +94,7 @@ const Test  = styled.div`
     font-size: 1.1rem;
     cursor: pointer;
     &:hover{
+        
         background-color: red;
     }
 `;
@@ -146,8 +151,14 @@ const TimingStuff = styled.div`
 `;
 const Day = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     color: white;
     font-size: 1rem;
     font-weight: bold;
+    gap: 20px;
+
+    &:hover {
+        background-color: red;
+    }
 `;
