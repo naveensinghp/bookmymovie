@@ -126,6 +126,27 @@ input:-moz-placeholder{
   animation: spin 1000ms linear infinite;
 }
 
+.testing_two{
+  transform: scale(0);
+  width: 200px;
+  height: 400px;
+  background-color: yellow;
+}
+
+.testting {
+  cursor: pointer;
+  width: 200px;
+  height: 400px;
+  background-color: hotpink;
+}
+.testting:hover .testing_two{
+  background-color: aqua;
+  position: absolute;
+  transform: scale(1);
+  transform-origin: top center;
+  will-change: transform; 
+  transition: all .3s ease-in;
+}
 @keyframes spin {
   from {
     transform: rotate(-360deg);
