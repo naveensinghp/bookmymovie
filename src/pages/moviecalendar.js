@@ -47,12 +47,20 @@ function MovieCalendar(){
                                     <h3>Sun</h3>
                                     <h3>14</h3>
                                 </div>
-                                {/* <div>Sun</div>
-                                <div>{date}</div> */}
                             <ChevronRight color="gray" />
                         </Day>
-
-
+                        <div className="testting">
+                            HOVER ME YELLOW WILL SHOW
+                        </div>
+                        <div className="testing_two">
+                        IAM SECOND
+                        </div>
+                        {/* <Monthrow>
+                            <Month>
+                                <h4 style={{fontSize: '1.5rem'}}>Sun</h4>
+                                <h5 style={{fontSize: '1.7rem'}}>19</h5>
+                            </Month>
+                        </Monthrow> */}
                         {/* <div style={{
                                 display: 'flex',
                                 gap: '8rem',
@@ -88,7 +96,18 @@ function MovieCalendar(){
 
 export default MovieCalendar;
 
-const Test  = styled.div`
+
+const Monthrow = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    color: white;
+    font-size: 1rem;
+    padding: 15px 40px;
+`;
+
+const Month  = styled.div`
     display: flex;
     flex-direction: column;
     font-size: 1.1rem;
