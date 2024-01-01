@@ -41,26 +41,38 @@ function MovieCalendar(){
                         <Showstuff> synopsis</Showstuff>
                     </Showwrapper>
                     <TimingStuff>
-                        <Day>
+                        {/* <Day>
                             <ChevronLeft color="gray" />
                                 <div style={{display: 'flex',flexDirection: 'column'}}>
                                     <h3>Sun</h3>
                                     <h3>14</h3>
                                 </div>
                             <ChevronRight color="gray" />
-                        </Day>
-                        <div className="testting">
+                        </Day> */}
+                        {/* <div className="testting">
                             HOVER ME YELLOW WILL SHOW
+                            <p className="testing_two">
+                                IAM SECOND
+                            </p>
                         </div>
-                        <div className="testing_two">
-                        IAM SECOND
-                        </div>
-                        {/* <Monthrow>
+
+                        <div className="hello">
+                            <h1 className="test">My First CSS Example</h1>
+                        <p className="para">This is a paragraph.</p>
+                        </div> */}
+                       
+                       {/* After hover state */}
+
+                       {range(4).map((num) =>( 
+            
+                        
+                        <Monthrow>
                             <Month>
                                 <h4 style={{fontSize: '1.5rem'}}>Sun</h4>
                                 <h5 style={{fontSize: '1.7rem'}}>19</h5>
                             </Month>
-                        </Monthrow> */}
+                        </Monthrow>
+                         ))}
                         {/* <div style={{
                                 display: 'flex',
                                 gap: '8rem',
@@ -107,13 +119,14 @@ const Monthrow = styled.div`
     padding: 15px 40px;
 `;
 
-const Month  = styled.div`
+const Month = styled.div`
     display: flex;
     flex-direction: column;
     font-size: 1.1rem;
     cursor: pointer;
+    width: 200px;
+    text-align: center;
     &:hover{
-        
         background-color: red;
     }
 `;

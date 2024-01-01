@@ -134,18 +134,26 @@ input:-moz-placeholder{
 }
 
 .testting {
-  cursor: pointer;
+  /* cursor: pointer; */
   width: 200px;
   height: 400px;
   background-color: hotpink;
 }
 .testting:hover .testing_two{
   background-color: aqua;
-  position: absolute;
-  transform: scale(1);
-  transform-origin: top center;
-  will-change: transform; 
-  transition: all .3s ease-in;
+}
+
+.hello{
+  background-color: yellow;
+}
+.hello:hover .para{
+  background-color: aqua;
+	color : hotpink;
+}
+
+
+.test:hover {
+	color: red;
 }
 @keyframes spin {
   from {
