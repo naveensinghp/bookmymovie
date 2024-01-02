@@ -7,11 +7,6 @@ import React from 'react';
 import { range } from "../utils";
 
 function MovieCalendar(){
-    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-
-    let newDate = new Date()
-    let date = newDate.getDate();
-    console.log("tt",new Date().toUTCString());
     // From 
     return(
         <>
@@ -24,83 +19,10 @@ function MovieCalendar(){
                         <X size={32} color="white" />
                     </Link>
                 </Close>
-                {/* MOVIE BANNER GOESHERS */}
-                <div>
-                    <img src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/big/1460x600/HO00025768.jpg" alt="banner" />
-                    <MovieTitle>
-                        <h1>Leo (U/A)</h1>
-                        <h4>(U/A) • 2h 44m • Thursday, October 19, 2023 • TAMIL • ACTION</h4>
-                        <h5>Thalapathy Vijay, Sanjay Dutt, Trisha</h5>
-                    </MovieTitle>
+                <img src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/big/1460x600/HO00025768.jpg" alt="banner" />
+                <div style={{color:'red'}}>
+                    <h1>Hello World</h1>
                 </div>
-                
-                
-                <MoviePoster>
-                    <Showwrapper>
-                        <Showstuff> ShowTimes</Showstuff>
-                        <Showstuff> synopsis</Showstuff>
-                    </Showwrapper>
-                    <TimingStuff>
-                        {/* <Day>
-                            <ChevronLeft color="gray" />
-                                <div style={{display: 'flex',flexDirection: 'column'}}>
-                                    <h3>Sun</h3>
-                                    <h3>14</h3>
-                                </div>
-                            <ChevronRight color="gray" />
-                        </Day> */}
-                        {/* <div className="testting">
-                            HOVER ME YELLOW WILL SHOW
-                            <p className="testing_two">
-                                IAM SECOND
-                            </p>
-                        </div>
-
-                        <div className="hello">
-                            <h1 className="test">My First CSS Example</h1>
-                        <p className="para">This is a paragraph.</p>
-                        </div> */}
-                       
-                       {/* After hover state */}
-
-                       {range(4).map((num) =>( 
-            
-                        
-                        <Monthrow>
-                            <Month>
-                                <h4 style={{fontSize: '1.5rem'}}>Sun</h4>
-                                <h5 style={{fontSize: '1.7rem'}}>19</h5>
-                            </Month>
-                        </Monthrow>
-                         ))}
-                        {/* <div style={{
-                                display: 'flex',
-                                gap: '8rem',
-                                color:'white',
-                                fontSize: '1rem',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                padding: '15px 40px'
-                                }}>
-                                <Test>
-                                    <h4 style={{fontSize: '1.5rem'}}>Sun</h4>
-                                    <h5 style={{fontSize: '1.7rem'}}>19</h5>
-                                </Test>
-                                <Test>
-                                    <h4 style={{fontSize: '1.5rem'}}>Mon</h4>
-                                    <h5 style={{fontSize: '1.7rem'}}>20</h5>
-                                </Test>
-                                <Test>
-                                    <h4 style={{fontSize: '1.5rem'}}>Tue</h4>
-                                    <h5 style={{fontSize: '1.7rem'}}>21</h5>
-                                </Test>
-                                <Test>
-                                    <h4 style={{fontSize: '1.5rem'}}>Wed</h4>
-                                    <h5 style={{fontSize: '1.7rem'}}>22</h5>
-                                </Test>
-                        </div> */}
-                    </TimingStuff>
-                </MoviePoster>
             </Wrapper>
         </>
     );
@@ -108,6 +30,15 @@ function MovieCalendar(){
 
 export default MovieCalendar;
 
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid white;
+  padding-left: 15%;
+  padding-right: 15%;
+`;
 
 const Monthrow = styled.div`
     display: flex;
@@ -156,13 +87,7 @@ const Showwrapper = styled.div`
     background: var(--color-black-400);
 `;
 
-const Wrapper = styled.div`
-  padding-top: 1%;
-  /* background: hotpink; */
-  margin-left: 5%;
-  margin-right: 5%;
-  border-bottom: 1px solid white;
-`;
+
 
 const Showstuff = styled.div`
     cursor: pointer;
