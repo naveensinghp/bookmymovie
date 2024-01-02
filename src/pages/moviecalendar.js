@@ -20,9 +20,17 @@ function MovieCalendar(){
                     </Link>
                 </Close>
                 <img src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/big/1460x600/HO00025768.jpg" alt="banner" />
-                <div style={{color:'red'}}>
-                    <h1>Hello World</h1>
-                </div>
+                <MovieTitle>
+                    <h1>Leo (U/A)</h1>
+                    <h4>(U/A) • 2h 44m • Thursday, October 19, 2023 • TAMIL • ACTION</h4>
+                </MovieTitle>
+                <Showwrapper>
+                        <Showstuff> ShowTimes</Showstuff>
+                        <Showstuff> synopsis</Showstuff>
+                </Showwrapper>
+                <ShowTimeSlot>
+
+                </ShowTimeSlot>
             </Wrapper>
         </>
     );
@@ -35,9 +43,16 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border-bottom: 1px solid white;
+
   padding-left: 15%;
   padding-right: 15%;
+`;
+
+const ShowTimeSlot = styled.div`
+  border-bottom: 1px solid white;
+  /* background-color: green; */
+  height: 20px;
+
 `;
 
 const Monthrow = styled.div`
