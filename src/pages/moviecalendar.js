@@ -7,29 +7,35 @@ import React from 'react';
 import { range } from "../utils";
 
 function MovieCalendar(){
-    // From 
+    const[isShowTime,setShowTime] = React.useState(false);
+    const[isSynopsis,setSynopsis] = React.useState(true);
     return(
         <>
             <Header/>
             <TextLink  href="/">Go Home</TextLink>
-            {/* <h1>Movie Calendar Page</h1> */}
             <Wrapper>
-                <Close>
-                    <Link href="/">
-                        <X size={32} color="white" />
-                    </Link>
-                </Close>
-                <img src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/big/1460x600/HO00025768.jpg" alt="banner" />
+                <Close><Link href="/"><X size={32} color="white" /></Link></Close>
+                <div style={{background: 'hotpink',width: '100%',height: '400px'}}>
+
+                </div>
+                {/* <img src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/big/1460x600/HO00025768.jpg" alt="banner" /> */}
                 <MovieTitle>
                     <h1>Leo (U/A)</h1>
                     <h4>(U/A) • 2h 44m • Thursday, October 19, 2023 • TAMIL • ACTION</h4>
                 </MovieTitle>
                 <Showwrapper>
-                        <Showstuff> ShowTimes</Showstuff>
+                        {/* <Showstuff> ShowTimes</Showstuff> */}
+                        <button onClick={() => setShowTime(!isShowTime)}>Toggle</button>
                         <Showstuff> synopsis</Showstuff>
                 </Showwrapper>
+                
+                <div style={{color:'red'}}>
+                    <h1>Hello I am ShowTime -  {isShowTime}</h1>
+                </div>
+                <div style={{color: 'yellow'}}> 
+                    <h1>Hello I am Synopsis</h1>
+                </div>
                 <ShowTimeSlot>
-
                 </ShowTimeSlot>
             </Wrapper>
         </>
@@ -43,9 +49,16 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-
   padding-left: 15%;
   padding-right: 15%;
+`;
+
+const MovieTitle = styled.div`
+    position: absolute;
+    font-size: 1rem;
+    color: white;
+    top: 19em;
+    padding: 20px;
 `;
 
 const ShowTimeSlot = styled.div`
@@ -75,15 +88,6 @@ const Month = styled.div`
     &:hover{
         background-color: red;
     }
-`;
-
-const MovieTitle = styled.div`
-    position: absolute;
-    font-size: 1rem;
-    color: white;
-    top: 23em;
-    padding: 20px;
-
 `;
 
 
