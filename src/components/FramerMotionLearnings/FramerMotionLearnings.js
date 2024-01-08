@@ -91,6 +91,7 @@ function Toggle({
   );
 }
 
+
 function LayoutAnimation(){
   const [isMaxiMized,setisMaximized] = React.useState(false);
   return(
