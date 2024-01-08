@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 function AnnoucementBanner() {
   return <Wrapper>
-      <img src="https://originserver-static1-uat.pvrcinemas.com/pvrcms/banners/Kotak-Welcome_back__1738.jpg" alt="banner" />
+      <img src="#" alt="banner" />
   </Wrapper>;
 }
 

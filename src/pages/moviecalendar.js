@@ -8,7 +8,7 @@ import { range } from "../utils";
 
 function MovieCalendar(){
     const[isShowTime,setShowTime] = React.useState(false);
-    const[isSynopsis,setSynopsis] = React.useState(true);
+    console.log(isShowTime)
     return(
         <>
             <Header/>
@@ -18,23 +18,33 @@ function MovieCalendar(){
                 <div style={{background: 'hotpink',width: '100%',height: '400px'}}>
 
                 </div>
-                {/* <img src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/big/1460x600/HO00025768.jpg" alt="banner" /> */}
+               
                 <MovieTitle>
                     <h1>Leo (U/A)</h1>
                     <h4>(U/A) • 2h 44m • Thursday, October 19, 2023 • TAMIL • ACTION</h4>
                 </MovieTitle>
                 <Showwrapper>
-                        {/* <Showstuff> ShowTimes</Showstuff> */}
-                        <button onClick={() => setShowTime(!isShowTime)}>Toggle</button>
+                        <Showstuff> 
+                        <button onClick={() => setShowTime(!isShowTime)}>ShowTime</button>
+                        </Showstuff>
+                        
+                        <button onClick={() => setShowTime(!isShowTime)}>Synopsis</button>
                         <Showstuff> synopsis</Showstuff>
                 </Showwrapper>
                 
-                <div style={{color:'red'}}>
-                    <h1>Hello I am ShowTime -  {isShowTime}</h1>
-                </div>
-                <div style={{color: 'yellow'}}> 
+                <div>
+                {isShowTime ? (
+                    <div style={{color:'red'}}>
+                        <h1>Hello I am ShowTime -  {isShowTime}</h1>
+                    </div>
+                ) : (
+                    <div style={{color: 'yellow'}}> 
                     <h1>Hello I am Synopsis</h1>
                 </div>
+                )}
+                </div>
+                
+                
                 <ShowTimeSlot>
                 </ShowTimeSlot>
             </Wrapper>
@@ -49,8 +59,8 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 8%;
+  padding-right: 8%;
 `;
 
 const MovieTitle = styled.div`
