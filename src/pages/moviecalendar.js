@@ -5,10 +5,19 @@ import { X,ChevronRight,ChevronLeft } from 'react-feather';
 import Link from "../components/Link";
 import React from 'react';
 import { range } from "../utils";
+import useIsonScreen from "../hooks/use-is-onscreen";
 
 function MovieCalendar(){
+    const elementRef = React.useRef();
+    //const isOnscreen = useIsonScreen(elementRef);
     const[isShowTime,setShowTime] = React.useState(false);
-    console.log(isShowTime)
+    //const [isOnscreen,elementRef] = useIsonScreen()
+
+    React.useEffect(()=>{
+        if(isShowTime){
+            console.log("REACTED",isShowTime)
+        }
+    },[isShowTime])
     return(
         <>
             <Header/>
