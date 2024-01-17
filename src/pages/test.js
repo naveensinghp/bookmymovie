@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
+import Button from '../components/Button';
 
 
 export default function Test(){
@@ -12,7 +13,7 @@ export default function Test(){
         {flex: 1,background: 'hsl(50deg 100% 60%)'},
     ];
     return<>
-        <Wrapper>
+        {/* <Wrapper>
            <section>
             <label htmlFor={`${id}-name`}>
                 Name
@@ -40,11 +41,20 @@ export default function Test(){
             }}
             />
            </section>
-        </Wrapper>
+           
+        </Wrapper> */}
+        <SeatNumber>
+            <Button variant='fill'>
+                1
+            </Button>
+        </SeatNumber>
     </>
 }
 
-
+const SeatNumber = styled.div`
+    margin: 10px auto;
+    width: 300px;
+`
 
 const Wrapper = styled.div`
     width: 100%;

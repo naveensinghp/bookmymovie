@@ -6,6 +6,9 @@ import Link from "../components/Link";
 import React from 'react';
 import { range } from "../utils";
 import useIsonScreen from "../hooks/use-is-onscreen";
+import Button from "../components/Button";
+
+
 
 function MovieCalendar(){
     const elementRef = React.useRef();
@@ -27,32 +30,39 @@ function MovieCalendar(){
                 <div style={{background: 'hotpink',width: '100%',height: '400px'}}>
 
                 </div>
-               
                 <MovieTitle>
                     <h1>Leo (U/A)</h1>
                     <h4>(U/A) • 2h 44m • Thursday, October 19, 2023 • TAMIL • ACTION</h4>
                 </MovieTitle>
                 <Showwrapper>
-                        <Showstuff> 
+                        {/* <Showstuff> 
+                            <button onClick={() => setShowTime(!isShowTime)}>ShowTime</button>
+                        </Showstuff> */}
                         <button onClick={() => setShowTime(!isShowTime)}>ShowTime</button>
-                        </Showstuff>
-                        
-                        <button onClick={() => setShowTime(!isShowTime)}>Synopsis</button>
-                        <Showstuff> synopsis</Showstuff>
+                        {/* <Button variant='fill' size="medium" >
+                            Submit
+                        </Button> */}
+                         <button onClick={() => setShowTime(!isShowTime)}>synopsis</button>
+                        {/* <Showstuff> synopsis</Showstuff> */}
+                        <ul style={{display: 'flex',color: 'white', gap: '20px'}}>
+                            <li>First Link</li>
+                            <li>Second Link</li>
+                        </ul>
                 </Showwrapper>
                 
                 <div>
-                {isShowTime ? (
-                    <div style={{color:'red'}}>
-                        <h1>Hello I am ShowTime -  {isShowTime}</h1>
-                    </div>
-                ) : (
+                    {isShowTime ? 
+                    (
+                        <div style={{color:'red'}}>
+                            <h1>Hello I am ShowTime -  {isShowTime}</h1>
+                        </div>
+                    ) : (
                     <div style={{color: 'yellow'}}> 
                     <h1>Hello I am Synopsis</h1>
                 </div>
                 )}
                 </div>
-                
+               
                 
                 <ShowTimeSlot>
                 </ShowTimeSlot>

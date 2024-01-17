@@ -24,6 +24,7 @@ const SIZES = {
 function Button({variant,size,children,href}) {
   const styles = SIZES[size];
   let Component;
+ console.log(variant)
   if(variant === 'fill'){
     Component = FillButton
   }else{
@@ -66,8 +67,8 @@ const ButtonBase = styled.button`
 `;
 
 const FillButton = styled(ButtonBase)`
-  /* background-color: 'hotpink';
-  color: 'white'; */
+  background-color: 'hotpink';
+  color: 'white';
 `
 const OutlineButton = styled(ButtonBase)`
   background-color: 'red';
