@@ -70,7 +70,7 @@ function MovieCalendar(){
                        
                        {/* After hover state */}
 
-                       {range(1).map((num) =>( 
+                       {range(4).map((num) =>( 
                         <Monthrow>
                             <Month>
                                 <h4 style={{fontSize: '1.1rem'}}>Jan</h4>
@@ -167,8 +167,9 @@ const Showstuff = styled.div`
 `;
 
 const TimingStuff = styled.div`
-    padding: 20px;
+     margin-left: 20px;
     display: flex;
+    gap: 20px;
 `;
 const Day = styled.div`
     display: flex;
