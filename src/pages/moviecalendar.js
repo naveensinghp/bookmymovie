@@ -26,46 +26,61 @@ function MovieCalendar(){
             <Header/>
             <TextLink  href="/">Go Home</TextLink>
             <Wrapper>
-                <Close><Link href="/"><X size={32} color="white" /></Link></Close>
-                <div style={{background: 'hotpink',width: '100%',height: '400px'}}>
-
-                </div>
-                <MovieTitle>
-                    <h1>Leo (U/A)</h1>
-                    <h4>(U/A) • 2h 44m • Thursday, October 19, 2023 • TAMIL • ACTION</h4>
-                </MovieTitle>
-                <Showwrapper>
-                        {/* <Showstuff> 
-                            <button onClick={() => setShowTime(!isShowTime)}>ShowTime</button>
-                        </Showstuff> */}
-                        <button onClick={() => setShowTime(!isShowTime)}>ShowTime</button>
-                        {/* <Button variant='fill' size="medium" >
-                            Submit
-                        </Button> */}
-                         <button onClick={() => setShowTime(!isShowTime)}>synopsis</button>
-                        {/* <Showstuff> synopsis</Showstuff> */}
-                        <ul style={{display: 'flex',color: 'white', gap: '20px'}}>
-                            <li>First Link</li>
-                            <li>Second Link</li>
-                        </ul>
-                </Showwrapper>
-                
+                <Close>
+                    <Link href="/">
+                        <X size={32} color="white" />
+                    </Link>
+                </Close>
+                {/* MOVIE BANNER GOESHERS */}
                 <div>
-                    {isShowTime ? 
-                    (
-                        <div style={{color:'red'}}>
-                            <h1>Hello I am ShowTime -  {isShowTime}</h1>
-                        </div>
-                    ) : (
-                    <div style={{color: 'yellow'}}> 
-                    <h1>Hello I am Synopsis</h1>
+                    <img src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/big/1460x600/HO00025768.jpg" alt="banner" />
+                    <MovieTitle>
+                        <h1>Leo (U/A)</h1>
+                        <h4>(U/A) • 2h 44m • Thursday, October 19, 2023 • TAMIL • ACTION</h4>
+                        <h5>Thalapathy Vijay, Sanjay Dutt, Trisha</h5>
+                    </MovieTitle>
                 </div>
-                )}
-                </div>
-               
                 
-                <ShowTimeSlot>
-                </ShowTimeSlot>
+                
+                <MoviePoster>
+                    <Showwrapper>
+                        <Showstuff> ShowTimes</Showstuff>
+                        <Showstuff> synopsis</Showstuff>
+                    </Showwrapper>
+                    <TimingStuff>
+                        {/* <Day>
+                            <ChevronLeft color="gray" />
+                                <div style={{display: 'flex',flexDirection: 'column'}}>
+                                    <h3>Sun</h3>
+                                    <h3>14</h3>
+                                </div>
+                            <ChevronRight color="gray" />
+                        </Day> */}
+                        {/* <div className="testting">
+                            HOVER ME YELLOW WILL SHOW
+                            <p className="testing_two">
+                                IAM SECOND
+                            </p>
+                        </div>
+
+                        <div className="hello">
+                            <h1 className="test">My First CSS Example</h1>
+                        <p className="para">This is a paragraph.</p>
+                        </div> */}
+                       
+                       {/* After hover state */}
+
+                       {range(1).map((num) =>( 
+                        <Monthrow>
+                            <Month>
+                                <h4 style={{fontSize: '1.1rem'}}>Jan</h4>
+                                <h5 style={{fontSize: '1.4rem'}}>19</h5>
+                                <h5 style={{fontSize: '1rem'}}>Today</h5>
+                            </Month>
+                        </Monthrow>
+                         ))}
+                    </TimingStuff>
+                </MoviePoster>
             </Wrapper>
         </>
     );
@@ -104,7 +119,7 @@ const Monthrow = styled.div`
     gap: 8rem;
     color: white;
     font-size: 1rem;
-    padding: 15px 40px;
+
 `;
 
 const Month = styled.div`
@@ -114,6 +129,7 @@ const Month = styled.div`
     cursor: pointer;
     width: 200px;
     text-align: center;
+    background-color: hotpink;
     &:hover{
         background-color: red;
     }
