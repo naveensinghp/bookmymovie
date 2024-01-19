@@ -10,12 +10,9 @@ import Button from "../components/Button";
 
 
 
-function MovieCalendar(){
+export default function MovieCalendar(){
     const elementRef = React.useRef();
-    //const isOnscreen = useIsonScreen(elementRef);
     const[isShowTime,setShowTime] = React.useState(false);
-    //const [isOnscreen,elementRef] = useIsonScreen()
-
     React.useEffect(()=>{
         if(isShowTime){
             console.log("REACTED",isShowTime)
@@ -40,53 +37,35 @@ function MovieCalendar(){
                         <h5>Thalapathy Vijay, Sanjay Dutt, Trisha</h5>
                     </MovieTitle>
                 </div>
-                
-                
                 <MoviePoster>
-                    <Showwrapper>
-                        <Showstuff> ShowTimes</Showstuff>
-                        <Showstuff> synopsis</Showstuff>
-                    </Showwrapper>
-                    <TimingStuff>
-                        {/* <Day>
-                            <ChevronLeft color="gray" />
-                                <div style={{display: 'flex',flexDirection: 'column'}}>
-                                    <h3>Sun</h3>
-                                    <h3>14</h3>
-                                </div>
-                            <ChevronRight color="gray" />
-                        </Day> */}
-                        {/* <div className="testting">
-                            HOVER ME YELLOW WILL SHOW
-                            <p className="testing_two">
-                                IAM SECOND
-                            </p>
-                        </div>
-
-                        <div className="hello">
-                            <h1 className="test">My First CSS Example</h1>
-                        <p className="para">This is a paragraph.</p>
-                        </div> */}
-                       
-                       {/* After hover state */}
-
-                       {range(4).map((num) =>( 
-                        <Monthrow>
-                            <Month>
-                                <h4 style={{fontSize: '1.1rem'}}>Jan</h4>
-                                <h5 style={{fontSize: '1.4rem'}}>19</h5>
-                                <h5 style={{fontSize: '1rem'}}>Today</h5>
-                            </Month>
-                        </Monthrow>
-                         ))}
-                    </TimingStuff>
+                    <ShowTime />    
                 </MoviePoster>
             </Wrapper>
         </>
     );
+
+    function ShowTime(){
+        return(
+            <Showwrapper>
+                        {/* <Showstuff> ShowTimes</Showstuff>
+                        <Showstuff> synopsis</Showstuff> */}
+                <TimingStuff>
+                    {range(4).map((num) =>( 
+                    <Monthrow>
+                        <Month>
+                            <h4 style={{fontSize: '1.1rem'}}>Jan</h4>
+                            <h5 style={{fontSize: '1.4rem'}}>19</h5>
+                            <h5 style={{fontSize: '1rem'}}>Today</h5>
+                        </Month>
+                    </Monthrow>
+                        ))}
+                </TimingStuff>
+            </Showwrapper>
+        );
+    }
 }
 
-export default MovieCalendar;
+
 
 
 const Wrapper = styled.div`
@@ -129,10 +108,10 @@ const Month = styled.div`
     cursor: pointer;
     width: 200px;
     text-align: center;
-    background-color: hotpink;
-    &:hover{
+    background-color: #878787;
+    /* &:hover{
         background-color: red;
-    }
+    } */
 `;
 
 
@@ -146,11 +125,8 @@ const Close = styled.div`
 `;
 
 const Showwrapper = styled.div`
-    display: flex;
-    justify-content: center;
     background: var(--color-black-400);
 `;
-
 
 
 const Showstuff = styled.div`
@@ -167,7 +143,6 @@ const Showstuff = styled.div`
 `;
 
 const TimingStuff = styled.div`
-     margin-left: 20px;
     display: flex;
     gap: 20px;
 `;
@@ -179,8 +154,7 @@ const Day = styled.div`
     font-size: 1rem;
     font-weight: bold;
     gap: 20px;
-
-    &:hover {
+    /* &:hover {
         background-color: red;
-    }
+    } */
 `;
