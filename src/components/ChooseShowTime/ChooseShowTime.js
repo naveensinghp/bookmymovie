@@ -13,6 +13,6 @@ function ChooseShowTime() {
 
 export default ChooseShowTime;
 const Wrapper = styled.div`
-color: white;
- margin-left: 15%;
+  color: white;
+  margin-left: 15%;
 `

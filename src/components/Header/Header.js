@@ -110,7 +110,7 @@ const SearchSection = styled.div`
   /* background: hotpink; */
   width: 70%;
   display: flex;
-   flex-direction: column;
+  flex-direction: column;
   justify-content: center;
   gap: 20px;
 `;
@@ -131,6 +131,7 @@ const Select = styled.select`
     color: ${COLORS.white};
     height: 2.5rem;
 `;
+
 const SearchMovies = styled.div`
   background: ${COLORS.gray[300]};
   width: 60%;
