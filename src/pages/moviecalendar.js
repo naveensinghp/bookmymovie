@@ -50,15 +50,31 @@ export default function MovieCalendar(){
                         {/* <Showstuff> ShowTimes</Showstuff>
                         <Showstuff> synopsis</Showstuff> */}
                 <TimingStuff>
-                    {range(4).map((num) =>( 
+                    {range(1).map((num) =>( 
                     <Monthrow>
                         <Month>
-                            <h4 style={{fontSize: '1.1rem'}}>Jan</h4>
-                            <h5 style={{fontSize: '1.4rem'}}>19</h5>
-                            <h5 style={{fontSize: '1rem'}}>Today</h5>
+                            <div style={{padding: '10px 10px 10px 10px'}}>
+                                <h5 style={{fontSize: '1.4rem',fontWeight: 'bolder'}}>19</h5>
+                                <h5 style={{fontSize: '1rem'}}>Today</h5>
+                            </div>
+                           
                         </Month>
                     </Monthrow>
                         ))}
+                        
+                         <Monthrow>
+                            <div style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                padding: '10px 10px 10px 10px'
+                            }}>
+                                <h5 style={{fontSize: '1.4rem'}}>21</h5>
+                                <h5 style={{fontSize: '1rem'}}>Mon</h5>
+                            </div>
+                        </Monthrow>
+                        
                 </TimingStuff>
             </Showwrapper>
         );
@@ -108,7 +124,7 @@ const Month = styled.div`
     cursor: pointer;
     width: 200px;
     text-align: center;
-    background-color: #878787;
+    background-color: #333333;
     /* &:hover{
         background-color: red;
     } */
