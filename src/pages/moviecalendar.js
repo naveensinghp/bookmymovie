@@ -70,7 +70,7 @@ export default function MovieCalendar(){
                                 alignItems: 'center',
                                 padding: '10px 10px 10px 10px'
                             }}>
-                                <h5 style={{fontSize: '1.4rem'}}>21</h5>
+                                <h5 style={{fontSize: '1.4rem'}}>11</h5>
                                 <h5 style={{fontSize: '1rem'}}>Mon</h5>
                             </div>
                         </Monthrow>
