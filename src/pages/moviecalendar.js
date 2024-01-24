@@ -7,8 +7,9 @@ import React from 'react';
 import { range } from "../utils";
 import useIsonScreen from "../hooks/use-is-onscreen";
 import Button from "../components/Button";
-
-
+import { COLORS } from "../constants";
+import {search} from 'react-icons-kit/fa/search'
+import { Icon } from 'react-icons-kit'
 
 export default function MovieCalendar(){
     const elementRef = React.useRef();
@@ -38,19 +39,34 @@ export default function MovieCalendar(){
                     </MovieTitle>
                 </div>
                 <MoviePoster>
-                    <ShowTime />    
+                    <ShowTime /> 
+                    <SearchCinemas /> 
                 </MoviePoster>
             </Wrapper>
         </>
     );
 
+    function SearchCinemas(){
+        return(
+            <Scwrapper>
+                <SearchSection>
+                    <SearchMovies>
+                        <Icon style={{color: 'white'}} size="0.9em" icon={search} />
+                        <Input 
+                            id=" search-movie"
+                            type="text"
+                            placeholder="Search movies or theatres"
+                        />
+                    </SearchMovies>
+                </SearchSection>
+            </Scwrapper>
+        );
+    }
     function ShowTime(){
         return(
             <Showwrapper>
-                        {/* <Showstuff> ShowTimes</Showstuff>
-                        <Showstuff> synopsis</Showstuff> */}
                 <TimingStuff>
-                    {range(1).map((num) =>( 
+                    {range(4).map((num) =>( 
                     <Monthrow>
                         <Month>
                             <div style={{padding: '10px 10px 10px 10px'}}>
@@ -61,8 +77,7 @@ export default function MovieCalendar(){
                         </Month>
                     </Monthrow>
                         ))}
-                        
-                         <Monthrow>
+                         {/* <Month>
                             <div style={{
                                 display: 'flex',
                                 flexDirection: 'column',
@@ -71,10 +86,9 @@ export default function MovieCalendar(){
                                 padding: '10px 10px 10px 10px'
                             }}>
                                 <h5 style={{fontSize: '1.4rem'}}>11</h5>
-                                <h5 style={{fontSize: '1rem'}}>Mon</h5>
+                                <h5 style={{fontSize: '1rem'}}>Tomorrow</h5>
                             </div>
-                        </Monthrow>
-                        
+                        </Month> */}
                 </TimingStuff>
             </Showwrapper>
         );
@@ -82,6 +96,42 @@ export default function MovieCalendar(){
 }
 
 
+const Scwrapper = styled.div`
+    padding: 20px;
+    border-radius: 7px;
+    background-color: #333333;
+    color: white;
+    margin-top: 30px;
+`;
+
+const Input = styled.input`
+    outline: 0px;
+    border-color: rgb(28 28 28);
+    width: 100%;
+    font-size: 1rem;
+    background: ${COLORS.gray[300]};
+    color: ${COLORS.white};
+`;
+
+
+const SearchSection = styled.div`
+  /* background: hotpink; */
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+`;
+
+const SearchMovies = styled.div`
+  background: ${COLORS.gray[300]};
+  width: 60%;
+  border-radius: 5px;
+  height: 2.5rem;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+`;
 
 
 const Wrapper = styled.div`
