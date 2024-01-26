@@ -10,6 +10,8 @@ import Button from "../components/Button";
 import { COLORS } from "../constants";
 import {search} from 'react-icons-kit/fa/search'
 import { Icon } from 'react-icons-kit'
+import { dummyShowTime } from "../data";
+
 
 export default function MovieCalendar(){
     const elementRef = React.useRef();
@@ -66,36 +68,27 @@ export default function MovieCalendar(){
         return(
             <Showwrapper>
                 <TimingStuff>
-                    {range(4).map((num) =>( 
-                    <Monthrow>
-                        <Month>
-                            <div style={{padding: '10px 10px 10px 10px'}}>
-                                <h5 style={{fontSize: '1.4rem',fontWeight: 'bolder'}}>19</h5>
-                                <h5 style={{fontSize: '1rem'}}>Today</h5>
-                            </div>
-                           
-                        </Month>
-                    </Monthrow>
+                        {dummyShowTime.map((data) =>(
+                           (data.movierunning ? 
+                            <Monthrow>
+                                <Month>
+                                    <Showinfo>
+                                        <h5 style={{fontSize: '1.4rem',fontWeight: 'bolder'}}>{data.date}</h5>
+                                        <h5 style={{fontSize: '1rem'}}>{data.day}</h5>
+                                    </Showinfo>
+                                </Month>
+                            </Monthrow> : 
+                        "")
                         ))}
-                         {/* <Month>
-                            <div style={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                padding: '10px 10px 10px 10px'
-                            }}>
-                                <h5 style={{fontSize: '1.4rem'}}>11</h5>
-                                <h5 style={{fontSize: '1rem'}}>Tomorrow</h5>
-                            </div>
-                        </Month> */}
                 </TimingStuff>
             </Showwrapper>
         );
     }
 }
 
-
+const Showinfo = styled.div`
+    padding: 10px 10px 10px 10px;
+`;
 const Scwrapper = styled.div`
     padding: 20px;
     border-radius: 7px;

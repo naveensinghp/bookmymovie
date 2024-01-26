@@ -9,6 +9,48 @@ export const WEEKS = [
     }
 ]
 
+export const dummyShowTime = [
+    {
+        day: 'today',
+        date: "26",
+        week: 'Mon',
+        morningshow: '10.00 AM',
+        movierunning: true,
+        noonshow: '02.00 PM'
+    },
+    {
+        day: 'tomorrow',
+        date: "27",
+        week: 'Tues',
+        morningshow: '10.00 AM',
+        movierunning: true,
+        noonshow: '02.00 PM'
+    },
+    {
+        day: 'Mon',
+        date: "01",
+        week: 'Tues',
+        morningshow: '10.00 AM',
+        movierunning: true,
+        noonshow: '02.00 PM'
+    },
+    {
+        day: 'Tue',
+        date: "02",
+        week: 'Tues',
+        movierunning: false,
+        morningshow: '10.00 AM',
+        noonshow: '02.00 PM'
+    },
+    {
+        day: 'Fri',
+        date: "03",
+        week: 'Tues',
+        movierunning: false,
+        morningshow: '10.00 AM',
+        noonshow: '02.00 PM'
+    },
+];
 
 export const nowShowingMovie = [
     {
