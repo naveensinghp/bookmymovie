@@ -9,6 +9,29 @@ export const WEEKS = [
     }
 ]
 
+export const SEATSET = [
+    {
+      id: '001',
+      label: 'Available',
+      color: 'green',
+    },
+    {
+      id: '002',
+      label: 'Filing Fast',
+      color: 'red',
+    },
+    {
+      id: '003',
+      label: 'Sold Out',
+      color: 'hotpink',
+    },
+    {
+      id: '004',
+      label: 'Lapsed',
+      color: 'green',
+    },
+  ];
+
 export const dummyShowTime = [
     {
         day: 'today',

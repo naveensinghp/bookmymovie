@@ -10,7 +10,7 @@ import Button from "../components/Button";
 import { COLORS } from "../constants";
 import {search} from 'react-icons-kit/fa/search'
 import { Icon } from 'react-icons-kit'
-import { dummyShowTime } from "../data";
+import { SEATSET, dummyShowTime } from "../data";
 
 
 export default function MovieCalendar(){
@@ -61,6 +61,15 @@ export default function MovieCalendar(){
                         />
                     </SearchMovies>
                 </SearchSection>
+                <div>
+                <div style={{display: 'flex',gap: '20px',listStyle: 'none',whiteSpace: 'nowrap'}}>
+                    {SEATSET.map((data) =>(
+                        <>
+                            <h4 style={{color: `${data.color}`}}>{data.label}</h4>
+                        </>
+                    ))}
+                    </div>
+                </div>
             </Scwrapper>
         );
     }
@@ -90,6 +99,8 @@ const Showinfo = styled.div`
     padding: 10px 10px 10px 10px;
 `;
 const Scwrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
     border-radius: 7px;
     background-color: #333333;
