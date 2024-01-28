@@ -13,22 +13,22 @@ export const SEATSET = [
     {
       id: '001',
       label: 'Available',
-      color: 'green',
+      color: '#48a748',
     },
     {
       id: '002',
       label: 'Filing Fast',
-      color: 'red',
+      color: '#dd932b',
     },
     {
       id: '003',
       label: 'Sold Out',
-      color: 'hotpink',
+      color: '#e7352f',
     },
     {
       id: '004',
       label: 'Lapsed',
-      color: 'green',
+      color: '#837a7a',
     },
   ];
 
