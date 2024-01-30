@@ -52,6 +52,17 @@ const EXAMPLE_USER = {
         >{children}</Banner>
     );
   }
+
+  function Slider(){
+    return (
+      <div>
+        
+      </div>
+    );
+  }
+  function VolumeSlider(){
+
+  }
 }
 
 

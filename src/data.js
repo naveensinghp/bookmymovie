@@ -34,7 +34,7 @@ export const SEATSET = [
 
 export const dummyShowTime = [
     {
-        day: 'today',
+        day: 'Today',
         date: "26",
         week: 'Mon',
         morningshow: '10.00 AM',
@@ -42,7 +42,7 @@ export const dummyShowTime = [
         noonshow: '02.00 PM'
     },
     {
-        day: 'tomorrow',
+        day: 'Tomorrow',
         date: "27",
         week: 'Tues',
         morningshow: '10.00 AM',
