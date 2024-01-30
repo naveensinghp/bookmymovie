@@ -32,6 +32,34 @@ export const SEATSET = [
     },
   ];
 
+export const availableShowTime = [
+    {
+        id: 1,
+        showtime: '11.20 AM',
+        language: 'English'
+    }, 
+    {
+        id: 2,
+        showtime: '13.20 AM',
+        language: 'English'
+    }
+]
+
+export const movieTheatres = [
+    // {
+    //     id: 1,
+    //     name: "INOX Prozone Mall,Saravanampatty, Sathy Road Coimbatore",
+    //     subtitle:"PVR INOX Limited., 1st Floor, Prozone Mall, Saravanampatty, Sathy Road, Coimbatore - 641035, Tamil Nadu",
+    //     kms:"50"
+    // },
+    {
+        id: 2,
+        name: "PVR Brookefields Mall Coimbatore",
+        subtitle:"4th Floor,Brookefields Mall, 641001",
+        kms:"50"
+    },
+]  
+
 export const dummyShowTime = [
     {
         day: 'Today',

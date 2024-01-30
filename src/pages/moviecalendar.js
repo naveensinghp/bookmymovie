@@ -10,7 +10,7 @@ import Button from "../components/Button";
 import { COLORS } from "../constants";
 import {search} from 'react-icons-kit/fa/search'
 import { Icon } from 'react-icons-kit'
-import { SEATSET, dummyShowTime } from "../data";
+import { SEATSET, dummyShowTime,movieTheatres,availableShowTime } from "../data";
 
 
 export default function MovieCalendar(){
@@ -43,11 +43,46 @@ export default function MovieCalendar(){
                 <MoviePoster>
                     <ShowTime /> 
                     <SearchCinemas /> 
+                    <MovieTheatre />
                 </MoviePoster>
             </Wrapper>
         </>
     );
 
+    function MovieTheatre(){
+        return(
+            <>
+                {movieTheatres.map((theatre) =>(
+                   <Scwrapper>
+                        <SearchSection>
+                            <h4>{theatre.name}</h4>
+                            <h6>{theatre.subtitle}</h6>
+                            <div style={{display: 'flex',gap: '20px'}}>
+                                {
+                                    availableShowTime.map((show) => (
+                                    <div style={{
+                                       backgroundColor: '#15140a',
+                                       padding: '12px 10px',
+                                       width: '200px',
+                                       height: '55px',
+                                       display: 'flex',
+                                       flexDirection: 'row',
+                                       justifyContent: 'center',
+                                       alignItems: 'center',
+                                       borderRadius: '6px'
+                                    }}>
+                                    <div style={{color: '#418f41'}}>{show.showtime}</div>
+                                    </div>
+                                    ))
+                                }
+                                
+                            </div>
+                        </SearchSection>
+                   </Scwrapper>
+                ))}
+            </>
+        )
+    }
     function SearchCinemas(){
         return(
             <Scwrapper>
