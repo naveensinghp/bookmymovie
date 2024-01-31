@@ -44,6 +44,7 @@ export default function MovieCalendar(){
                     <ShowTime /> 
                     <SearchCinemas /> 
                     <MovieTheatre />
+                    <br/><br/><br/><br/>
                 </MoviePoster>
             </Wrapper>
         </>
@@ -63,15 +64,18 @@ export default function MovieCalendar(){
                                     <div style={{
                                        backgroundColor: '#15140a',
                                        padding: '12px 10px',
-                                       width: '200px',
-                                       height: '55px',
+                                       width: '100px',
                                        display: 'flex',
                                        flexDirection: 'row',
                                        justifyContent: 'center',
                                        alignItems: 'center',
-                                       borderRadius: '6px'
+                                       borderRadius: '6px',
                                     }}>
-                                    <div style={{color: '#418f41'}}>{show.showtime}</div>
+                                    <div style={{
+                                        color: '#418f41',
+                                        fontSize:'12px',
+                                        fontWeight: 'bold'
+                                        }}>{show.showtime}</div>
                                     </div>
                                     ))
                                 }
