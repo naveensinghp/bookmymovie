@@ -58,28 +58,16 @@ export default function MovieCalendar(){
                         <SearchSection>
                             <h4>{theatre.name}</h4>
                             <h6>{theatre.subtitle}</h6>
-                            <div style={{display: 'flex',gap: '20px'}}>
+                            <div style={{display: 'flex',gap: '20px',cursor: 'pointer'}}>
                                 {
                                     availableShowTime.map((show) => (
-                                    <div style={{
-                                       backgroundColor: '#15140a',
-                                       padding: '12px 10px',
-                                       width: '100px',
-                                       display: 'flex',
-                                       flexDirection: 'row',
-                                       justifyContent: 'center',
-                                       alignItems: 'center',
-                                       borderRadius: '6px',
-                                    }}>
-                                    <div style={{
-                                        color: '#418f41',
-                                        fontSize:'12px',
-                                        fontWeight: 'bold'
-                                        }}>{show.showtime}</div>
-                                    </div>
+                                        <ShowTimeWrapper>
+                                            <ShowTimeMovie>
+                                                {show.showtime}
+                                            </ShowTimeMovie>
+                                        </ShowTimeWrapper>
                                     ))
                                 }
-                                
                             </div>
                         </SearchSection>
                    </Scwrapper>
@@ -133,6 +121,25 @@ export default function MovieCalendar(){
         );
     }
 }
+
+
+
+const ShowTimeMovie = styled.div`
+    color: #418f41;
+    font-size: 12px;
+    font-weight: bold;
+`;
+
+const ShowTimeWrapper = styled.div`
+    background-color: #15140a;
+    padding: 12px 10px;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+`;
 
 const Showinfo = styled.div`
     padding: 10px 10px 10px 10px;
