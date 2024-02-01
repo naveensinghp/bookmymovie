@@ -44,7 +44,9 @@ export default function MovieCalendar(){
                     <ShowTime /> 
                     <SearchCinemas /> 
                     <MovieTheatre />
-                    <br/><br/><br/><br/>
+                    <br/>
+                    {/* <br/><br/><br/><br/> */}
+                    <MovieSeat />
                 </MoviePoster>
             </Wrapper>
         </>
@@ -118,6 +120,41 @@ export default function MovieCalendar(){
                         ))}
                 </TimingStuff>
             </Showwrapper>
+        );
+    }
+
+    function MovieSeat(){
+        return(
+            <Scwrapper>
+                 <SearchSection>
+                    <div 
+                        style={{
+                            height: '120vh',
+                            display: 'flex',
+                            display: 'flex',
+                            gap: '20px'
+                        }}
+                    >
+                        {/* <h3>Hello World</h3> */}
+                        {range(10).map((num) => (
+                            <div
+                            style={{
+                                width: '35px',
+                                height: '35px',
+                                backgroundColor: 'white',
+                                borderRadius: '4px',
+                                color: 'black',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center'
+                            }}
+                        >{num}</div>
+                        )
+                        )}
+                        
+                    </div>
+                 </SearchSection>
+            </Scwrapper>
         );
     }
 }
