@@ -11,6 +11,7 @@ import { COLORS } from "../constants";
 import {search} from 'react-icons-kit/fa/search'
 import { Icon } from 'react-icons-kit'
 import { SEATSET, dummyShowTime,movieTheatres,availableShowTime } from "../data";
+import LinkButton from "../components/LinkButton";
 
 
 export default function MovieCalendar(){
@@ -46,7 +47,9 @@ export default function MovieCalendar(){
                     <MovieTheatre />
                     <br/>
                     {/* <br/><br/><br/><br/> */}
-                    <MovieSeat />
+                    {/* <MovieSeat /> */}
+                    <LinkButton href="/add-transaction">Add Transaction</LinkButton>
+                    <LinkButton > Transaction</LinkButton>
                 </MoviePoster>
             </Wrapper>
         </>
@@ -125,6 +128,7 @@ export default function MovieCalendar(){
 
     function MovieSeat(){
         return(
+            
             <Scwrapper>
                  <SearchSection>
                     <div 
@@ -135,7 +139,8 @@ export default function MovieCalendar(){
                             gap: '20px'
                         }}
                     >
-                        {/* <h3>Hello World</h3> */}
+                        
+                       
                         {range(10).map((num) => (
                             <div
                             style={{
