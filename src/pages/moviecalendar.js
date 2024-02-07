@@ -12,6 +12,7 @@ import {search} from 'react-icons-kit/fa/search'
 import { Icon } from 'react-icons-kit'
 import { SEATSET, dummyShowTime,movieTheatres,availableShowTime } from "../data";
 import LinkButton from "../components/LinkButton";
+import Boop from "../hooks/use-boop.hook";
 
 
 export default function MovieCalendar(){
@@ -47,9 +48,9 @@ export default function MovieCalendar(){
                     <MovieTheatre />
                     <br/>
                     {/* <br/><br/><br/><br/> */}
-                    {/* <MovieSeat /> */}
-                    <LinkButton href="/add-transaction">Add Transaction</LinkButton>
-                    <LinkButton > Transaction</LinkButton>
+                    <MovieSeat />
+                    {/* <LinkButton href="/add-transaction">Add Transaction</LinkButton>
+                    <LinkButton > Transaction</LinkButton> */}
                 </MoviePoster>
             </Wrapper>
         </>
@@ -128,35 +129,20 @@ export default function MovieCalendar(){
 
     function MovieSeat(){
         return(
-            
             <Scwrapper>
                  <SearchSection>
                     <div 
                         style={{
                             height: '120vh',
                             display: 'flex',
-                            display: 'flex',
                             gap: '20px'
                         }}
                     >
-                        
-                       
                         {range(10).map((num) => (
-                            <div
-                            style={{
-                                width: '35px',
-                                height: '35px',
-                                backgroundColor: 'white',
-                                borderRadius: '4px',
-                                color: 'black',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center'
-                            }}
-                        >{num}</div>
+                            // <Boop  timing={100}>2</Boop>
+                            <SeatNum>{num}</SeatNum>
                         )
                         )}
-                        
                     </div>
                  </SearchSection>
             </Scwrapper>
@@ -165,6 +151,22 @@ export default function MovieCalendar(){
 }
 
 
+const SeatNum = styled.div`
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    &:hover{
+        background-color: #ffcf14;
+    }
+`;
 
 const ShowTimeMovie = styled.div`
     color: #418f41;
