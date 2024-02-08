@@ -103,6 +103,8 @@ export const dummyShowTime = [
     },
 ];
 
+export const alphabets = ['A','B','C','D','E'];
+
 export const nowShowingMovie = [
     {
         id: 1,

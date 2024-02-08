@@ -10,7 +10,13 @@ import Button from "../components/Button";
 import { COLORS } from "../constants";
 import {search} from 'react-icons-kit/fa/search'
 import { Icon } from 'react-icons-kit'
-import { SEATSET, dummyShowTime,movieTheatres,availableShowTime } from "../data";
+import { 
+        SEATSET, 
+        dummyShowTime,
+        movieTheatres,
+        availableShowTime,
+        alphabets
+    } from "../data";
 import LinkButton from "../components/LinkButton";
 import Boop from "../hooks/use-boop.hook";
 
@@ -128,9 +134,19 @@ export default function MovieCalendar(){
     }
 
     function MovieSeat(){
+        // 1. Based on Screen's, Seatment should arranged
+        // 2. Handicapped
+        const[state,setState] = React.useState("")
         return(
             <Scwrapper>
                  <SearchSection>
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        fontWeight: 'bold'
+                    }}>
+                        BUDGET (59.61)
+                    </div>
                     <div 
                         style={{
                             height: '120vh',
@@ -138,12 +154,20 @@ export default function MovieCalendar(){
                             gap: '20px'
                         }}
                     >
-                        {range(10).map((num) => (
+                        <div>A</div>
+                        {range(11).map((num) => (
                             // <Boop  timing={100}>2</Boop>
-                            <SeatNum>{num}</SeatNum>
+                            <SeatNum
+                                className={`${state}`}
+                                onClick={() =>{
+                                    setState('seatbooked');
+                                }}
+                            >{num}</SeatNum>
                         )
                         )}
                     </div>
+                    <div>{}</div>
+                    
                  </SearchSection>
             </Scwrapper>
         );
@@ -151,7 +175,7 @@ export default function MovieCalendar(){
 }
 
 
-const SeatNum = styled.div`
+const SeatNum = styled.button`
     width: 35px;
     height: 35px;
     background-color: white;
