@@ -165,6 +165,7 @@ export default function MovieCalendar(){
                             >{num}</SeatNum>
                         )
                         )}
+                         <div>A</div>
                     </div>
                     <div>{}</div>
                     
