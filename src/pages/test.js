@@ -3,7 +3,8 @@ import React from 'react';
 import Button from '../components/Button';
 import { range } from "../utils";
 import { 
-  SEATSET
+  SEATSET,
+  alphabets
 } from "../data";
 
 export default function Test(){
@@ -21,12 +22,17 @@ const EXAMPLE_USER = {
 
         <Column>
           <Row>
-            <div>A</div>
-            {range(11).map((num) => (
-              <SeatNum>{num}</SeatNum>
-              ))}
+             <SeatRow>S</SeatRow>
+              {range(11).map((num) => (
+                <SeatNum>{num}</SeatNum>
+                ))}
+                <div style={{display:'flex'}}></div>
+                {range(11).map((num) => (
+                  <SeatNum>{num}</SeatNum>
+                ))}
+               <SeatRow>S</SeatRow>
           </Row>
-          <div>A</div>
+          
         </Column>
     </>
 
@@ -79,7 +85,10 @@ const EXAMPLE_USER = {
 }
 
 
+const SeatRow = styled.div`
 
+
+`;
 
 const Row = styled.div`
   display: flex;
@@ -112,6 +121,8 @@ const SeatNum = styled.button`
     font-weight: bold;
     &:hover{
         background-color: #ffcf14;
+        translate: 0px -16px;
+        transition: 200ms linear 50ms;
     }
 `;
 
