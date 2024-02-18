@@ -4,7 +4,8 @@ import Button from '../components/Button';
 import { range } from "../utils";
 import { 
   SEATSET,
-  alphabets
+  alphabets,
+  seatNumber
 } from "../data";
 
 export default function Test(){
@@ -20,20 +21,13 @@ const EXAMPLE_USER = {
             Successfully logged in! Welcome aboard, {EXAMPLE_USER.name}!
         </LoggedInBanner> */}
 
-        <Column>
-          <Row>
-             <SeatRow>S</SeatRow>
-              {range(11).map((num) => (
-                <SeatNum>{num}</SeatNum>
-                ))}
-                <div style={{display:'flex'}}></div>
-                {range(11).map((num) => (
-                  <SeatNum>{num}</SeatNum>
-                ))}
-               <SeatRow>S</SeatRow>
-          </Row>
-          
-        </Column>
+    {seatNumber.map(() =>(
+      <Column>
+        <Row>
+          <h1>Heing</h1>
+        </Row>
+      </Column>
+    ))}
     </>
 
   function Banner({type, children}){
@@ -79,9 +73,7 @@ const EXAMPLE_USER = {
       </div>
     );
   }
-  function VolumeSlider(){
-
-  }
+   
 }
 
 
