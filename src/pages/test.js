@@ -13,6 +13,7 @@ const EXAMPLE_USER = {
     name: 'sayan',
     registrationStatus: 'verified',
 } 
+const[seatClicked, setSeatClicked] = React.useState("");
     return<>
         {/* <LoggedInBanner
             type="success"
@@ -20,14 +21,30 @@ const EXAMPLE_USER = {
         >
             Successfully logged in! Welcome aboard, {EXAMPLE_USER.name}!
         </LoggedInBanner> */}
-
-    {seatNumber.map(() =>(
-      <Column>
-        <Row>
-          <h1>Heing</h1>
-        </Row>
+            
+        <Column>
+        {/* <Row>
+          {range(11).map((num) => (
+              <SeatNum>{num}</SeatNum>
+           ))}
+        </Row> */}
+         {seatNumber.map((data) => (
+            <div 
+              style={{
+                display: 'flex',
+                gap: '16px',
+                paddingTop: '20px'
+              
+              }}
+            >
+              <div>{data.seat}</div>
+              {data.seatno.map((num) => (
+                     <SeatNum>{num}</SeatNum>
+              ))}
+               <div>{data.seat}</div>
+            </div>
+           ))}
       </Column>
-    ))}
     </>
 
   function Banner({type, children}){

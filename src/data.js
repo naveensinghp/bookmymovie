@@ -106,13 +106,13 @@ export const dummyShowTime = [
 export const seatNumber = [
     {
         id:1,
-        seat: "a ",
-        seatno: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+        seat: "a",
+        seatno: ['1','2','3']
     },
     {
         id:2,
-        seat: "a",
-        seatno: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+        seat: "b",
+        seatno: ['1','2']
     }
 ]
 
