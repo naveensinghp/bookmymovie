@@ -8,7 +8,12 @@ import {
   seatNumber
 } from "../data";
 
+import { FavouriteColorContext } from '../components/App/App';
+
+
 export default function Test(){
+  const favouriteColor = React.useContext(FavouriteColorContext);
+
 const EXAMPLE_USER = {
     name: 'sayan',
     registrationStatus: 'verified',
