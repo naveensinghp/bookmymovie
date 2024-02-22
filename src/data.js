@@ -103,11 +103,16 @@ export const dummyShowTime = [
     },
 ];
 
+let test = [];
+
+for(let i = 0; i < 20; i++){
+ test.push(i);
+}
 export const seatNumber = [
     {
         id:1,
         seat: "a",
-        seatno: ['1','2','3']
+        seatno: ['1','2','3','4','5','6','7','8','9','10',' ',' ','11','12','13','14','15','16']
     },
     {
         id:2,

@@ -43,15 +43,24 @@ const[seatClicked, setSeatClicked] = React.useState("");
               }}
             >
               <div>{data.seat}</div>
-              {data.seatno.map((num) => (
-                     <SeatNum>{num}</SeatNum>
-              ))}
+                {data.seatno.map((num) => (
+                    <SeatNum num={num}/>
+                ))}
                <div>{data.seat}</div>
             </div>
            ))}
       </Column>
     </>
 
+  function SeatNum({num}){
+    // console.log("Hel",num);
+    return(
+      <>
+      {num && num > 0 ? <SeatNums key={num}> {num}</SeatNums> : <TransparentButton />}
+       
+      </>
+    );
+  }
   function Banner({type, children}){
     const backgroundColor = type === 'success' ? 'green': 'red';
    
@@ -121,7 +130,22 @@ const Column = styled.div`
   outline: 2px solid red;
 `;
 
-const SeatNum = styled.button`
+const TransparentButton = styled.button`
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    
+`;
+
+const SeatNums = styled.button`
     width: 35px;
     height: 35px;
     background-color: white;
