@@ -23,7 +23,7 @@ function App() {
           <Route exact path="/fm" element={<FramerMotionLearnings />} />
         </Routes>
       </Router>
-      {/* <FramerMotionLearnings /> */}
+     
     </>
   );
 }
