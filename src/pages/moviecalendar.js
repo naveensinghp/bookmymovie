@@ -19,10 +19,9 @@ import {
     } from "../data";
 import LinkButton from "../components/LinkButton";
 import Boop from "../hooks/use-boop.hook";
-
+import MovieSeatBook from "../components/MovieSeatBook/MovieSeatBook";
 
 export default function MovieCalendar(){
-    const elementRef = React.useRef();
     const[isShowTime,setShowTime] = React.useState(false);
     React.useEffect(()=>{
         if(isShowTime){
@@ -54,7 +53,6 @@ export default function MovieCalendar(){
                     <MovieTheatre />
                     <br/>
                     {/* <br/><br/><br/><br/> */}
-                    <MovieSeat />
                     {/* <LinkButton href="/add-transaction">Add Transaction</LinkButton>
                     <LinkButton > Transaction</LinkButton> */}
                 </MoviePoster>
@@ -73,9 +71,10 @@ export default function MovieCalendar(){
                             <div style={{display: 'flex',gap: '20px',cursor: 'pointer'}}>
                                 {
                                     availableShowTime.map((show) => (
-                                        <ShowTimeWrapper>
+                                        <ShowTimeWrapper href="/movieseat" as="movieseat">
                                             <ShowTimeMovie>
-                                                {show.showtime}
+                                                {/* {show.showtime} */}
+                                                <Button variant='fill' size="small" href="/movieseat">{show.showtime}</Button>
                                             </ShowTimeMovie>
                                         </ShowTimeWrapper>
                                     ))
@@ -132,77 +131,22 @@ export default function MovieCalendar(){
             </Showwrapper>
         );
     }
-
-    function MovieSeat(){
-        // 1. Based on Screen's, Seatment should arranged
-        // 2. Handicapped
-        const[state,setState] = React.useState("")
-        return(
-            <Scwrapper>
-                 <SearchSection>
-                    <div style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        fontWeight: 'bold'
-                    }}>
-                        BUDGET (59.61)
-                    </div>
-                    <div 
-                        style={{
-                            height: '120vh',
-                            display: 'flex',
-                            gap: '20px'
-                        }}
-                    >
-                        <div>A</div>
-                        {range(11).map((num) => (
-                            // <Boop  timing={100}>2</Boop>
-                            <SeatNum
-                                className={`${state}`}
-                                onClick={() =>{
-                                    setState('seatbooked');
-                                }}
-                            >{num}</SeatNum>
-                        )
-                        )}
-                         <div>A</div>
-                    </div>
-                    <div>{}</div>
-                    
-                 </SearchSection>
-            </Scwrapper>
-        );
-    }
 }
 
 
-const SeatNum = styled.button`
-    width: 35px;
-    height: 35px;
-    background-color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    &:hover{
-        background-color: #ffcf14;
-    }
-`;
 
 const ShowTimeMovie = styled.div`
-    color: #418f41;
+    color: white;
     font-size: 12px;
     font-weight: bold;
 `;
 
-const ShowTimeWrapper = styled.div`
+const ShowTimeWrapper = styled.button`
     background-color: #15140a;
     padding: 12px 10px;
     width: 100px;
+    border: none;
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -269,12 +213,6 @@ const MovieTitle = styled.div`
     padding: 20px;
 `;
 
-const ShowTimeSlot = styled.div`
-  border-bottom: 1px solid white;
-  /* background-color: green; */
-  height: 20px;
-
-`;
 
 const Monthrow = styled.div`
     display: flex;
@@ -314,32 +252,8 @@ const Showwrapper = styled.div`
 `;
 
 
-const Showstuff = styled.div`
-    cursor: pointer;
-    text-transform: uppercase;
-    padding: 20px;
-    font-size: 1.1rem;
-    font-weight: bolder;
-    color: var(--color-white);
-    background: var(--color-black-500);
-    &:hover{
-        color: var(--color-yellow);
-    }
-`;
 
 const TimingStuff = styled.div`
     display: flex;
     gap: 20px;
-`;
-const Day = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    gap: 20px;
-    /* &:hover {
-        background-color: red;
-    } */
 `;
