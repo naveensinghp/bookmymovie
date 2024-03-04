@@ -13,12 +13,11 @@ import { FavouriteColorContext } from '../components/App/App';
 
 export default function Test(){
   const favouriteColor = React.useContext(FavouriteColorContext);
-
-const EXAMPLE_USER = {
-    name: 'sayan',
-    registrationStatus: 'verified',
-} 
-const[seatClicked, setSeatClicked] = React.useState("");
+  const EXAMPLE_USER = {
+      name: 'sayan',
+      registrationStatus: 'verified',
+  } 
+  const[seatClicked, setSeatClicked] = React.useState("");
     return<>
         {/* <LoggedInBanner
             type="success"
@@ -33,6 +32,7 @@ const[seatClicked, setSeatClicked] = React.useState("");
               <SeatNum>{num}</SeatNum>
            ))}
         </Row> */}
+        <h3>Budget (59.61)</h3>
          {seatNumber.map((data) => (
             <div 
               style={{
@@ -44,7 +44,7 @@ const[seatClicked, setSeatClicked] = React.useState("");
             >
               <div>{data.seat}</div>
                 {data.seatno.map((num) => (
-                    <SeatNum num={num}/>
+                  <SeatNum num={num}/>
                 ))}
                <div>{data.seat}</div>
             </div>
@@ -157,11 +157,11 @@ const SeatNums = styled.button`
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    &:hover{
+    /* &:hover{
         background-color: #ffcf14;
         translate: 0px -16px;
         transition: 200ms linear 50ms;
-    }
+    } */
 `;
 
 
