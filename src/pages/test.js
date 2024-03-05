@@ -110,7 +110,6 @@ export default function Test(){
 
 const SeatRow = styled.div`
 
-
 `;
 
 const Row = styled.div`
