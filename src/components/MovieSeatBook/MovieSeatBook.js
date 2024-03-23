@@ -11,7 +11,7 @@ function MovieSeatBook() {
   return (
     <>
       <Column>
-          <h3>Budget (59.61)</h3>
+          {/* <h3>Budget (59.61)</h3> */}
           {seatNumber.map((data) => (
             <div 
               style={{
@@ -28,17 +28,20 @@ function MovieSeatBook() {
                <div>{data.seat}</div>
             </div>
            ))}
+            {/* {seatNumber.filter(person => person.id -1).map(filteredPerson => (
+            <li>
+              {filteredPerson.seat}
+            </li>
+          ))} */}
       </Column>
     </>
   );
 }
 
 function SeatNum({num}){
-  // console.log("Hel",num);
   return(
     <>
     {num && num > 0 ? <SeatNums key={num}> {num}</SeatNums> : <TransparentButton />}
-     
     </>
   );
 }
@@ -55,6 +58,7 @@ const Column = styled.div`
   align-items: center;
   justify-content: center;
   outline: 2px solid red;
+  flex-flow: column-reverse;
 `;
 
 const SeatNums = styled.button`
