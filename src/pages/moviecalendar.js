@@ -73,8 +73,8 @@ export default function MovieCalendar(){
                                     availableShowTime.map((show) => (
                                         <ShowTimeWrapper href="/movieseat" as="movieseat">
                                             <ShowTimeMovie>
-                                                {/* {show.showtime} */}
-                                                <Button variant='fill' size="small" href="/movieseat">{show.showtime}</Button>
+                                                {show.showtime}
+                                                {/* <Button variant='fill' size="small" href="/movieseat">{show.showtime}</Button> */}
                                             </ShowTimeMovie>
                                         </ShowTimeWrapper>
                                     ))
@@ -142,7 +142,7 @@ const ShowTimeMovie = styled.div`
 `;
 
 const ShowTimeWrapper = styled.button`
-    background-color: #15140a;
+    background-color: #17a21d;
     padding: 12px 10px;
     width: 100px;
     border: none;
