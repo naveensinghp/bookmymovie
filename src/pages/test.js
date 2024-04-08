@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../components/Button';
 import { range } from "../utils";
 import { 
@@ -9,16 +9,22 @@ import {
 } from "../data";
 
 import { FavouriteColorContext } from '../components/App/App';
+import Modal from '../components/Modal/Modal';
+import useToggle from '../hooks/use-toggle';
 
 
 export default function Test(){
+  const [ismodal,setModal] = useState(false);
   const favouriteColor = React.useContext(FavouriteColorContext);
   const EXAMPLE_USER = {
       name: 'sayan',
       registrationStatus: 'verified',
   } 
+  
   const[seatClicked, setSeatClicked] = React.useState("");
+
     return<>
+      <ModalTest />
         {/* <LoggedInBanner
             type="success"
             user={EXAMPLE_USER}
@@ -52,6 +58,22 @@ export default function Test(){
       </Column>
     </>
 
+   function ModalTest(){
+    const [isModalOpen, toggleIsModalOpen] = useToggle(false);
+    return<>
+      {isModalOpen && (
+        <Modal handleDismiss={toggleIsModalOpen}>
+          This is an example modal! It includes{' '}
+          {/* <a href="">several</a> <a href="">different</a>{' '}
+          <a href="">links</a>. */}
+        </Modal>
+      )}
+        
+        <button onClick={toggleIsModalOpen}>
+        Toggle modal
+      </button>
+    </>
+   }
   function SeatNum({num}){
     // console.log("Hel",num);
     return(
