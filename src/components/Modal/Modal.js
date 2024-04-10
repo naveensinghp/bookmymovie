@@ -4,6 +4,10 @@ import { Icon } from 'react-icons-kit'
 import {ic_mic_outline} from 'react-icons-kit/md/ic_mic_outline'
 
 function Modal({handleDimiss,children}) {
+  const closeBtnRef = React.useRef();
+  React.useEffect(() => {
+    
+  },[])
   return (
     <Modalwrapper>
       <Modalbackdrop>
