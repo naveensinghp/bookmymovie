@@ -2,30 +2,57 @@ import React from 'react';
 import styled from 'styled-components';
 import { Icon } from 'react-icons-kit'
 import {ic_mic_outline} from 'react-icons-kit/md/ic_mic_outline'
+import { Dialog } from '@headlessui/react';
 
-function Modal({handleDimiss,children}) {
-  const closeBtnRef = React.useRef();
+function Modal({
+  title,
+  description,
+  isOpen,
+  handleDismiss,
+  children
+
+}) {
+  
   React.useEffect(() => {
     
   },[])
+  console.log(handleDismiss)
   return (
-    <Modalwrapper>
-      <Modalbackdrop>
-        <Modaldialog>
-          <div>
-             {children}
-             {/* <Icon size="1.4em" icon={ic_mic_outline} onClick={alert('test')}/> */}
-             <button onClick={handleDimiss}>
-          Toggle modal
-        </button>
-          </div>
-          {/* <Close>
-            {children}
-             <Icon size="1.4em" icon={ic_mic_outline} onClick={handleDimiss}/>
-          </Close> */}
-        </Modaldialog>
-      </Modalbackdrop>
-    </Modalwrapper>
+    <Dialog
+      className="modalwrapper"
+      open={isOpen}
+      onClose={handleDismiss}
+    >
+      <div className='modalbackdrop' 
+      
+      />
+      <Dialog.Panel className="modaldialog">
+          <Dialog.Title>{title}</Dialog.Title>
+          {description && (
+          <Dialog.Description>
+            {description}
+          </Dialog.Description>
+        )}
+        {children}
+      </Dialog.Panel>
+    </Dialog>
+    // <Modalwrapper>
+    //   <Modalbackdrop>
+    //     <Modaldialog>
+    //       <div>
+    //          {children}
+    //          {/* <Icon size="1.4em" icon={ic_mic_outline} onClick={alert('test')}/> */}
+    //          <button onClick={handleDimiss}>
+    //       Toggle modal
+    //     </button>
+    //       </div>
+    //       {/* <Close>
+    //         {children}
+    //          <Icon size="1.4em" icon={ic_mic_outline} onClick={handleDimiss}/>
+    //       </Close> */}
+    //     </Modaldialog>
+    //   </Modalbackdrop>
+    // </Modalwrapper>
   );
 }
 
