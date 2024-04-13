@@ -11,27 +11,23 @@ import {
 import { FavouriteColorContext } from '../components/App/App';
 import Modal from '../components/Modal/Modal';
 import useToggle from '../hooks/use-toggle';
+import Center from '../components/Center/Center';
 
 
 export default function Test(){
-  const [ismodal,setModal] = useState(false);
-  const favouriteColor = React.useContext(FavouriteColorContext);
-  const EXAMPLE_USER = {
-      name: 'sayan',
-      registrationStatus: 'verified',
-  } 
-  
-  const[seatClicked, setSeatClicked] = React.useState("");
+
 
     return<>
-      <ModalTest />
+      {/* */}
+      <Center>
+        <ModalTest />
+      </Center>
         {/* <LoggedInBanner
             type="success"
             user={EXAMPLE_USER}
-        >
+          >
             Successfully logged in! Welcome aboard, {EXAMPLE_USER.name}!
         </LoggedInBanner> */}
-            
         <Column>
         {/* <Row>
           {range(11).map((num) => (
@@ -61,17 +57,14 @@ export default function Test(){
    function ModalTest(){
     const [isModalOpen, toggleIsModalOpen] = useToggle(false);
     return<>
-      {isModalOpen && (
-        <Modal handleDismiss={toggleIsModalOpen}>
-          This is an example modal! It includes{' '}
-          {/* <a href="">several</a> <a href="">different</a>{' '}
-          <a href="">links</a>. */}
-        </Modal>
-      )}
-        
-        <button onClick={toggleIsModalOpen}>
-        Toggle modal
-      </button>
+      <Modal
+        title="Log in"
+        isOpen={isModalOpen}
+        handleDismiss={() => toggleIsModalOpen(false)}
+      >
+        <h1>Shall We Begin </h1>
+      </Modal>
+      <button onClick={toggleIsModalOpen}>Log in</button>
     </>
    }
   function SeatNum({num}){
