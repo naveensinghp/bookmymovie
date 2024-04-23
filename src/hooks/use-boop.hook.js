@@ -1,6 +1,5 @@
 import React from 'react';
 import { animated, useSpring } from 'react-spring';
-
 // Learned this boop from the website of https://www.joshwcomeau.com/react/boop/
 function useBoop ({ 
   x = 0,
