@@ -12,8 +12,9 @@ function Modal({
   children
 
 }) {
-  
+  const closeBtnRef = React.useRef();
   React.useEffect(() => {
+    const currentlyFocusedEle = document.activeElement
     
   },[])
   console.log(handleDismiss)
@@ -23,9 +24,7 @@ function Modal({
       open={isOpen}
       onClose={handleDismiss}
     >
-      <div className='modalbackdrop' 
-      
-      />
+      <div className='modalbackdrop'/>
       <Dialog.Panel className="modaldialog">
           <Dialog.Title>{title}</Dialog.Title>
           {description && (

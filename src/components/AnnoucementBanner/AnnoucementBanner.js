@@ -1,9 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import { getMoviePosters } from '../../data';
+
 
 function AnnoucementBanner() {
   return <Wrapper>
-      <img src="#" alt="banner" />
+    {getMoviePosters.map((data) => 
+       <img 
+        key={data.id}
+        src={data.img} 
+        style={{ width: '100%' }} 
+        alt={data.title} 
+        />
+    )}
+      
   </Wrapper>;
 }
 
