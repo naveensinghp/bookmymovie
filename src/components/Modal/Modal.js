@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Icon } from 'react-icons-kit'
 import {ic_mic_outline} from 'react-icons-kit/md/ic_mic_outline'
 import { Dialog } from '@headlessui/react';
+import {close} from 'react-icons-kit/ikons/close'
 
 function Modal({
   title,
@@ -26,6 +27,12 @@ function Modal({
     >
       <div className='modalbackdrop'/>
       <Dialog.Panel className="modaldialog">
+            <button
+              className="closebtn"
+              onClick={handleDismiss}
+            >
+              <Icon icon={close} size={40} />
+            </button>
           <Dialog.Title>{title}</Dialog.Title>
           {description && (
           <Dialog.Description>
@@ -80,8 +87,8 @@ const Modaldialog = styled.div`
 
 `;
 
-const Close = styled.div`
-position: absolute;
+const CloseBtn = styled.div`
+  position: absolute;
   top: 0;
   right: 0;
   padding: 16px;

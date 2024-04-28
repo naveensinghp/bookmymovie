@@ -138,6 +138,25 @@ export const seatNumber = [
 
 export const alphabets = ['A','B','C','D','E','F','G'];
 
+
+export const getMoviePosters = [
+    {
+        id: 1,
+        img: 'assets/movie1.jpg',
+        title: "Extaction 2"
+    },
+    {
+        id: 2,
+        img: 'assets/movie2.jpg',
+        title: "Fast and Furious"
+    },
+    {
+        id: 3,
+        img: 'assets/movie3.jpg',
+        title: "Batman"
+    }
+]
+
 export const nowShowingMovie = [
     {
         id: 1,

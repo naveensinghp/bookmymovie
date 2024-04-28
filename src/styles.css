@@ -190,3 +190,15 @@ input:-moz-placeholder{
   width: 340px;
   max-width: 100vw;
 }
+
+.closebtn{
+  position: absolute;
+  background: transparent;
+  border: none;
+  top: 0;
+  right: 0;
+  padding: 16px;
+  color: white;
+  transform: translateY(-100%);
+  cursor: pointer;
+}
