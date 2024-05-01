@@ -62,11 +62,29 @@ export default function Test(){
         isOpen={isModalOpen}
         handleDismiss={() => toggleIsModalOpen(false)}
       >
-        <h1>Shall We Begin </h1>
+        {/* <h1>Shall We Begin </h1> */}
+        <LoginForm />
       </Modal>
       <button onClick={toggleIsModalOpen}>Log in</button>
     </>
    }
+
+   function LoginForm(){
+    return(
+      <form>
+        <div>
+          <label>
+            Email
+          </label>
+          <input
+          type="email"
+          />
+          <button>Submit</button>
+        </div>
+      </form>
+    );
+   }
+
   function SeatNum({num}){
     // console.log("Hel",num);
     return(
