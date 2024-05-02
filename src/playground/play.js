@@ -8,6 +8,7 @@ function Slider({
     handleActiveColor,
     ...delegated 
 }){
+    
     const id = React.useId();
     return(
         <div className="">
