@@ -1,12 +1,9 @@
 import Header from "../components/Header/Header";
 import TextLink from "../components/TextLink";
 import styled from 'styled-components';
-import { X,ChevronRight,ChevronLeft } from 'react-feather';
+import { X } from 'react-feather';
 import Link from "../components/Link";
 import React from 'react';
-import { range } from "../utils";
-import useIsonScreen from "../hooks/use-is-onscreen";
-import Button from "../components/Button";
 import { COLORS } from "../constants";
 import {search} from 'react-icons-kit/fa/search'
 import { Icon } from 'react-icons-kit'
@@ -14,12 +11,7 @@ import {
         SEATSET, 
         dummyShowTime,
         movieTheatres,
-        availableShowTime,
-        alphabets
-    } from "../data";
-import LinkButton from "../components/LinkButton";
-import Boop from "../hooks/use-boop.hook";
-import MovieSeatBook from "../components/MovieSeatBook/MovieSeatBook";
+        availableShowTime    } from "../data";
 
 export default function MovieCalendar(){
     const[isShowTime,setShowTime] = React.useState(false);
