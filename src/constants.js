@@ -8,6 +8,7 @@ export const COLORS = {
     blue: '#25ace2',
     white: '#FFF',
     black: '#000',
+    primaryLight : 'hsl(46.4deg 92.41% 51.65%)',
 }
 
 

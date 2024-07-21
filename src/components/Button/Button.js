@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { COLORS } from '../../constants';
+
 
 const SIZES = {
   small: {
@@ -24,7 +26,6 @@ const SIZES = {
 function Button({variant,size,children,href}) {
   const styles = SIZES[size];
   let Component;
- console.log(variant)
   if(variant === 'fill'){
     Component = FillButton
   }else{
@@ -47,18 +48,14 @@ const ButtonBase = styled.button`
   color: var(--color-black);
   font-weight: bolder;
   border-radius: 0.25rem;
-  /* padding: 0.3rem 0.9rem; */
   padding: var(--padding);
   text-align: center;
   text-decoration: none;
   display: inline-block;
   border: none;
   font-size: 0.9rem;
-  /* font-size: var(--fontSize); */
   letter-spacing: 0.6px;
   width: 100%;
-
-
   cursor: pointer;
   &:focus {
     outline-color: hotpink;
@@ -67,16 +64,14 @@ const ButtonBase = styled.button`
 `;
 
 const FillButton = styled(ButtonBase)`
-  background-color: 'hotpink';
-  color: 'white';
+  background-color: ${COLORS.primary};
+  color: ${COLORS.white};
 `
 const OutlineButton = styled(ButtonBase)`
-  background-color: 'red';
-  color: 'white';
+  background-color: red;
+  color: ${COLORS.white};
   border: 2px solid
 `
-const GhostButton = styled(ButtonBase)``
-
 
 export default Button;
 
