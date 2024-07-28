@@ -18,9 +18,6 @@ function MovieCard(props) {
   return(
     <>
      {/* <Spinner /> */}
-     {/* <div className={styles.cardwrapper}>
-      <div className={styles.child}></div>
-     </div> */}
       <div className={styles.cardwrapper}>
         <img src={movie.moviePoster} className={styles.movieimg} alt="bookmymovielogo"/>
         <div>
@@ -43,7 +40,12 @@ function MovieCard(props) {
           {/* <Link to="/moviecalendar" className="btn btn-primary">hello</Link> */}
 
           <div className={styles.bookingstuff}>
-            <Button variant='fill' size="small" href="/moviecalendar">Book Tickets</Button>
+            <Button 
+                variant='fill' 
+                size="small"
+                href="/moviecalendar"
+            >Book Tickets
+            </Button>
             <Button variant='fill' size="small">Play Trailer</Button>
             {/* <TextLink href="/moviecalendar">
               Hello World
