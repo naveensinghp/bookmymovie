@@ -1,32 +1,24 @@
-import React from 'react';
+ /* This Spacer Component from the resource of https://www.joshwcomeau.com/react/modern-spacer-gif/ */
+import styled from 'styled-components'; 
 
-// function Spacer() {
-//   return <div></div>;
-// }
 
-const Spacer = ({
-  size,
-  axis,
-  style = {},
-  ...delegated
-}) => {
-  const width = axis === 'vertical' ? 1 : size;
-  const height = axis === 'horizontal' ? 1 : size;
 
-  return(
-    <span
-      style={{
-        display: 'block',
-        width,
-        minWidth: width,
-        height,
-        minHeight: height,
-        ...style
-      }}
-    >
-      {...delegated}
-    </span>
-  );
+function getHeight({axis,size}){
+  return axis === 'horizontal' ? 1 : size; 
 }
 
+function getWidth({axis,size}){
+  return axis === 'vertical' ? 1 : size; 
+}
+
+const Spacer = styled.span`
+  display: block;
+  width: ${getWidth}px;
+  min-width: ${getWidth}px;
+  height: ${getHeight}px;
+  min-height: ${getHeight}px;
+
+`;
+
 export default Spacer;
+

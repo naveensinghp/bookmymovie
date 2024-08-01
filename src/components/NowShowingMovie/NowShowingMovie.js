@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { range } from '../../utils';
 import MovieCard from '../MovieCard/MovieCard';
 import { nowShowingMovie } from '../../data';
+import Button from '../Button';
 
 function NowShowingMovie() {
   return(
