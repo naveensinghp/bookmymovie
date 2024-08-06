@@ -12,12 +12,13 @@ import {
         dummyShowTime,
         movieTheatres,
         availableShowTime    } from "../data";
+import Button from "../components/Button";
 
 export default function MovieCalendar(){
     const[isShowTime,setShowTime] = React.useState(false);
     React.useEffect(()=>{
         if(isShowTime){
-            console.log("REACTED",isShowTime)
+            
         }
     },[isShowTime])
     return(
@@ -31,22 +32,18 @@ export default function MovieCalendar(){
                     </Link>
                 </Close>
                 {/* MOVIE BANNER GOESHERS */}
-                <div>
+                {/* <div>
                     <img src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/big/1460x600/HO00025768.jpg" alt="banner" />
                     <MovieTitle>
                         <h1>Leo (U/A)</h1>
                         <h4>(U/A) • 2h 44m • Thursday, October 19, 2023 • TAMIL • ACTION</h4>
                         <h5>Thalapathy Vijay, Sanjay Dutt, Trisha</h5>
                     </MovieTitle>
-                </div>
+                </div> */}
                 <MoviePoster>
                     <ShowTime /> 
                     <SearchCinemas /> 
                     <MovieTheatre />
-                    <br/>
-                    {/* <br/><br/><br/><br/> */}
-                    {/* <LinkButton href="/add-transaction">Add Transaction</LinkButton>
-                    <LinkButton > Transaction</LinkButton> */}
                 </MoviePoster>
             </Wrapper>
         </>
@@ -63,12 +60,14 @@ export default function MovieCalendar(){
                             <div style={{display: 'flex',gap: '20px',cursor: 'pointer'}}>
                                 {
                                     availableShowTime.map((show) => (
-                                        <ShowTimeWrapper href="/movieseat" as="movieseat">
-                                            <ShowTimeMovie>
-                                                {show.showtime}
-                                                {/* <Button variant='fill' size="small" href="/movieseat">{show.showtime}</Button> */}
-                                            </ShowTimeMovie>
-                                        </ShowTimeWrapper>
+                                        <Button size="small" variant={'fill'}>
+                                             {show.showtime}
+                                        </Button>
+                                        // <ShowTimeWrapper href="/movieseat" as="movieseat">
+                                        //     <ShowTimeMovie>
+                                        //         {show.showtime}
+                                        //     </ShowTimeMovie>
+                                        // </ShowTimeWrapper>
                                     ))
                                 }
                             </div>
@@ -224,9 +223,6 @@ const Month = styled.div`
     width: 200px;
     text-align: center;
     background-color: #333333;
-    /* &:hover{
-        background-color: red;
-    } */
 `;
 
 
