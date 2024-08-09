@@ -58,7 +58,6 @@ const ButtonBase = styled.button`
   width: 100%;
   cursor: pointer;
   &:focus {
-    outline-color: ${};
     outline-offset: 4px;
   }
 `;

@@ -11,7 +11,6 @@ function MovieSeatBook() {
   return (
     <>
       <Column>
-          {/* <h3>Budget (59.61)</h3> */}
           {seatNumber.map((data) => (
             <div 
               style={{
@@ -28,11 +27,6 @@ function MovieSeatBook() {
                <div>{data.seat}</div>
             </div>
            ))}
-            {/* {seatNumber.filter(person => person.id -1).map(filteredPerson => (
-            <li>
-              {filteredPerson.seat}
-            </li>
-          ))} */}
       </Column>
     </>
   );
