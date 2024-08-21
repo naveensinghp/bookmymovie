@@ -5,15 +5,15 @@ import styled from 'styled-components';
 function BookMovieSeat(){
     return(
         <>
-            {/* <Header />
+            <Header />
             <Wrapper>
                 <MovieSeatBook />
-            </Wrapper> */}
-            <GridWrapper>
+            </Wrapper>
+            {/* <GridWrapper>
                 <Headers>My Website</Headers>
                 <Main>Content Goes Here</Main>
                 <Footer>Footer Goes Here</Footer>
-            </GridWrapper>
+            </GridWrapper> */}
         </>     
     );
 }
