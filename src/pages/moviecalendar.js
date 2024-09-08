@@ -7,6 +7,7 @@ import React from 'react';
 import { COLORS } from "../constants";
 import {search} from 'react-icons-kit/fa/search'
 import { Icon } from 'react-icons-kit'
+import Spacer from "../components/Spacer/Spacer";
 import { 
         SEATSET, 
         dummyShowTime,
@@ -55,9 +56,23 @@ export default function MovieCalendar(){
                 {movieTheatres.map((theatre) =>(
                    <Scwrapper>
                         <SearchSection>
+                            {/* <div>{theatre.name}</div>
+                            <div>{theatre.subtitle}</div>
+                            <Spacer /> */}
                             <h4>{theatre.name}</h4>
-                            <h6>{theatre.subtitle}</h6>
-                            <div style={{display: 'flex',gap: '20px',cursor: 'pointer'}}>
+                            <h5>{theatre.subtitle}</h5>
+
+                            <Spacer size={30} />
+                            <hr/>
+                            {/* <div style={{display: 'flex',width: '150px',height: '50px',background: 'hotpink'}}
+                            >
+                                <div>English</div>
+                                <div style={{}}>
+                                09.30 AM
+                                </div>
+                               
+                            </div> */}
+                            {/* <div style={{display: 'flex',gap: '20px',cursor: 'pointer'}}>
                                 {
                                     availableShowTime.map((show) => (
                                         <Button size="small" variant={'fill'}>
@@ -70,7 +85,7 @@ export default function MovieCalendar(){
                                         // </ShowTimeWrapper>
                                     ))
                                 }
-                            </div>
+                            </div> */}
                         </SearchSection>
                    </Scwrapper>
                 ))}
@@ -170,11 +185,10 @@ const Input = styled.input`
 
 const SearchSection = styled.div`
   /* background: hotpink; */
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
 `;
 
 const SearchMovies = styled.div`
