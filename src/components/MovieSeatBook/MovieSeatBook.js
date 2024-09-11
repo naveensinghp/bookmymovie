@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import { 
   SEATSET,
@@ -8,6 +8,7 @@ import {
 
 
 function MovieSeatBook() {
+  const [activeIndex, setActiveIndex] = useState(null);
   return (
     <>
       <Column>
@@ -21,9 +22,17 @@ function MovieSeatBook() {
               }}
             >
               <div>{data.seat}</div>
-                {data.seatno.map((num) => (
-                  <SeatNum num={num}/>
-                ))}
+                {data.seatno.map((seatno,index) => {
+                   const rowindex = `${data.seat}-${index}`
+                   const clickedSeat = `${data.seat}${''}${seatno}`
+                  return (
+                    <SeatNum 
+                      variant={seatno}
+                      active={rowindex === activeIndex}
+                    >{seatno}</SeatNum>
+                  
+                  )
+                })}
                <div>{data.seat}</div>
             </div>
            ))}
@@ -32,13 +41,6 @@ function MovieSeatBook() {
   );
 }
 
-function SeatNum({num}){
-  return(
-    <>
-    {num && num > 0 ? <SeatNums key={num}> {num}</SeatNums> : <TransparentButton />}
-    </>
-  );
-}
 
 export default MovieSeatBook;
 
@@ -55,10 +57,12 @@ const Column = styled.div`
   flex-flow: column-reverse;
 `;
 
-const SeatNums = styled.button`
+const SeatNum = styled.button`
     width: 35px;
     height: 35px;
-    background-color: white;
+    /* background-color: white; */
+    background-color: ${props => props.active ? '#ffcb05' : 'white'}; 
+    border: 1px solid ${props => props.active ? '#ffcb05' : '#7a7a7a'};
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -67,6 +71,13 @@ const SeatNums = styled.button`
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    visibility: ${props => {
+    if (props.variant.includes('x')) {
+      return 'hidden';
+    }else {
+        return 'visible'; 
+    } 
+    }}; 
     /* &:hover{
         background-color: #ffcf14;
         translate: 0px -16px;
