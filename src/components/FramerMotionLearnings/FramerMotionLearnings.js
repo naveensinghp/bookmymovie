@@ -8,19 +8,15 @@ import { range } from '../../utils';
 function FramerMotionLearnings() {
   const [isEnabled,setiSEnabled] = React.useState(false)
   return <>
-    <div style={{background: 'white'}}>
+    <div style={{background: 'black',height: '100vh'}}>
       {/* <h1>Hello Wolrd</h1> */}
-      {/* <Toggle 
+      <Toggle 
         value={isEnabled}
         onChange={setiSEnabled}
-      /> */}
-      {/* <FlexDemo /> */}
+      />
+      <FlexDemo />
+      <LayoutAnimation />
       
-      {/* <Profile 
-        person="Arya"
-        gender="female"
-        contact="123456"
-      /> */}
       <WidgetProcessor total={12} />
     </div>
   </>;
@@ -77,7 +73,7 @@ function Toggle({
       transition={{
         type: 'spring',
         stiffness: 500,
-        damping: 140,
+        damping: 40,
       }}
       animate={{
         x: value ? '100%' : '0%'
