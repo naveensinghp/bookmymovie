@@ -63,8 +63,8 @@ const ButtonBase = styled.button`
 `;
 
 const FillButton = styled(ButtonBase)`
-  background-color: ${COLORS.primary};
-  color: ${COLORS.white};
+  background-color: ${COLORS.white};
+  color: ${COLORS.black};
 `
 const OutlineButton = styled(ButtonBase)`
   background-color: red;
