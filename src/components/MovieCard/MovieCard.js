@@ -6,20 +6,28 @@ import Spinner from '../Spinner';
 import TextLink from '../TextLink/TextLink';
 import MovieCalendar from '../../pages/moviecalendar';
 import { Link } from "react-router-dom"; 
+import { useNavigate } from 'react-router-dom';
 
 
 
 function MovieCard(props) {
+  const navigate = useNavigate();
    let movie = props.data;
    const[like, setLink] = React.useState(movie.likesCount);
    function onClickLike(){
     setLink(like +1)
    }
+   const handleClick = () => {
+    const data = { message: 'Hello, World!' };
+    navigate('/moviecalendar', { state: data }); // Pass data using state
+  };
   return(
     <>
      {/* <Spinner /> */}
       <div className={styles.cardwrapper}>
-        <img src={movie.moviePoster} className={styles.movieimg} alt="bookmymovielogo"/>
+        <img src={movie.moviePoster} 
+          className={styles.movieimg} 
+          alt="bookmymovielogo"/>
         <div>
           { movie.newRelease ? <div className={styles.newreleaselabel}> Releasing on {movie.releaseDate}</div> : ""}
           <div className={styles.likeheart}>
@@ -37,15 +45,16 @@ function MovieCard(props) {
                 {movie.language} • (U/A) • {movie.genre}
               </div>
           </div>
-          {/* <Link to="/moviecalendar" className="btn btn-primary">hello</Link> */}
-
           <div className={styles.bookingstuff}>
-            <Button 
+            {/* <Button 
                 variant='fill' 
                 size="small"
-                href="/moviecalendar"
+                onClick={handleClick}
+               
             >Book Tickets
-            </Button>
+            </Button> */}
+                  <button onClick={handleClick}>Go to Data Page</button>
+
             <Button variant='fill' size="small">Play Trailer</Button>
             {/* <TextLink href="/moviecalendar">
               Hello World
