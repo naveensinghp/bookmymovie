@@ -2,6 +2,7 @@ import React from 'react';
 import { home } from 'react-icons-kit/icomoon/home'
 import { Icon } from 'react-icons-kit'
 import styled from 'styled-components';
+import TextLink from '../TextLink';
 
 
 function SubmenuLeft() {

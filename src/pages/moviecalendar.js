@@ -14,14 +14,13 @@ import {
         movieTheatres,
         availableShowTime    } from "../data";
 import Button from "../components/Button";
+import { useLocation } from 'react-router-dom';
+
 
 export default function MovieCalendar(){
-    const[isShowTime,setShowTime] = React.useState(false);
-    React.useEffect(()=>{
-        if(isShowTime){
-            
-        }
-    },[isShowTime])
+    const location = useLocation();
+    const data = location.state; //
+    console.log('ddd',data);
     return(
         <>
             <Header/>
@@ -33,19 +32,9 @@ export default function MovieCalendar(){
                     </Link>
                 </Close>
                 {/* MOVIE BANNER GOESHERS */}
-                {/* <div>
-                    <img src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/big/1460x600/HO00025768.jpg" alt="banner" />
-                    <MovieTitle>
-                        <h1>Leo (U/A)</h1>
-                        <h4>(U/A) • 2h 44m • Thursday, October 19, 2023 • TAMIL • ACTION</h4>
-                        <h5>Thalapathy Vijay, Sanjay Dutt, Trisha</h5>
-                    </MovieTitle>
-                </div> */}
-                <MoviePoster>
-                    <ShowTime /> 
-                    <SearchCinemas /> 
-                    <MovieTheatre />
-                </MoviePoster>
+                <ShowTime /> 
+                <SearchCinemas /> 
+                <MovieTheatre />
             </Wrapper>
         </>
     );
@@ -56,36 +45,32 @@ export default function MovieCalendar(){
                 {movieTheatres.map((theatre) =>(
                    <Scwrapper>
                         <SearchSection>
-                            {/* <div>{theatre.name}</div>
-                            <div>{theatre.subtitle}</div>
-                            <Spacer /> */}
                             <h4>{theatre.name}</h4>
                             <h5>{theatre.subtitle}</h5>
-
                             <Spacer size={30} />
                             <hr/>
-                            {/* <div style={{display: 'flex',width: '150px',height: '50px',background: 'hotpink'}}
-                            >
-                                <div>English</div>
-                                <div style={{}}>
-                                09.30 AM
+                            <Spacer size={30} />
+                             {/* MOVIE TIME BOOKING */}
+                            <div 
+                                    style={{
+                                        background: '#f5faf6',
+                                        height: '50px', 
+                                        width: '150px',
+                                        border: '2px solid #76be43',
+                                        position: 'relative'
+                                }} >
+                                <div   
+                                    style={{
+                                            color: 'black',
+                                            fontWeight: 'bold',
+                                            position: 'absolute',
+                                            top: '-10px',
+                                            background: 'white'
+                                            }}> 
+                                    Tamil 
                                 </div>
-                               
-                            </div> */}
-                            {/* <div style={{display: 'flex',gap: '20px',cursor: 'pointer'}}>
-                                {
-                                    availableShowTime.map((show) => (
-                                        <Button size="small" variant={'fill'}>
-                                             {show.showtime}
-                                        </Button>
-                                        // <ShowTimeWrapper href="/movieseat" as="movieseat">
-                                        //     <ShowTimeMovie>
-                                        //         {show.showtime}
-                                        //     </ShowTimeMovie>
-                                        // </ShowTimeWrapper>
-                                    ))
-                                }
-                            </div> */}
+                                {/* <div style={{color: '#76be43',fontWeight: 'bold'}}> 12.00 AM </div> */}
+                            </div>
                         </SearchSection>
                    </Scwrapper>
                 ))}
