@@ -123,7 +123,7 @@ input:-moz-placeholder{
   width: max-content;
   margin: auto;
   color: white;
-  animation: spin 1000ms linear infinite;
+  animation: spin 2000ms linear infinite;
 }
 
 .testing_two{
