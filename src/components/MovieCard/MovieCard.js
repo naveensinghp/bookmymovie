@@ -53,8 +53,7 @@ function MovieCard(props) {
                
             >Book Tickets
             </Button> */}
-                  <button onClick={handleClick}>Go to Data Page</button>
-
+            <Button href={'/moviecalendar'} variant='fill' size="small" onClick={handleClick}>Book Tickets</Button>
             <Button variant='fill' size="small">Play Trailer</Button>
             {/* <TextLink href="/moviecalendar">
               Hello World

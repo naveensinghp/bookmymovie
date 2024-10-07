@@ -25,19 +25,32 @@ export default function MovieCalendar(){
         <>
             <Header/>
             <TextLink  href="/">Go Home</TextLink>
-            <Wrapper>
+            <MovieInfo />
+           {/* MovieInfo */}
+            {/* MovieDate */}
+            {/* <Wrapper>
                 <Close>
                     <Link href="/">
                         <X size={32} color="white" />
                     </Link>
                 </Close>
-                {/* MOVIE BANNER GOESHERS */}
                 <ShowTime /> 
                 <SearchCinemas /> 
                 <MovieTheatre />
-            </Wrapper>
+            </Wrapper> */}
         </>
     );
+
+
+    function MovieInfo(){
+        return(
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,6)' }}>
+                 {/* MoviePoster */}
+                {/* MovieDetailedInfo */}
+              <h1>Hello WOrld</h1>
+            </div>
+        );
+    }
 
     function MovieTheatre(){
         return(

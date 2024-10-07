@@ -31,7 +31,8 @@ function Header() {
   return (
     <Wrapper>
       <Logo>
-        <TextLink href="/"> <img src="assets/logo.png" alt="bookmymovielogo" width={200}/></TextLink>
+        {/* <TextLink href="/"> <img src="assets/logo.png" alt="bookmymovielogo" width={200}/></TextLink> */}
+        <h1>WATCHERS</h1>
       </Logo>
       <SearchSection>
          <div className={styles.searchMovieWrapper}>
