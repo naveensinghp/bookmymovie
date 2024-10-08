@@ -15,7 +15,7 @@ import {
         availableShowTime    } from "../data";
 import Button from "../components/Button";
 import { useLocation } from 'react-router-dom';
-
+import MoviePoster from "../components/MoviePoster/MoviePoster";
 
 export default function MovieCalendar(){
     const location = useLocation();
@@ -23,8 +23,8 @@ export default function MovieCalendar(){
     console.log('ddd',data);
     return(
         <>
-            <Header/>
-            <TextLink  href="/">Go Home</TextLink>
+           
+            {/* <TextLink  href="/">Go Home</TextLink> */}
             <MovieInfo />
            {/* MovieInfo */}
             {/* MovieDate */}
@@ -44,11 +44,11 @@ export default function MovieCalendar(){
 
     function MovieInfo(){
         return(
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,6)' }}>
-                 {/* MoviePoster */}
+            <MovieInfoWrapper>
+                <MoviePoster />
                 {/* MovieDetailedInfo */}
-              <h1>Hello WOrld</h1>
-            </div>
+                {/* <img src="assets/movie2.jpg" alt="mobie" width={294} height={230} /> */}
+            </MovieInfoWrapper>
         );
     }
 
@@ -138,6 +138,13 @@ export default function MovieCalendar(){
 }
 
 
+const MovieInfoWrapper = styled.div`
+    background: hotpink;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 40px ;
+
+`
 
 const ShowTimeMovie = styled.div`
     color: white;
@@ -238,8 +245,7 @@ const Month = styled.div`
 `;
 
 
-const MoviePoster = styled.div`
-`
+
 const Close = styled.div`
     cursor: pointer;
     position: absolute;
