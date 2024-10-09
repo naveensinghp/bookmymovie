@@ -45,9 +45,11 @@ export default function MovieCalendar(){
     function MovieInfo(){
         return(
             <MovieInfoWrapper>
-                <MoviePoster />
+                <MoviePoster 
+                    imgsrc={'assets/avatar.jpeg'}
+                    movietile={'The Avatar Way of Water'}
+                />
                 {/* MovieDetailedInfo */}
-                {/* <img src="assets/movie2.jpg" alt="mobie" width={294} height={230} /> */}
             </MovieInfoWrapper>
         );
     }
@@ -139,7 +141,6 @@ export default function MovieCalendar(){
 
 
 const MovieInfoWrapper = styled.div`
-    background: hotpink;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 40px 40px ;

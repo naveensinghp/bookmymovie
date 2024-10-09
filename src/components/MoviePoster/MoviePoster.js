@@ -1,29 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function MoviePoster() {
+function MoviePoster({imgsrc,movietile}) {
   return (
-    <Wrapper>
-      <ImageFit>
-        <img src="assets/avatar.jpeg" alt="mobie" width={294} height={230} />
-      </ImageFit>
-      <h1>Avatar Way of Water</h1>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <ImageFit>
+          <img src={imgsrc} alt="mobie" className="movieimg" />
+        </ImageFit>
+      </Wrapper>
+     <MovieTitle>{movietile}</MovieTitle>
+    </>
   );
 }
 
 const Wrapper = styled.div`
-  width: 100%;
   display: flex;
-  flex-direction: column;
 `
 
 const ImageFit = styled.div`
-  background: red;
-  height: 296px;
-  width: 240px;
-  border-radius: 20px;
+  width: 250px;
+`
 
+const MovieTitle = styled.h1`
+  font-size: 1.5rem;
+  color: white;
 `
 
 export default MoviePoster;
