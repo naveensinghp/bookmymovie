@@ -47,7 +47,7 @@ export default function MovieCalendar(){
             <MovieInfoWrapper>
                 <MoviePoster 
                     imgsrc={'assets/avatar.jpeg'}
-                    movietile={'The Avatar Way of Water'}
+                    movietile={'Avatar: The Way of Water'}
                 />
                 {/* MovieDetailedInfo */}
             </MovieInfoWrapper>
