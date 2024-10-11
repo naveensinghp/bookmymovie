@@ -142,8 +142,8 @@ export default function MovieCalendar(){
 
 const MovieInfoWrapper = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 40px 40px ;
+    grid-template-columns: 40 60%;
+    padding: 40px;
 
 `
 
