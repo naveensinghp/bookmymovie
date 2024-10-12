@@ -14,35 +14,52 @@ function MoviePoster({imgsrc,movietile}) {
           <img src={imgsrc} alt="mobie" className="movieimg" />
         </ImageFit>
          <MovieGeneralInfo>
-              {/* <MovieTitle>{movietile}</MovieTitle>
-              <div style={{display: 'flex',flexDirection: 'column'}}>
-              <Spacer size={50} />
-              <div style={{display: 'flex', gap:'20px'}}>
-              {CompleteGenre.map((genre) => (
-                 <MovieGenre>{genre}</MovieGenre>
-              ))}
-              </div>
-              <MoviePlot>
-                Jake Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight a difficult war against the humans.
-              </MoviePlot>
-              <Spacer size={50} />
-              <ReadMore>
-                Read More
-                <Icon size={18} icon={chevronDown} color={'red'} />
-              </ReadMore>
-              </div> */}
               <FlexColumn>
                 <MovieTitle>{movietile}</MovieTitle>
                 <MovieGenreStuff>
+                <Spacer size={40} />
                   <FlexRow>
                   <MovieLeftSection>
-                  {CompleteGenre.map((genre) => (
+                    <div style={{display: 'flex',gap: '10px'}}>
+                    {CompleteGenre.map((genre) => (
                       <MovieGenre>{genre}</MovieGenre>
                     ))}
+                    </div>
+                    <Spacer size={10} />
+                    <div style={{display: 'flex',gap: '10px'}}>
+                      <Ratings>
+                        <img src="assets/imdb.png" width={50} alt="imdb" />
+                        <div style={{color: 'white',fontSize: '12px'}}> 7.6 / 10</div>
+                      </Ratings>
+                      <Ratings>
+                        <img src="assets/imdb.png" width={50} alt="imdb" />
+                        <div style={{color: 'white',fontSize: '12px'}}> 7.6 / 10</div>
+                      </Ratings>
+                      </div>
+                    
+                    {/* <MoviePlot>
+                      Jake Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight a difficult war against the humans.
+                    </MoviePlot>
+                    <Spacer size={50} />
+                    <ReadMore>
+                      Read More
+                      <Icon size={18} icon={chevronDown} color={'red'} />
+                    </ReadMore> */}
                     </MovieLeftSection>
-                    <MovieRightSection>
-                       <h1>Testing</h1>
-                    </MovieRightSection>
+                    {/* <MovieRightSection>
+                       <DirectorInfo>
+                          <h2>Director</h2>
+                          <span>James Cameron</span>
+                       </DirectorInfo>
+                       <DirectorInfo>
+                          <h2>Writer</h2>
+                          <span>James Cameron</span>
+                       </DirectorInfo>
+                       <DirectorInfo>
+                          <h2>Stars</h2>
+                          <span>James Cameron</span>
+                       </DirectorInfo>
+                    </MovieRightSection> */}
                   </FlexRow>
                 </MovieGenreStuff>
               </FlexColumn>
@@ -51,6 +68,17 @@ function MoviePoster({imgsrc,movietile}) {
     </>
   );
 }
+
+
+const Ratings = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const DirectorInfo = styled.div`
+
+
+`
 
 const FlexColumn = styled.div`
   display: flex;
@@ -74,17 +102,6 @@ const MovieRightSection =styled.div`
 
 `;
 
-{/* <FlexColumn>
-    <MovieName></MovieName>
-    <MovieGenreStuff>
-        <FlexRow>
-            <MovieLeftSection>
-            </MovieLeftSection>
-            <MovieRightSection>
-            </MovieRightSection>
-        </FlexRow>
-    </MovieGenreStuff>
-</FlexColumn> */}
 
 
 const MoviePlot = styled.div`
@@ -97,13 +114,15 @@ const MovieGeneralInfo = styled.div`
   outline: 2px solid red;
 `
 const MovieGenre = styled.div`
-  background: #515151;
-  width: 200px;
+  background: #292d37;
+  font-size: 12px;
+  width: 95px;
   text-align: center;
   border-radius: 20px;
-  padding: 5px;
-  color: white;
+  padding: 3px;
+  color: #84858a;
   font-weight: bold;
+  height: 25px;
 `
 const Wrapper = styled.div`
   display: flex;
@@ -111,12 +130,12 @@ const Wrapper = styled.div`
 `
 
 const ImageFit = styled.div`
-  width: 250px;
-  outline: 2px solid red;
+  width: 350px;
+  /* outline: 2px solid red; */
 `
 
 const MovieTitle = styled.h1`
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
 `
 
