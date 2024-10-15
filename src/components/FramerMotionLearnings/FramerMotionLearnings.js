@@ -4,19 +4,22 @@ import styled from 'styled-components';
 import css from './FramerMotion.module.css';
 import { ChevronDown, ChevronUp } from 'react-feather';
 import { range } from '../../utils';
+import VisuallyHidden from '../VisuallyHidden/VisuallyHidden';
+import Spacer from '../Spacer';
+
 
 function FramerMotionLearnings() {
   const [isEnabled,setiSEnabled] = React.useState(false)
   return <>
     <div style={{background: 'black',height: '100vh'}}>
       {/* <h1>Hello Wolrd</h1> */}
-      <Toggle 
+      {/* <Toggle 
         value={isEnabled}
         onChange={setiSEnabled}
       />
       <FlexDemo />
-      <LayoutAnimation />
-      
+      <LayoutAnimation /> */}
+        <Spacer size={50} />
       <WidgetProcessor total={12} />
     </div>
   </>;
@@ -34,13 +37,14 @@ function WidgetProcessor({total}){
   }
 
   function handleRevertWidget(){
+    console.log('ff',numOfProcessedWidget);
     if(numOfProcessedWidget > 0){
       setNumOfProcessingWidget(numOfProcessedWidget -1);
     }
   }
   return(
-    <div className="widget_wrapper">
-      <div className="inbox">
+    <div className={css.widget_wrapper}> 
+      <div className={css.inbox}>
         { range(numOfUnProcessingWidget).map((itemNum) =>{
           return (
             <div 
@@ -50,6 +54,25 @@ function WidgetProcessor({total}){
           );
         })}
       </div>
+      <div className={css.actions}>
+        <button onClick={handleProcessWidget}>
+          <VisuallyHidden>Process widget</VisuallyHidden>
+          <ChevronDown color='white' />
+        </button>
+        <button onClick={handleRevertWidget}>
+          <VisuallyHidden>Revert widget</VisuallyHidden>
+          <ChevronDown color='white' />
+        </button>
+      </div>
+
+      <div className={css.outbox}>
+        {range(numOfProcessedWidget).map((itemNum) =>{
+          return(
+            <div key={itemNum} className={css.widget} />
+          )
+        })}
+      </div>
+
     </div>
   );
 }
