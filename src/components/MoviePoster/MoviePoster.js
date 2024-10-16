@@ -4,6 +4,7 @@ import { range } from '../../utils';
 import Spacer from '../Spacer/Spacer';
 import {chevronDown} from 'react-icons-kit/feather/chevronDown'
 import { Icon } from 'react-icons-kit'
+import Button from '../Button';
 
 
 function MoviePoster({imgsrc,movietile}) {
@@ -37,10 +38,15 @@ function MoviePoster({imgsrc,movietile}) {
                       </Ratings>
                       </div>
                     
-                    {/* <MoviePlot>
+                    <MoviePlot>
                       Jake Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight a difficult war against the humans.
                     </MoviePlot>
                     <Spacer size={50} />
+                    <div style={{width: '200px'}}>
+                      <Button size={'small'}>Read More </Button>
+                    </div>
+                   
+                    {/* 
                     <ReadMore>
                       Read More
                       <Icon size={18} icon={chevronDown} color={'red'} />

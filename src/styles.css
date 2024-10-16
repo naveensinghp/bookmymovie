@@ -55,6 +55,7 @@ html {
     --color-gray-300: hsl(0deg 0% 28.63%);
     --color-gray-900: hsl(0deg 0% 90%);
     --color-blue-400: hsl(197.55deg 76.42% 51.76%);
+    --color-blue-300: #97b7f3;
     --color-yellow:  hsl(46.45deg 100% 57.45%);
     --color-white: white;
     --test-color: hotpink;
