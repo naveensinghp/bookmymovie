@@ -50,6 +50,19 @@ export default function MovieCalendar(){
                     movietile={'Avatar: The Way of Water'}
                 />
                 {/* MovieDetailedInfo */}
+                <Spacer size={30} />
+                <MovieShowInfo>
+                  <MovieShowWrapper>
+                   <DateSection>
+                        <h4>Date</h4>
+                        <MovieDatePicker>
+                            <MovieMonth>Jun</MovieMonth>
+                            <MovieDate>09</MovieDate>
+                            <MovieDay>Tu</MovieDay>
+                        </MovieDatePicker>
+                   </DateSection>
+                  </MovieShowWrapper>
+                </MovieShowInfo>
             </MovieInfoWrapper>
         );
     }
@@ -138,6 +151,41 @@ export default function MovieCalendar(){
         );
     }
 }
+
+const MovieMonth = styled.div`
+
+`
+const MovieDate = styled.div`
+ font-weight: bolder;
+`
+const MovieDay = styled.div`
+
+`
+
+const MovieDatePicker = styled.div`
+    padding: 16px;
+    background: var(--color-blue-300);
+    height: 90px;
+    color: var(--color-black-400);
+    border-radius: 50px;
+    font-size: 0.9rem;
+`
+
+const DateSection = styled.div`
+    color: white;
+    display: flex;
+`
+
+const MovieShowInfo = styled.div`
+
+`
+
+const MovieShowWrapper = styled.div`
+    height: 100px;
+    background: #3e3f41;
+    border-radius: 10px;
+    margin: 30px;
+`
 
 
 const MovieInfoWrapper = styled.div`
