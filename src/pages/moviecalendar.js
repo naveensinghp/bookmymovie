@@ -16,6 +16,8 @@ import {
 import Button from "../components/Button";
 import { useLocation } from 'react-router-dom';
 import MoviePoster from "../components/MoviePoster/MoviePoster";
+import { range } from "../utils";
+
 
 export default function MovieCalendar(){
     const location = useLocation();
@@ -55,11 +57,13 @@ export default function MovieCalendar(){
                   <MovieShowWrapper>
                    <DateSection>
                         <h4>Date</h4>
-                        <MovieDatePicker>
-                            <MovieMonth>Jun</MovieMonth>
-                            <MovieDate>09</MovieDate>
-                            <MovieDay>Tu</MovieDay>
-                        </MovieDatePicker>
+                        {range(7).map((num) => ( 
+                            <MovieDatePicker>
+                                <MovieMonth>Jun</MovieMonth>
+                                <MovieDate>09</MovieDate>
+                                <MovieDay>Tu</MovieDay>
+                            </MovieDatePicker>
+                        ))}
                    </DateSection>
                   </MovieShowWrapper>
                 </MovieShowInfo>
@@ -174,6 +178,7 @@ const MovieDatePicker = styled.div`
 const DateSection = styled.div`
     color: white;
     display: flex;
+    gap: 10px;
 `
 
 const MovieShowInfo = styled.div`
