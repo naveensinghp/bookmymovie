@@ -157,22 +157,24 @@ export default function MovieCalendar(){
 }
 
 const MovieMonth = styled.div`
-
+ font-size: 12px;
 `
 const MovieDate = styled.div`
  font-weight: bolder;
+ font-size: 12px;
 `
 const MovieDay = styled.div`
-
+ font-size: 12px;
 `
 
 const MovieDatePicker = styled.div`
     padding: 16px;
     background: var(--color-blue-300);
-    height: 90px;
+    height: 72px;
     color: var(--color-black-400);
     border-radius: 50px;
     font-size: 0.9rem;
+    overflow: hidden;
 `
 
 const DateSection = styled.div`
