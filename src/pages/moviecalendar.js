@@ -17,6 +17,8 @@ import Button from "../components/Button";
 import { useLocation } from 'react-router-dom';
 import MoviePoster from "../components/MoviePoster/MoviePoster";
 import { range } from "../utils";
+import { ChevronLeft } from 'react-feather';
+import { ChevronRight } from "react-feather";
 
 
 export default function MovieCalendar(){
@@ -56,14 +58,25 @@ export default function MovieCalendar(){
                 <MovieShowInfo>
                   <MovieShowWrapper>
                    <DateSection>
-                        <h4>Date</h4>
+                         {/* Date 1 */}
+                         {/* Arrow Left */}
+                          {/* Days */}
+                         {/* Arrow Right */}
+                         <div style={{display: 'flex',alignItems: 'center',gap:'10px',padding: '12px'}}>
+                         <DateTitle>Date</DateTitle>
+                        <ChevronLeft color="orange" size={18} />
                         {range(7).map((num) => ( 
                             <MovieDatePicker>
-                                <MovieMonth>Jun</MovieMonth>
-                                <MovieDate>09</MovieDate>
-                                <MovieDay>Tu</MovieDay>
+                                <div style={{ display: 'flex',flexDirection: 'column',alignItems: 'center' }}>
+                                    <MovieMonth>Jun</MovieMonth>
+                                    <MovieDate>{num}</MovieDate>
+                                    <MovieDay>We</MovieDay>
+                                </div>
                             </MovieDatePicker>
                         ))}
+                        <ChevronRight color="orange" size={18} />
+                         </div>
+                        
                    </DateSection>
                   </MovieShowWrapper>
                 </MovieShowInfo>
@@ -167,10 +180,14 @@ const MovieDay = styled.div`
  font-size: 12px;
 `
 
+const DateTitle = styled.div`
+    color: var(--color-blue-300);
+    font-weight: bolder;
+`
+
 const MovieDatePicker = styled.div`
-    padding: 16px;
+    padding: 8px 16px;
     background: var(--color-blue-300);
-    height: 72px;
     color: var(--color-black-400);
     border-radius: 50px;
     font-size: 0.9rem;
