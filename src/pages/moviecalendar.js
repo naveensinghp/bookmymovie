@@ -3,7 +3,7 @@ import TextLink from "../components/TextLink";
 import styled from 'styled-components';
 import { X } from 'react-feather';
 import Link from "../components/Link";
-import React from 'react';
+import React, { useState } from 'react';
 import { COLORS } from "../constants";
 import {search} from 'react-icons-kit/fa/search'
 import { Icon } from 'react-icons-kit'
@@ -47,6 +47,12 @@ export default function MovieCalendar(){
 
 
     function MovieInfo(){
+        const [isActive, setIsActive] = useState(false);
+
+        const toggleActive = () => {
+            setIsActive((prev) => !prev);
+          };
+
         return(
             <MovieInfoWrapper>
                 <MoviePoster 
@@ -58,17 +64,19 @@ export default function MovieCalendar(){
                 <MovieShowInfo>
                   <MovieShowWrapper>
                    <DateSection>
-                         {/* Date 1 */}
-                         {/* Arrow Left */}
-                          {/* Days */}
-                         {/* Arrow Right */}
-                         <div style={{display: 'flex',alignItems: 'center',gap:'10px',padding: '12px'}}>
+                         <div 
+                            style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap:'10px',
+                                    padding: '12px'}}
+                         >
                          <DateTitle>Date</DateTitle>
                         <ChevronLeft color="orange" size={18} />
                         {range(7).map((num) => ( 
-                            <MovieDatePicker>
+                            <MovieDatePicker isActive={isActive} onClick={toggleActive}>
                                 <div style={{ display: 'flex',flexDirection: 'column',alignItems: 'center' }}>
-                                    <MovieMonth>Jun</MovieMonth>
+                                    <MovieMonth> Jan</MovieMonth>
                                     <MovieDate>{num}</MovieDate>
                                     <MovieDay>We</MovieDay>
                                 </div>
@@ -76,7 +84,6 @@ export default function MovieCalendar(){
                         ))}
                         <ChevronRight color="orange" size={18} />
                          </div>
-                        
                    </DateSection>
                   </MovieShowWrapper>
                 </MovieShowInfo>
@@ -186,8 +193,10 @@ const DateTitle = styled.div`
 `
 
 const MovieDatePicker = styled.div`
+    cursor: pointer;
     padding: 8px 16px;
-    background: var(--color-blue-300);
+    /* background: var(--color-blue-300); */
+    background: ${(props) => (props.isActive ?  '#97b7f3' : 'gray')};
     color: var(--color-black-400);
     border-radius: 50px;
     font-size: 0.9rem;
@@ -208,7 +217,6 @@ const MovieShowWrapper = styled.div`
     height: 100px;
     background: #3e3f41;
     border-radius: 10px;
-    margin: 30px;
 `
 
 
