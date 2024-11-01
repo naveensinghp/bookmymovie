@@ -42,30 +42,22 @@ function MoviePoster({imgsrc,movietile}) {
                       Jake Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight a difficult war against the humans.
                     </MoviePlot>
                     <Spacer size={50} />
-                    <div style={{width: '200px'}}>
+                    {/* <div style={{width: '200px' }}>
                       <Button size={'small'}>Read More </Button>
                     </div>
-                   
+                    */}
                     {/* 
                     <ReadMore>
                       Read More
                       <Icon size={18} icon={chevronDown} color={'red'} />
                     </ReadMore> */}
                     </MovieLeftSection>
-                    {/* <MovieRightSection>
+                    <MovieRightSection>
                        <DirectorInfo>
                           <h2>Director</h2>
                           <span>James Cameron</span>
                        </DirectorInfo>
-                       <DirectorInfo>
-                          <h2>Writer</h2>
-                          <span>James Cameron</span>
-                       </DirectorInfo>
-                       <DirectorInfo>
-                          <h2>Stars</h2>
-                          <span>James Cameron</span>
-                       </DirectorInfo>
-                    </MovieRightSection> */}
+                    </MovieRightSection>
                   </FlexRow>
                 </MovieGenreStuff>
               </FlexColumn>
@@ -105,7 +97,7 @@ const MovieLeftSection = styled.div`
 `;
 
 const MovieRightSection =styled.div`
-
+  border: outline solid;
 `;
 
 
