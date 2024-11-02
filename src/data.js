@@ -134,6 +134,32 @@ export const seatNumber = [
 
 export const alphabets = ['A','B','C','D','E','F','G'];
 
+export const getDummyData = [
+    {
+        id: 1,
+        day: 'Mon',
+        month: 'Jan',
+        date: '09'
+    },
+    {
+        id: 2,
+        day: 'Tue',
+        month: 'Jan',
+        date: '10'
+    },
+    {
+        id: 3,
+        day: 'Wed',
+        month: 'Jan',
+        date: '11'
+    },
+    {
+        id: 4,
+        day: 'Thur',
+        month: 'Jan',
+        date: '12'
+    }
+]
 
 export const getMoviePosters = [
     {

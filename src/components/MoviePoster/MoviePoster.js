@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { range } from '../../utils';
 import Spacer from '../Spacer/Spacer';
-import {chevronDown} from 'react-icons-kit/feather/chevronDown'
-import { Icon } from 'react-icons-kit'
-import Button from '../Button';
 
 
 function MoviePoster({imgsrc,movietile}) {
@@ -22,8 +18,8 @@ function MoviePoster({imgsrc,movietile}) {
                   <FlexRow>
                   <MovieLeftSection>
                     <div style={{display: 'flex',gap: '10px'}}>
-                    {CompleteGenre.map((genre) => (
-                      <MovieGenre>{genre}</MovieGenre>
+                    {CompleteGenre.map((index,genre) => (
+                        <MovieGenre key={index}>{genre}</MovieGenre>
                     ))}
                     </div>
                     <Spacer size={10} />
@@ -37,7 +33,6 @@ function MoviePoster({imgsrc,movietile}) {
                         <div style={{color: 'white',fontSize: '12px'}}> 7.6 / 10</div>
                       </Ratings>
                       </div>
-                    
                     <MoviePlot>
                       Jake Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight a difficult war against the humans.
                     </MoviePlot>
@@ -52,12 +47,12 @@ function MoviePoster({imgsrc,movietile}) {
                       <Icon size={18} icon={chevronDown} color={'red'} />
                     </ReadMore> */}
                     </MovieLeftSection>
-                    <MovieRightSection>
+                    {/* <MovieRightSection>
                        <DirectorInfo>
                           <h2>Director</h2>
                           <span>James Cameron</span>
                        </DirectorInfo>
-                    </MovieRightSection>
+                    </MovieRightSection> */}
                   </FlexRow>
                 </MovieGenreStuff>
               </FlexColumn>
@@ -97,7 +92,7 @@ const MovieLeftSection = styled.div`
 `;
 
 const MovieRightSection =styled.div`
-  border: outline solid;
+ outline: 2px solid yellow;
 `;
 
 
