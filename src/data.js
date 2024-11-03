@@ -134,6 +134,36 @@ export const seatNumber = [
 
 export const alphabets = ['A','B','C','D','E','F','G'];
 
+
+function getMonthName(monthIndex) {
+    const monthNames = [
+        'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    ];
+    return monthNames[monthIndex];
+}
+
+export function getDates(){
+    let data = [];
+    const currentDate = new Date();
+    const currentDay = currentDate.getDay();
+    const currentMonthIndex = currentDate.getMonth()
+    const currentMonthName = getMonthName(currentMonthIndex);
+    const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    for (let i = 0; i < 7; i++) {
+        const nextDate = new Date(currentDate);
+        nextDate.setDate(currentDate.getDate() + (i - currentDay))
+        const dayName = daysOfWeek[nextDate.getDay()];
+        const day = String(nextDate.getDate()).padStart(2, '0'); 
+        // console.log('fff',day);
+        let array =  {day: day,month: currentMonthName,week: dayName }
+        data.push(array);
+    }
+    // console.log('date',data)
+    return data;
+    
+}
+
 export const getDummyData = [
     {
         id: 1,

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import Spacer from "../components/Spacer/Spacer";
-import { getDummyData} from "../data";
+import { getDates, getDummyData} from "../data";
 import MoviePoster from "../components/MoviePoster/MoviePoster";
 import { ChevronLeft } from 'react-feather';
 import { ChevronRight } from "react-feather";
@@ -42,11 +42,11 @@ export default function MovieCalendar(){
                     <DateSectionWrapper>
                         <DateTitle>Date</DateTitle>
                             <ChevronLeft color="orange" size={18} />
-                            {getDummyData.map(({id, day, month, date}) => ( 
+                            {getDates().map(({id, day, month, week}) => ( 
                                 <MovieDatePicker>
                                     <MovieDateWrapper key={id}>
                                         <MovieMonth>{month}</MovieMonth>
-                                        <MovieDate>{date}</MovieDate>
+                                        <MovieDate>{week}</MovieDate>
                                         <MovieDay>{day}</MovieDay>
                                     </MovieDateWrapper>
                                 </MovieDatePicker>
