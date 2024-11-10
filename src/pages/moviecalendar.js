@@ -10,15 +10,9 @@ import { ChevronRight } from "react-feather";
 export default function MovieCalendar(){
     return(
         <>
-            <MovieInfo />
-        </>
-    );
-
-
-    function MovieInfo(){
-        return(
-            <MovieInfoWrapper>
+           <MovieInfoWrapper>
                  {/* 
+                 Reference Component
                  <MovieDetailedInfo 
                    poster={poster}
                    title={title}
@@ -34,7 +28,6 @@ export default function MovieCalendar(){
                     imgsrc={'assets/avatar.jpeg'}
                     movietile={'Avatar: The Way of Water'}
                 />
-                {/* MovieDetailedInfo */}
                 <Spacer size={30} />
                 <MovieShowInfo>
                   <MovieShowWrapper>
@@ -43,11 +36,11 @@ export default function MovieCalendar(){
                         <DateTitle>Date</DateTitle>
                             <ChevronLeft color="orange" size={18} />
                             {getDates().map(({id, day, month, week}) => ( 
-                                <MovieDatePicker>
-                                    <MovieDateWrapper key={id}>
+                                <MovieDatePicker key={id}>
+                                    <MovieDateWrapper>
                                         <MovieMonth>{month}</MovieMonth>
-                                        <MovieDate>{week}</MovieDate>
                                         <MovieDay>{day}</MovieDay>
+                                        <MovieDate>{week}</MovieDate>
                                     </MovieDateWrapper>
                                 </MovieDatePicker>
                             ))}
@@ -57,8 +50,9 @@ export default function MovieCalendar(){
                   </MovieShowWrapper>
                 </MovieShowInfo>
             </MovieInfoWrapper>
-        );
-    }
+        </>
+    );
+
 
 }
 
@@ -69,14 +63,18 @@ const MovieDateWrapper = styled.div`
 `
 
 const MovieMonth = styled.div`
- font-size: 12px;
+    color: var(--color-gray-300);
+    font-size: 12px;
 `
 const MovieDate = styled.div`
     font-weight: bolder;
     font-size: 12px;
+    color: var(--color-gray-300);
 `
 const MovieDay = styled.div`
- font-size: 12px;
+    font-weight: bolder;
+    font-size: 12px;
+    color: var(--color-gray-300);
 `
 
 const DateTitle = styled.div`
@@ -87,7 +85,7 @@ const DateTitle = styled.div`
 const MovieDatePicker = styled.div`
     cursor: pointer;
     padding: 8px 16px;
-    background: ${(props) => (props.isActive ?  '#97b7f3' : 'gray')};
+    background: var(--color-blue-300);
     color: var(--color-black-400);
     border-radius: 50px;
     font-size: 0.9rem;
@@ -102,7 +100,7 @@ const DateSectionWrapper = styled.div`
 `
 
 const DateSection = styled.div`
-    color: white;
+    color: var(--color-black-400);
     display: flex;
     gap: 10px;
 `
@@ -112,8 +110,8 @@ const MovieShowInfo = styled.div`
 `
 
 const MovieShowWrapper = styled.div`
-    height: 100px;
-    background: #3e3f41;
+    /* height: 100px; */
+    background: #29292d;
     border-radius: 10px;
 `
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Spacer from '../Spacer/Spacer';
+import { ChevronDown, chevronDown } from "react-feather";
 
 
 function MoviePoster({imgsrc,movietile}) {
@@ -19,11 +20,15 @@ function MoviePoster({imgsrc,movietile}) {
                   <MovieLeftSection>
                     <div style={{display: 'flex',gap: '10px'}}>
                     {CompleteGenre.map((index,genre) => (
-                        <MovieGenre key={index}>{genre}</MovieGenre>
+                        <MovieGenre key={index}>{index}</MovieGenre>
                     ))}
                     </div>
                     <Spacer size={10} />
                     <div style={{display: 'flex',gap: '10px'}}>
+                      <Ratings>
+                        <img src="assets/imdb.png" width={50} alt="imdb" />
+                        <div style={{color: 'white',fontSize: '12px'}}> 7.6 / 10</div>
+                      </Ratings>
                       <Ratings>
                         <img src="assets/imdb.png" width={50} alt="imdb" />
                         <div style={{color: 'white',fontSize: '12px'}}> 7.6 / 10</div>
@@ -37,15 +42,10 @@ function MoviePoster({imgsrc,movietile}) {
                       Jake Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight a difficult war against the humans.
                     </MoviePlot>
                     <Spacer size={50} />
-                    {/* <div style={{width: '200px' }}>
-                      <Button size={'small'}>Read More </Button>
-                    </div>
-                    */}
-                    {/* 
                     <ReadMore>
                       Read More
-                      <Icon size={18} icon={chevronDown} color={'red'} />
-                    </ReadMore> */}
+                        <ChevronDown color="orange" size={18} />
+                    </ReadMore>
                     </MovieLeftSection>
                     {/* <MovieRightSection>
                        <DirectorInfo>
@@ -69,7 +69,7 @@ const Ratings = styled.div`
 `
 
 const DirectorInfo = styled.div`
-
+  
 
 `
 
@@ -119,11 +119,11 @@ const MovieGenre = styled.div`
 `
 const Wrapper = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 4rem;
 `
 
 const ImageFit = styled.div`
-  width: 350px;
+  width: 500px;
   /* outline: 2px solid red; */
 `
 
@@ -133,7 +133,14 @@ const MovieTitle = styled.h1`
 `
 
 const ReadMore = styled.div`
-  color: white;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--color-blue-300);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
 `;
 
 export default MoviePoster;
