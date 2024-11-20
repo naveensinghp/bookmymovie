@@ -46,18 +46,8 @@ function MovieCard(props) {
               </div>
           </div>
           <div className={styles.bookingstuff}>
-            {/* <Button 
-                variant='fill' 
-                size="small"
-                onClick={handleClick}
-               
-            >Book Tickets
-            </Button> */}
             <Button href={'/moviecalendar'} variant='fill' size="small" onClick={handleClick}>Book Tickets</Button>
             <Button variant='fill' size="small">Play Trailer</Button>
-            {/* <TextLink href="/moviecalendar">
-              Hello World
-            </TextLink> */}
           </div>
         </div> 
       </div>

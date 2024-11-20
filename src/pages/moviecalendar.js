@@ -5,6 +5,7 @@ import { getDates, getDummyData} from "../data";
 import MoviePoster from "../components/MoviePoster/MoviePoster";
 import { ChevronLeft } from 'react-feather';
 import { ChevronRight } from "react-feather";
+import { COLORS } from '../constants';
 
 
 export default function MovieCalendar(){
@@ -46,15 +47,38 @@ export default function MovieCalendar(){
                             ))}
                         <ChevronRight color="orange" size={18} />
                     </DateSectionWrapper>
+                    <div style={{color: 'white'}}>
+                        <div> Time</div>
+                        <Select
+                            label="sort"
+                            value="test">
+                                <option value="newst">Coimbatore</option>
+                                <option value="game">Bangalore</option>
+                                <option value="cutest">Chennai</option>
+                        </Select>
+                    </div>
                    </DateSection>
                   </MovieShowWrapper>
                 </MovieShowInfo>
+               
             </MovieInfoWrapper>
         </>
     );
 
 
 }
+
+const Select = styled.select`
+    background: ${COLORS.gray[300]};
+    width: 100%;
+    padding: 10px 50px;
+    color: white;
+    /* border-color: ${COLORS.gray[300]}; */
+    font-size: 14px;
+    border-radius: 8px;
+    color: ${COLORS.white};
+    height: 2.5rem;
+`;
 
 const MovieDateWrapper = styled.div`
     display: flex;
@@ -86,7 +110,8 @@ const MovieDatePicker = styled.div`
     cursor: pointer;
     padding: 8px 16px;
     background: var(--color-blue-300);
-    color: var(--color-black-400);
+    /* color: var(--color-black-400); */
+    /* background: var(--color-gray-300); */
     border-radius: 50px;
     font-size: 0.9rem;
     overflow: hidden;
@@ -102,6 +127,7 @@ const DateSectionWrapper = styled.div`
 const DateSection = styled.div`
     color: var(--color-black-400);
     display: flex;
+    flex-direction: row;
     gap: 10px;
 `
 
