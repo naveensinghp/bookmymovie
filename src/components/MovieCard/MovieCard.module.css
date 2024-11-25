@@ -4,7 +4,7 @@
     height: 230px;
     border-radius: 12px;
     position: relative;
-    transition: transform 250ms, opacity 400ms;
+    /* transition: transform 250ms, opacity 400ms; */
 }
 
 .likeheart{
@@ -37,6 +37,30 @@
   box-shadow: 0 1px 2px #00000059  
 }
 
+
+.wrapper {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 8px;
+}
+.thumbnail {
+  display: block;
+  width: 100%;
+}
+
+.thumbnail{
+  transition: transform 500ms;
+}
+
+.thumbnailWrapper{
+  overflow: hidden;
+}
+
+.thumbnailWrapper:hover .thumbnail{
+  transform: scale(1.1);
+}
+
 /* .cardwrapper:hover .bookingstuff{
   position: absolute;
   transform: scale(1);
@@ -45,10 +69,19 @@
   transition: all .3s ease-in;
 } */
 
+.thumbnailwrapper{
+  overflow: hidden;
+}
 
-.cardwrapper:hover .movieimg{
+.movieimg{
+  transition: transform 500ms;
+}
+
+.thumbnailwrapper:hover .movieimg{
   transform: scale(1.2);
 }
+
+
 
 .container{
   position: relative;
@@ -73,13 +106,11 @@
 } */
 .bookingstuff{
   width: 100%;
-  /* background: hotpink; */
   display: flex;
   gap: 10px;
-  /* transform: scale(1); */
   position: absolute;
-  bottom: 2px;
-  padding: 15px 12px;
+  bottom: 0;
+  padding: 10px;
 }
 
 .movieimg{

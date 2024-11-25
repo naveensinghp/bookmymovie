@@ -24,10 +24,25 @@ function MovieCard(props) {
   return(
     <>
      {/* <Spinner /> */}
+     {/* <div className={styles.wrapper}>
+     <a href="/" className={styles.thumbnailWrapper}>
+        <img
+          alt="A balloon store"
+          className={styles.thumbnail}
+          src="https://courses.joshwcomeau.com/cfj-mats/article-image-balloons.jpg"
+        />
+      </a>
+     </div> */}
       <div className={styles.cardwrapper}>
-        <img src={movie.moviePoster} 
+      <div className={styles.wrapper}>
+      <a href="/" className={styles.thumbnailwrapper}>
+           <img src={movie.moviePoster} 
           className={styles.movieimg} 
           alt="bookmymovielogo"/>
+        </a>
+      </div>
+       
+       
         <div>
           { movie.newRelease ? <div className={styles.newreleaselabel}> Releasing on {movie.releaseDate}</div> : ""}
           <div className={styles.likeheart}>
