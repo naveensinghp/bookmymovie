@@ -7,8 +7,8 @@ import Spacer from '../Spacer/Spacer';
 
 function Home() {
   return <>
-       <Header />
-       <Spacer size={100} />
+       {/* <Header />
+       <Spacer size={100} /> */}
       {/* <AnnoucementBanner/> */}
       <LoyaltyProgram />
       <NowShowingMovie />
