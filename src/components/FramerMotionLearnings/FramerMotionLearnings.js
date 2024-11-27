@@ -19,11 +19,36 @@ function FramerMotionLearnings() {
       />
       <FlexDemo />
       <LayoutAnimation /> */}
+      <DynamicUpdate />
         <Spacer size={50} />
-      <WidgetProcessor total={12} />
+      {/* <WidgetProcessor total={12} /> */}
     </div>
   </>;
 }
+
+function DynamicUpdate(){
+  const [animated,setAnimated] = React.useState(false);
+  return(
+    <Wrapper>
+
+    </Wrapper>
+  );
+}
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  height: 100vh;
+`;
+
+const Box = styled.div`
+  width: 80px;
+  height: 80px;
+  background: slateblue;
+`
 
 
 function WidgetProcessor({total}){
