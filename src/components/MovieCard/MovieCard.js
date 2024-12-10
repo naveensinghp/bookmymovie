@@ -19,7 +19,11 @@ function MovieCard(props) {
    }
    const handleClick = () => {
     const data = { message: 'Hello, World!' };
-    navigate('/moviecalendar', { state: data }); // Pass data using state
+    //navigate('/moviecalendar', { state: data }); // Pass data using state
+    navigate.push({
+      pathname: '/moviecalendar',
+      state: { id: 1, title: 'Hello World' }
+    });
   };
   return(
     <>
@@ -61,7 +65,13 @@ function MovieCard(props) {
               </div>
           </div>
           <div className={styles.bookingstuff}>
-            <Button href={'/moviecalendar'} variant='fill' size="small" onClick={handleClick}>Book Tickets</Button>
+            <Button 
+                href={'/moviecalendar'} 
+                variant='fill' 
+                size="small" 
+                onClick={handleClick}>
+                  Book Tickets
+              </Button>
             <Button variant='fill' size="small">Play Trailer</Button>
           </div>
         </div> 

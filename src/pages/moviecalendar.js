@@ -6,9 +6,10 @@ import MoviePoster from "../components/MoviePoster/MoviePoster";
 import { ChevronLeft } from 'react-feather';
 import { ChevronRight } from "react-feather";
 import { COLORS } from '../constants';
-
+import { useLocation } from "react-router-dom";
 
 export default function MovieCalendar(){
+   
     return(
         <>
            <MovieInfoWrapper>
@@ -26,7 +27,7 @@ export default function MovieCalendar(){
                  />
                  */}
                 <MoviePoster 
-                    imgsrc={'assets/avatar.jpeg'}
+                    imgsrc={'assets/movie2.jpg'}
                     movietile={'Avatar: The Way of Water'}
                 />
                 <Spacer size={30} />
