@@ -219,39 +219,39 @@ export const nowShowingMovie = [
         genre: "Adventure",
         language: 'Hindi'
     },
-    {
-        id: 2,
-        movieName: "One Pieces",
-        movieRunningLanguage: ["Tamil","Hinid","Telegu"],
-        moviePoster: "assets/movie1.jpg",
-        newRelease: true,
-        releaseDate: "Fri Nov 14",
-        likesCount: 60,
-        genre: "Drama",
-        language: 'Tamil'
-    },
-    {
-        id: 3,
-        movieName: "One Pieces",
-        movieRunningLanguage: ["Tamil","Hinid","Telegu"],
-        moviePoster: "assets/movie2.jpg",
-        newRelease: true,
-        releaseDate: "Fri Dec 14",
-        likesCount: 20,
-        genre: "Drama",
-        language: 'Tamil'
-    },
-    {
-        id: 4,
-        movieName: "One Pieces",
-        movieRunningLanguage: ["Tamil","Hinid","Telegu"],
-        moviePoster: "assets/movie3.jpg",
-        newRelease: true,
-        releaseDate: "Fri Sept 14",
-        likesCount: 10,
-        genre: "Drama",
-        language: 'Tamil'
-    },
+    // {
+    //     id: 2,
+    //     movieName: "One Pieces",
+    //     movieRunningLanguage: ["Tamil","Hinid","Telegu"],
+    //     moviePoster: "assets/movie1.jpg",
+    //     newRelease: true,
+    //     releaseDate: "Fri Nov 14",
+    //     likesCount: 60,
+    //     genre: "Drama",
+    //     language: 'Tamil'
+    // },
+    // {
+    //     id: 3,
+    //     movieName: "One Pieces",
+    //     movieRunningLanguage: ["Tamil","Hinid","Telegu"],
+    //     moviePoster: "assets/movie2.jpg",
+    //     newRelease: true,
+    //     releaseDate: "Fri Dec 14",
+    //     likesCount: 20,
+    //     genre: "Drama",
+    //     language: 'Tamil'
+    // },
+    // {
+    //     id: 4,
+    //     movieName: "One Pieces",
+    //     movieRunningLanguage: ["Tamil","Hinid","Telegu"],
+    //     moviePoster: "assets/movie3.jpg",
+    //     newRelease: true,
+    //     releaseDate: "Fri Sept 14",
+    //     likesCount: 10,
+    //     genre: "Drama",
+    //     language: 'Tamil'
+    // },
     // {
     //     id: 5,
     //     movieName: "One Pieces",
@@ -296,5 +296,4 @@ export const nowShowingMovie = [
     //     genre: "Drama",
     //     language: 'Tamil'
     // },
-    
 ];
