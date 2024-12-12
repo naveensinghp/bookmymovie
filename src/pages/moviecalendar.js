@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React from 'react';
+import React,{ useState }  from 'react';
 import Spacer from "../components/Spacer/Spacer";
 import { getDates, getDummyData} from "../data";
 import MoviePoster from "../components/MoviePoster/MoviePoster";
@@ -9,7 +9,10 @@ import { COLORS } from '../constants';
 import { useLocation } from "react-router-dom";
 
 export default function MovieCalendar(){
-   
+    const [bgColor, setBgColor] = useState("#f0f0f0");
+    const handleClick = () => {
+        setBgColor(bgColor === "#f0f0f0" ? "#90caf9" : "#f0f0f0");
+    }
     return(
         <>
            <MovieInfoWrapper>
@@ -48,16 +51,6 @@ export default function MovieCalendar(){
                             ))}
                         <ChevronRight color="orange" size={18} />
                     </DateSectionWrapper>
-                    <div style={{color: 'white'}}>
-                        <div> Time</div>
-                        <Select
-                            label="sort"
-                            value="test">
-                                <option value="newst">Coimbatore</option>
-                                <option value="game">Bangalore</option>
-                                <option value="cutest">Chennai</option>
-                        </Select>
-                    </div>
                    </DateSection>
                   </MovieShowWrapper>
                 </MovieShowInfo>
@@ -89,6 +82,7 @@ const MovieDateWrapper = styled.div`
 
 const MovieMonth = styled.div`
     color: var(--color-gray-300);
+    font-weight: bolder;
     font-size: 12px;
 `
 const MovieDate = styled.div`
