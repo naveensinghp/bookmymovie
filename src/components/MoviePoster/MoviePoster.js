@@ -1,66 +1,67 @@
 import React from 'react';
 import styled from 'styled-components';
 import Spacer from '../Spacer/Spacer';
-import { ChevronDown, chevronDown } from "react-feather";
+import { ChevronDown, chevronDown, ChevronRight } from "react-feather";
 
 
 function MoviePoster({imgsrc,movietile}) {
   return (
     <>
       <Wrapper>
-        <ImageFit>
-          <img src={imgsrc} alt="mobie" className="movieimg" />
-        </ImageFit>
-         <MovieGeneralInfo>
-              <FlexColumn>
-                <MovieTitle>{movietile}</MovieTitle>
-                <MovieGenreStuff>
-                <Spacer size={40} />
-                  <FlexRow>
-                  <MovieLeftSection>
-                    <div style={{display: 'flex',gap: '10px'}}>
-                    {CompleteGenre.map((index,genre) => (
-                        <MovieGenre key={index}>{index}</MovieGenre>
-                    ))}
-                    </div>
-                    <Spacer size={10} />
-                    <div style={{display: 'flex',gap: '10px'}}>
-                      <Ratings>
-                        <img src="assets/imdb.png" width={50} alt="imdb" />
-                        <div style={{color: 'white',fontSize: '12px'}}> 7.6 / 10</div>
-                      </Ratings>
-                      <Ratings>
-                        <img src="assets/imdb.png" width={50} alt="imdb" />
-                        <div style={{color: 'white',fontSize: '12px'}}> 7.6 / 10</div>
-                      </Ratings>
-                      <Ratings>
-                        <img src="assets/imdb.png" width={50} alt="imdb" />
-                        <div style={{color: 'white',fontSize: '12px'}}> 7.6 / 10</div>
-                      </Ratings>
-                      </div>
-                    <MoviePlot>
-                      Jake Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight a difficult war against the humans.
-                    </MoviePlot>
-                    <Spacer size={50} />
-                    <ReadMore>
-                      Read More
-                        <ChevronDown color="orange" size={18} />
-                    </ReadMore>
-                    </MovieLeftSection>
-                    {/* <MovieRightSection>
-                       <DirectorInfo>
-                          <h2>Director</h2>
-                          <span>James Cameron</span>
-                       </DirectorInfo>
-                    </MovieRightSection> */}
-                  </FlexRow>
-                </MovieGenreStuff>
-              </FlexColumn>
-         </MovieGeneralInfo>
+        <ImageFit><img src={imgsrc} alt="mobie" className="movieimg" /></ImageFit>
+        <MovieGeneralInfo>
+           <MovieTitle>{movietile}</MovieTitle>
+          <FlexRow>
+            <MovieLeftSection>
+                <MovieGenreWrapper>
+                  {CompleteGenre.map((index,genre) => (
+                    <MovieGenre key={index}>{index}</MovieGenre>
+                  ))}
+              </MovieGenreWrapper>
+            </MovieLeftSection>
+             <MovieRightSection>
+                <DirectorSection />
+                 <Spacer size={100} />
+                <DirectorSection />
+             </MovieRightSection>
+          </FlexRow>
+        </MovieGeneralInfo>
       </Wrapper>
     </>
   );
 }
+
+
+function DirectorSection(){
+  return (
+    <>
+      <DirectorInfo>
+        <div>
+          <DirectorNameTitle>Director</DirectorNameTitle>
+          <DirectorName>James Cameron</DirectorName>
+        </div>
+        
+          <ChevronRight color="orange" size={18} />
+        </DirectorInfo>
+    </>
+  );
+}
+
+
+const DirectorNameTitle = styled.div`
+  color: red;
+  font-size: 1.5rem;
+`
+
+const DirectorName = styled.div`
+  color: white
+`
+
+const MovieGenreWrapper = styled.div`
+  display: flex;
+  gap: 10px;
+
+`
 
 
 const Ratings = styled.div`
@@ -69,13 +70,18 @@ const Ratings = styled.div`
 `
 
 const DirectorInfo = styled.div`
-  
+  width: 240px;
+  outline:  2px solid hotpink ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
 `
 
 const FlexColumn = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 `;
 
 const MovieGenreStuff = styled.div`
@@ -85,6 +91,7 @@ const MovieGenreStuff = styled.div`
 const FlexRow = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 `;
 
 const MovieLeftSection = styled.div`
@@ -104,7 +111,8 @@ const MoviePlot = styled.div`
 const CompleteGenre = ['Action','Adventures','Thriller','Fantasy']
 
 const MovieGeneralInfo = styled.div`
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
+  width: 100%;
 `
 const MovieGenre = styled.div`
   background: #292d37;
@@ -123,7 +131,7 @@ const Wrapper = styled.div`
 `
 
 const ImageFit = styled.div`
-  width: 500px;
+  /* width: 500px; */
   /* outline: 2px solid red; */
 `
 
