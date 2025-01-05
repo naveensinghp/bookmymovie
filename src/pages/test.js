@@ -62,7 +62,6 @@ export default function Test(){
         isOpen={isModalOpen}
         handleDismiss={() => toggleIsModalOpen(false)}
       >
-        {/* <h1>Shall We Begin </h1> */}
         <LoginForm />
       </Modal>
       <button onClick={toggleIsModalOpen}>Log in</button>
