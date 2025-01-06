@@ -95,7 +95,6 @@ export default function Test(){
   }
   function Banner({type, children}){
     const backgroundColor = type === 'success' ? 'green': 'red';
-   
     return (
         <div
           style={{padding: '16px',textAlign: 'center', borderRadius: '4px',background: backgroundColor}}
