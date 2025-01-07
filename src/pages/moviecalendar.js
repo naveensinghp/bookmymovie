@@ -17,7 +17,7 @@ export default function MovieCalendar(){
         <>
            <MovieInfoWrapper>
                  {/* 
-                 Reference Component
+                 Component Shoulde like this..
                  <MovieDetailedInfo 
                    poster={poster}
                    title={title}
@@ -104,9 +104,10 @@ const DateTitle = styled.div`
 const MovieDatePicker = styled.div`
     cursor: pointer;
     padding: 8px 16px;
-    background: var(--color-blue-300);
+    /* background: var(--color-blue-300); */
     /* color: var(--color-black-400); */
-    /* background: var(--color-gray-300); */
+    color: var(--color-gray-900);
+    background: var(--color-gray-300);
     border-radius: 50px;
     font-size: 0.9rem;
     overflow: hidden;

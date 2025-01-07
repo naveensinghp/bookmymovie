@@ -153,6 +153,7 @@ export function getDates(){
     for (let i = 0; i < 3; i++) {
         const nextDate = new Date(currentDate);
         nextDate.setDate(currentDate.getDate() + (i - currentDay))
+        console.log('nextdate',nextDate);
         const dayName = daysOfWeek[nextDate.getDay()];
         const day = String(nextDate.getDate()).padStart(2, '0'); 
         let array =  {day: day,month: currentMonthName,week: dayName }
@@ -219,17 +220,17 @@ export const nowShowingMovie = [
         genre: "Adventure",
         language: 'Hindi'
     },
-    // {
-    //     id: 2,
-    //     movieName: "One Pieces",
-    //     movieRunningLanguage: ["Tamil","Hinid","Telegu"],
-    //     moviePoster: "assets/movie1.jpg",
-    //     newRelease: true,
-    //     releaseDate: "Fri Nov 14",
-    //     likesCount: 60,
-    //     genre: "Drama",
-    //     language: 'Tamil'
-    // },
+    {
+        id: 2,
+        movieName: "One Pieces",
+        movieRunningLanguage: ["Tamil","Hinid","Telegu"],
+        moviePoster: "assets/movie1.jpg",
+        newRelease: true,
+        releaseDate: "Fri Nov 14",
+        likesCount: 60,
+        genre: "Drama",
+        language: 'Tamil'
+    },
     // {
     //     id: 3,
     //     movieName: "One Pieces",
