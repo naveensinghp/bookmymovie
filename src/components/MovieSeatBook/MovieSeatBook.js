@@ -13,28 +13,23 @@ function MovieSeatBook() {
     <>
       <Column>
           {seatNumber.map((data) => (
-            <div 
-              style={{
-                display: 'flex',
-                gap: '16px',
-                paddingTop: '20px'
-              
-              }}
-            >
-              <div>{data.seat}</div>
+            <Wrapper key={data.id}>
+                {data.seat}
                 {data.seatno.map((seatno,index) => {
+                  //  console.log(seatno);
                    const rowindex = `${data.seat}-${index}`
                    const clickedSeat = `${data.seat}${''}${seatno}`
                   return (
                     <SeatNum 
-                      variant={seatno}
-                      active={rowindex === activeIndex}
-                    >{seatno}</SeatNum>
-                  
+                        variant={seatno}
+                        active={rowindex === activeIndex}
+                    >
+                      {seatno}
+                    </SeatNum>
                   )
                 })}
                <div>{data.seat}</div>
-            </div>
+           </Wrapper>
            ))}
       </Column>
     </>
@@ -57,13 +52,20 @@ const Column = styled.div`
   flex-flow: column-reverse;
 `;
 
+const Wrapper = styled.div`
+  display: flex;
+  gap: 16px;
+  padding-top: 20px;
+`
+
 const SeatNum = styled.button`
     width: 35px;
     height: 35px;
+    font-size: 12px;
     /* background-color: white; */
     background-color: ${props => props.active ? '#ffcb05' : 'white'}; 
-    border: 1px solid ${props => props.active ? '#ffcb05' : '#7a7a7a'};
-    border: none;
+    /* border: 1px solid ${props => props.active ? '#ffcb05' : '#7a7a7a'}; */
+    border: 1px solid green;
     border-radius: 4px;
     cursor: pointer;
     color: black;
@@ -78,11 +80,11 @@ const SeatNum = styled.button`
         return 'visible'; 
     } 
     }}; 
-    /* &:hover{
+    &:hover{
         background-color: #ffcf14;
-        translate: 0px -16px;
-        transition: 200ms linear 50ms;
-    } */
+        /* translate: 0px -16px;
+        transition: 200ms linear 50ms; */
+    }
 `;
 
 
