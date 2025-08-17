@@ -38,7 +38,7 @@ export const BREAKPOINTS = {
     desktop: `(min-width: ${BREAKPOINT_SIZES.sm + 1}px)`,
   };
 
-export const SITE_TITLE ='bookmymovie';
+export const SITE_TITLE ='bookmymovies';
 
 
 
