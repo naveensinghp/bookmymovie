@@ -28,15 +28,6 @@ function MovieCard(props) {
   return(
     <>
      {/* <Spinner /> */}
-     {/* <div className={styles.wrapper}>
-     <a href="/" className={styles.thumbnailWrapper}>
-        <img
-          alt="A balloon store"
-          className={styles.thumbnail}
-          src="https://courses.joshwcomeau.com/cfj-mats/article-image-balloons.jpg"
-        />
-      </a>
-     </div> */}
       <div className={styles.cardwrapper}>
       <div className={styles.wrapper}>
       <a href="/" className={styles.thumbnailwrapper}>

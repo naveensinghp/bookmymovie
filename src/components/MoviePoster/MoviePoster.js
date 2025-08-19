@@ -8,7 +8,13 @@ function MoviePoster({imgsrc,movietile}) {
   return (
     <>
       <Wrapper>
-        <ImageFit><img src={imgsrc} alt="mobie" className="movieimg" /></ImageFit>
+        <ImageFit>
+            <img 
+              src={imgsrc} 
+              alt="mobileposter" 
+              className="movieimg" 
+              />
+         </ImageFit>
         <MovieGeneralInfo>
            <MovieTitle>{movietile}</MovieTitle>
           <FlexRow>
@@ -21,8 +27,10 @@ function MoviePoster({imgsrc,movietile}) {
             </MovieLeftSection>
              <MovieRightSection>
                 <DirectorSection />
-                 <Spacer size={100} />
-                <DirectorSection />
+                 <Spacer size={10} />
+                <WriterSection />
+                <Spacer size={20} />
+                <StarSection />
              </MovieRightSection>
           </FlexRow>
         </MovieGeneralInfo>
@@ -40,7 +48,46 @@ function DirectorSection(){
           <DirectorNameTitle>Director</DirectorNameTitle>
           <DirectorName>James Cameron</DirectorName>
         </div>
-        
+          <ChevronRight color="orange" size={18} />
+        </DirectorInfo>
+    </>
+  );
+}
+
+function WriterSection(){
+  return (
+    <>
+      <DirectorInfo>
+        <div>
+          <DirectorNameTitle>Writer</DirectorNameTitle>
+          <DirectorName> 
+            <ul>
+              <li>Testing 1</li>
+               <li>Testing 2</li>
+                <li>Testing 3</li>
+            </ul>
+          </DirectorName>
+        </div>
+          <ChevronRight color="orange" size={18} />
+        </DirectorInfo>
+    </>
+  );
+}
+
+function StarSection(){
+  return (
+    <>
+      <DirectorInfo>
+        <div>
+          <DirectorNameTitle>Stars</DirectorNameTitle>
+          <DirectorName> 
+            <ul>
+              <li>Rajini</li>
+               <li>Kamal</li>
+                <li>Vijay</li>
+            </ul>
+          </DirectorName>
+        </div>
           <ChevronRight color="orange" size={18} />
         </DirectorInfo>
     </>
@@ -49,7 +96,7 @@ function DirectorSection(){
 
 
 const DirectorNameTitle = styled.div`
-  color: red;
+  color: var(--color-blue-300);
   font-size: 1.5rem;
 `
 

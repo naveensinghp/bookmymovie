@@ -9,6 +9,7 @@ import { COLORS } from '../constants';
 import { useLocation } from "react-router-dom";
 
 export default function MovieCalendar(){
+    const id = React.useRef();
     const [bgColor, setBgColor] = useState("#f0f0f0");
     const handleClick = () => {
         setBgColor(bgColor === "#f0f0f0" ? "#90caf9" : "#f0f0f0");
@@ -30,7 +31,7 @@ export default function MovieCalendar(){
                  />
                  */}
                 <MoviePoster 
-                    imgsrc={'assets/movie2.jpg'}
+                    imgsrc={'assets/movie3.jpg'}
                     movietile={'Avatar: The Way of Water'}
                 />
                 <Spacer size={30} />
@@ -41,7 +42,7 @@ export default function MovieCalendar(){
                         <DateTitle>Date</DateTitle>
                             <ChevronLeft color="orange" size={18} />
                             {getDates().map(({id, day, month, week}) => ( 
-                                <MovieDatePicker key={id}>
+                                <MovieDatePicker key={`${day}-${month}-${week}-${week}`}>
                                     <MovieDateWrapper>
                                         <MovieMonth>{month}</MovieMonth>
                                         <MovieDay>{day}</MovieDay>
