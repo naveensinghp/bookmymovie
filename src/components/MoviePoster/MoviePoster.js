@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Spacer from '../Spacer/Spacer';
-import { ChevronDown, chevronDown, ChevronRight } from "react-feather";
-
+ import { ChevronDown, ChevronRight,ChevronUp } from "react-feather";
 
 function MoviePoster({imgsrc,movietile}) {
   return (
@@ -23,8 +22,11 @@ function MoviePoster({imgsrc,movietile}) {
                   {CompleteGenre.map((index,genre) => (
                     <MovieGenre key={index}>{index}</MovieGenre>
                   ))}
+                 
               </MovieGenreWrapper>
+               <MoviePlotInfo />
             </MovieLeftSection>
+            
              <MovieRightSection>
                 <DirectorSection />
                  <Spacer size={10} />
@@ -33,12 +35,40 @@ function MoviePoster({imgsrc,movietile}) {
                 <StarSection />
              </MovieRightSection>
           </FlexRow>
+          
         </MovieGeneralInfo>
       </Wrapper>
     </>
   );
 }
 
+
+function MoviePlotInfo(){
+    const [isExpanded, setIsExpanded] = useState(false);
+    const toggleExpansion = () => {
+    setIsExpanded(!isExpanded);
+  };
+  return(
+    <>
+      <Mwrapper>
+       {isExpanded ? (
+          // Full plot when expanded
+          `Jake Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight a difficult war against the humans.`
+        ) : (
+          // Short plot when collapsed
+          `Jake Sully and Ney'tiri have formed a family and are doing everything to stay together.`
+        )}
+    </Mwrapper>
+     {/* Use the styled component for the "Read More" section */}
+      <ReadMoreWrapper onClick={toggleExpansion}>
+        <span>{isExpanded ? 'Read Less' : 'Read More'}</span>
+        <div>
+          {isExpanded ? <ChevronUp color="orange" size={18} /> : <ChevronDown color="orange" size={18} />}
+        </div>
+      </ReadMoreWrapper>
+    </>
+  );
+}
 
 function DirectorSection(){
   return (
@@ -58,7 +88,7 @@ function WriterSection(){
   return (
     <>
       <DirectorInfo>
-        <div>
+        <div style={{marginTop: '20px'}}>
           <DirectorNameTitle>Writer</DirectorNameTitle>
           <DirectorName> 
             <ul>
@@ -93,6 +123,22 @@ function StarSection(){
     </>
   );
 }
+
+
+const Mwrapper = styled.p`
+ color: var(--color-white);
+ margin-top: 20px;
+ font-size: 1rem;
+`
+const ReadMoreWrapper = styled.div`
+  color: var(--color-blue-300);
+  font-size: 1rem;
+  text-transform: uppercase;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+`;
 
 
 const DirectorNameTitle = styled.div`
@@ -178,7 +224,7 @@ const Wrapper = styled.div`
 `
 
 const ImageFit = styled.div`
-  /* width: 500px; */
+  width: 500px;
   /* outline: 2px solid red; */
 `
 
