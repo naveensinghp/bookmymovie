@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/learn" element={<Test />} />
           <Route exact path="/moviecalendar" element={<MovieCalendar key={2} />} />
-          <Route exact path="/movieseat" element={<BookMovieSeat key={2} />} />
+          <Route exact path="/movieseat" element={<BookMovieSeat key={3} />} />
           <Route exact path="/fm" element={<FramerMotionLearnings />} />
         </Routes>
       </Router>
