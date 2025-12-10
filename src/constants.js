@@ -1,3 +1,4 @@
+/* This Color Constant */
 
 export const COLORS = {
     primary: 'hsl(46.4deg 92.41% 51.65%)',
