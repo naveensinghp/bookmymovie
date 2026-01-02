@@ -5,7 +5,7 @@ import styled from 'styled-components';
 function BookMovieSeat(){
     return(
         <>
-            <Header />
+            {/* <Header /> */}
             <Wrapper>
                 <MovieSeatBook />
             </Wrapper>
