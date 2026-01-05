@@ -39,7 +39,7 @@ export default function MovieCalendar(){
                   <MovieShowWrapper>
                    <DateSection>
                     <DateSectionWrapper>
-                        <DateTitle>Date</DateTitle>
+                        <DateTitle>Dec</DateTitle>
                             <ChevronLeft color="orange" size={18} />
                             {getDates().map(({id, day, month, week}) => ( 
                                 <MovieDatePicker key={`${day}-${month}-${week}-${week}`}>
