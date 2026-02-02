@@ -17,21 +17,21 @@ function MovieCard(props) {
    function onClickLike(){
     setLink(like +1)
    }
-  //  const handleClick = () => {
-  //   const data = { message: 'Hello, World!' };
-  //   //navigate('/moviecalendar', { state: data }); // Pass data using state
-  //   navigate.push({
-  //     pathname: '/moviecalendar',
-  //     state: { id: 1, title: 'Hello World' }
-  //   });
-  // };
-  const handleClick = () => {
-    navigate('/moviecalendar', {
-      state: {
-        title: "NaveenSingh"
-      },
+   const handleClick = () => {
+    const data = { message: 'Hello, World!' };
+    //navigate('/moviecalendar', { state: data }); // Pass data using state
+    navigate.push({
+      pathname: '/moviecalendar',
+      state: { id: 1, title: 'Hello World' }
     });
   };
+  // const handleClick = () => {
+  //   navigate('/moviecalendar', {
+  //     state: {
+  //       title: "NaveenSingh"
+  //     },
+  //   });
+  // };
   return(
     <>
      {/* <Spinner /> */}
@@ -43,8 +43,6 @@ function MovieCard(props) {
           alt="bookmymovielogo"/>
         </a>
       </div>
-       
-       
         <div>
           { movie.newRelease ? <div className={styles.newreleaselabel}> Releasing on {movie.releaseDate}</div> : ""}
           <div className={styles.likeheart}>
