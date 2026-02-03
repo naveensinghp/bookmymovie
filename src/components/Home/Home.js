@@ -10,7 +10,7 @@ function Home() {
        {/* <Header />
        <Spacer size={100} /> */}
       {/* <AnnoucementBanner/> */}
-      <LoyaltyProgram />
+      {/* <LoyaltyProgram /> */}
       <NowShowingMovie />
   </>;
 }
