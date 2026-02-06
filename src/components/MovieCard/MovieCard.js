@@ -17,21 +17,21 @@ function MovieCard(props) {
    function onClickLike(){
     setLink(like +1)
    }
-   const handleClick = () => {
-    const data = { message: 'Hello, World!' };
-    //navigate('/moviecalendar', { state: data }); // Pass data using state
-    navigate.push({
-      pathname: '/moviecalendar',
-      state: { id: 1, title: 'Hello World' }
-    });
-  };
-  // const handleClick = () => {
-  //   navigate('/moviecalendar', {
-  //     state: {
-  //       title: "NaveenSingh"
-  //     },
+  //  const handleClick = () => {
+  //   // const data = { message: 'Hello, World!' };
+  //   //navigate('/moviecalendar', { state: data }); // Pass data using state
+  //   navigate.push({
+  //     pathname: '/moviecalendar',
+  //     state: { id: 1, title: 'Hello World' }
   //   });
   // };
+  const handleClick = () => {
+    navigate('/moviecalendar', {
+      state: {
+        title: "NaveenSingh"
+      },
+    });
+  };
   return(
     <>
      {/* <Spinner /> */}
@@ -61,12 +61,13 @@ function MovieCard(props) {
               </div>
           </div>
           <div className={styles.bookingstuff}>
-            <Button 
+            {/* <Button 
                 variant='fill' 
                 size="small" 
-                onClick={handleClick}>
+                onClick={() => alert('Booking Tickets for ' + movie.movieName)}>
                   Book Tickets
-              </Button>
+              </Button> */}
+              <button onClick={() => handleClick()}>Book Ticket</button>
             <Button variant='fill' size="small">Play Trailer</Button>
           </div>
         </div> 
