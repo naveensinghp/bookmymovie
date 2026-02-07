@@ -24,6 +24,7 @@ const SIZES = {
 
 
 function Button({variant,size,children,href}) {
+  console.log(href)
   const styles = SIZES[size];
   let Component;
   if(variant === 'fill'){
