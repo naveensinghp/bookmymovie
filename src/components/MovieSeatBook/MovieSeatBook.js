@@ -9,6 +9,7 @@ function MovieSeatBook() {
     setActiveSeats(prev => {
       const next = new Set(prev);
       next.has(seatId) ? next.delete(seatId) : next.add(seatId);
+      console.log(next);
       return next;
     });
   };
