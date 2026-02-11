@@ -10,6 +10,7 @@ import MovieCalendar from "./pages/moviecalendar";
 import FramerMotionLearnings from './components/FramerMotionLearnings/FramerMotionLearnings';
 import Test from './pages/test';
 import BookMovieSeat from './pages/movieseatbook';
+import MovieDetailedInfo from './components/MovieDetailedInfo/MovieDetailedInfo';
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/learn" element={<Test />} />
           <Route exact path="/moviecalendar" element={<MovieCalendar key={2} />} />
+          <Route path="/movie/:id" element={<MovieDetailedInfo />} />
           <Route exact path="/movieseat" element={<BookMovieSeat key={3} />} />
           <Route exact path="/fm" element={<FramerMotionLearnings />} />
         </Routes>
