@@ -13,25 +13,22 @@ import { useNavigate } from 'react-router-dom';
 function MovieCard(props) {
   const navigate = useNavigate();
    let movie = props.data;
+   // console.log(movie);
+   const [showMovieDetails, setShowMovieDetails] = React.useState(false);
    const[like, setLink] = React.useState(movie.likesCount);
    function onClickLike(){
     setLink(like +1)
    }
-  //  const handleClick = () => {
-  //   // const data = { message: 'Hello, World!' };
-  //   //navigate('/moviecalendar', { state: data }); // Pass data using state
-  //   navigate.push({
-  //     pathname: '/moviecalendar',
-  //     state: { id: 1, title: 'Hello World' }
+  const goToMovieCalendar = () => {
+    navigate(`/movie/${movie.id}`);
+  }
+  // const handleClick = () => {
+  //   navigate('/moviecalendar', {
+  //     state: {
+  //       title: "NaveenSingh"
+  //     },
   //   });
   // };
-  const handleClick = () => {
-    navigate('/moviecalendar', {
-      state: {
-        title: "NaveenSingh"
-      },
-    });
-  };
   return(
     <>
      {/* <Spinner /> */}
@@ -67,7 +64,8 @@ function MovieCard(props) {
                 onClick={() => alert('Booking Tickets for ' + movie.movieName)}>
                   Book Tickets
               </Button> */}
-              <button onClick={() => handleClick()}>Book Ticket</button>
+              <button onClick={() => showMovieDetails(true)}>
+                Book Ticket</button>
             <Button variant='fill' size="small">Play Trailer</Button>
           </div>
         </div> 
