@@ -3,7 +3,7 @@ import React,{ useState }  from 'react';
 import Spacer from "../components/Spacer/Spacer";
 import { getDates, getDummyData} from "../data";
 import MoviePoster from "../components/MoviePoster/MoviePoster";
-import { ChevronLeft } from 'react-feather';
+import { ChevronLeft,ArrowLeft } from 'react-feather';
 import { ChevronRight } from "react-feather";
 import { COLORS } from '../constants';
 import { useLocation } from "react-router-dom";
@@ -11,11 +11,19 @@ import { useLocation } from "react-router-dom";
 export default function MovieCalendar(){
     const id = React.useRef();
     const [bgColor, setBgColor] = useState("#f0f0f0");
+    const [getMonth,setGetMonth] = useState("");
     const handleClick = () => {
         setBgColor(bgColor === "#f0f0f0" ? "#90caf9" : "#f0f0f0");
     }
+    const goBack = () => {
+        window.history.back();
+    }
     return(
         <>
+            <GoBack onClick={goBack}>
+                <ArrowLeft />
+            Go Back
+            </GoBack>
            <MovieInfoWrapper>
                  {/* 
                  Component Shoulde like this..
@@ -63,6 +71,15 @@ export default function MovieCalendar(){
 
 }
 
+const GoBack = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    color: var(--color-gray-900);
+    cursor: pointer;
+`
+
 const Select = styled.select`
     background: ${COLORS.gray[300]};
     width: 100%;
@@ -82,19 +99,19 @@ const MovieDateWrapper = styled.div`
 `
 
 const MovieMonth = styled.div`
-    color: var(--color-gray-300);
+    color: white;
     font-weight: bolder;
     font-size: 12px;
 `
 const MovieDate = styled.div`
     font-weight: bolder;
     font-size: 12px;
-    color: var(--color-gray-300);
+    color: white;
 `
 const MovieDay = styled.div`
     font-weight: bolder;
     font-size: 12px;
-    color: var(--color-gray-300);
+    color: white;
 `
 
 const DateTitle = styled.div`
