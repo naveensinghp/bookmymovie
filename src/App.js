@@ -24,7 +24,7 @@ function App() {
           <Route exact path="/moviecalendar" element={<MovieCalendar key={2} />} />
           <Route path="/movie/:id" element={<MovieDetailedInfo />} />
           <Route exact path="/movieseat" element={<BookMovieSeat key={3} />} />
-          <Route exact path="/fm" element={<FramerMotionLearnings />} />
+          {/* <Route exact path="/fm" element={<FramerMotionLearnings />} /> */}
         </Routes>
       </Router>
      
