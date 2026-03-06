@@ -58,14 +58,14 @@ function MovieCard(props) {
               </div>
           </div>
           <div className={styles.bookingstuff}>
-            {/* <Button 
+            <Button 
                 variant='fill' 
                 size="small" 
                 onClick={() => alert('Booking Tickets for ' + movie.movieName)}>
                   Book Tickets
-              </Button> */}
-              <button onClick={() => showMovieDetails(true)}>
-                Book Ticket</button>
+              </Button>
+              {/* <button onClick={() => showMovieDetails(true)}>
+                Book Ticket</button> */}
             <Button variant='fill' size="small">Play Trailer</Button>
           </div>
         </div> 
