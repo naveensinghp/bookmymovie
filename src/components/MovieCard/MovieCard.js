@@ -57,6 +57,7 @@ function MovieCard(props) {
         </div>
 
         <div className={styles.bookingstuff}>
+          {/* Button({variant,size,children,href})  */}
           <Button
             variant="fill"
             size="small"
@@ -64,7 +65,6 @@ function MovieCard(props) {
           >
             Book Tickets
           </Button>
-
           <Button variant="fill" size="small">
             Play Trailer
           </Button>

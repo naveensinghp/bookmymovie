@@ -23,8 +23,7 @@ const SIZES = {
 }
 
 
-function Button({variant,size,children,href}) {
-  console.log(href)
+function Button({variant,size,children,href,onClick}) {
   const styles = SIZES[size];
   let Component;
   if(variant === 'fill'){
@@ -34,7 +33,7 @@ function Button({variant,size,children,href}) {
   }
   return(
     <>
-    <Component style={styles} as={href ? 'a' : "button"} href={href}>
+    <Component style={styles} as={href ? 'a' : "button"} href={href} onClick={onClick}>
       {children}
     </Component>
     </>
