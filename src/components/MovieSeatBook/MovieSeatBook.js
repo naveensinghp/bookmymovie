@@ -74,7 +74,6 @@ const SeatNum = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: ${({ active }) => (active ? '#ffcb05' : 'white')};
   color: black;
 
